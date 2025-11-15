@@ -186,7 +186,11 @@ class Encoder:
             if value == 0.0:
                 return "0"
             # No scientific notation
-            return f"{value:.15g}".rstrip("0").rstrip(".")
+            result = f"{value:.15g}"
+            # Only strip trailing zeros if there's a decimal point
+            if "." in result:
+                result = result.rstrip("0").rstrip(".")
+            return result
 
         if isinstance(value, str):
             return self._encode_string(value)

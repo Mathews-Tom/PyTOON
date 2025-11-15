@@ -4,6 +4,8 @@ This module provides the Decoder class that coordinates the decoding
 of TOON format strings back to Python objects.
 """
 
+from __future__ import annotations
+
 import re
 from typing import Any, Literal
 
