@@ -1,0 +1,21 @@
+{
+  "language": "python",
+  "version": "3.8+",
+  "project_type": "library",
+  "enforcement_level": "BALANCED",
+  "configured_at": "2025-11-15T00:00:00Z",
+  "initialized": true,
+  "initialization_date": "2025-11-15T00:00:00Z",
+  "project_phase": "pre-implementation",
+  "recommended_workflow": "ticket-based",
+  "version_target": "1.0.0",
+  "testing": {
+    "framework": "pytest",
+    "property_testing": "hypothesis",
+    "coverage_target": 85
+  },
+  "type_checking": {
+    "tool": "mypy",
+    "mode": "strict"
+  }
+}

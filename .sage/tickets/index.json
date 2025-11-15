@@ -1,0 +1,2040 @@
+{
+  "version": "1.0",
+  "tickets": [
+    {
+      "id": "CORE-001",
+      "title": "Core Module Implementation",
+      "type": "epic",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Implement core module providing Encoder/Decoder classes and public API (encode/decode functions)",
+      "github": {
+        "issueNumber": 1,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/1"
+      },
+      "children": [
+        "CORE-002",
+        "CORE-003",
+        "CORE-004",
+        "CORE-005",
+        "CORE-006"
+      ],
+      "docs": {
+        "spec": "docs/specs/core/spec.md",
+        "plan": "docs/specs/core/plan.md",
+        "tasks": "docs/specs/core/tasks.md"
+      },
+      "version": "1.0",
+      "dependencies": []
+    },
+    {
+      "id": "CORE-002",
+      "title": "Implement TOONSpec Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create TOONSpec class with TOON v1.5+ specification constants including VERSION, DEFAULT_INDENT, SUPPORTED_DELIMITERS, and IDENTIFIER_PATTERN regex",
+      "parent": "CORE-001",
+      "acceptanceCriteria": [
+        "TOONSpec.VERSION == \"1.5\"",
+        "TOONSpec.DEFAULT_INDENT == 2",
+        "TOONSpec.SUPPORTED_DELIMITERS == [\",\", \"\\t\", \"|\"]",
+        "TOONSpec.IDENTIFIER_PATTERN validates safe identifiers",
+        "All constants have type hints",
+        "Unit tests cover all constants"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/core/spec.py",
+          "action": "create",
+          "purpose": "TOONSpec class with specification constants"
+        }
+      ],
+      "dependencies": [
+        "UTILS-002"
+      ],
+      "context": {
+        "specs": "docs/specs/core/spec.md",
+        "plans": "docs/specs/core/plan.md",
+        "tasks": "docs/specs/core/tasks.md"
+      },
+      "github": {
+        "issueNumber": 10,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/10"
+      }
+    },
+    {
+      "id": "CORE-003",
+      "title": "Create Package Structure",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Set up pytoon package structure with __init__.py, __version__.py, py.typed marker, and core module exports",
+      "parent": "CORE-001",
+      "acceptanceCriteria": [
+        "pytoon/__init__.py created with public API stubs",
+        "pytoon/__version__.py with __version__ = \"1.0.0\"",
+        "pytoon/py.typed marker for PEP 561",
+        "pytoon/core/__init__.py exports Encoder, Decoder, TOONSpec",
+        "All imports work: from pytoon import encode, decode"
+      ],
+      "effort": {
+        "storyPoints": 2,
+        "estimatedDays": 0.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/__init__.py",
+          "action": "create",
+          "purpose": "Public API exports"
+        },
+        {
+          "path": "pytoon/__version__.py",
+          "action": "create",
+          "purpose": "Version information"
+        },
+        {
+          "path": "pytoon/py.typed",
+          "action": "create",
+          "purpose": "PEP 561 marker"
+        },
+        {
+          "path": "pytoon/core/__init__.py",
+          "action": "create",
+          "purpose": "Core module exports"
+        }
+      ],
+      "dependencies": [],
+      "context": {
+        "specs": "docs/specs/core/spec.md",
+        "plans": "docs/specs/core/plan.md",
+        "tasks": "docs/specs/core/tasks.md"
+      },
+      "github": {
+        "issueNumber": 11,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/11"
+      }
+    },
+    {
+      "id": "CORE-004",
+      "title": "Implement Encoder Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create Encoder class with __init__ accepting configuration parameters (indent, delimiter, key_folding) and encode() method stub that will delegate to encoder module",
+      "parent": "CORE-001",
+      "acceptanceCriteria": [
+        "Encoder.__init__ validates indent > 0",
+        "Encoder.__init__ validates delimiter in [\",\", \"\\t\", \"|\"]",
+        "Encoder.__init__ validates key_folding in [\"off\", \"safe\"]",
+        "Encoder.encode(value) returns placeholder string",
+        "ValueError raised for invalid config with descriptive message",
+        "Full type hints with Literal types",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/core/encoder.py",
+          "action": "create",
+          "purpose": "Main Encoder class"
+        },
+        {
+          "path": "tests/unit/test_core_encoder.py",
+          "action": "create",
+          "purpose": "Encoder class unit tests"
+        }
+      ],
+      "dependencies": [
+        "CORE-002",
+        "UTILS-002"
+      ],
+      "context": {
+        "specs": "docs/specs/core/spec.md",
+        "plans": "docs/specs/core/plan.md",
+        "tasks": "docs/specs/core/tasks.md"
+      },
+      "github": {
+        "issueNumber": 12,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/12"
+      }
+    },
+    {
+      "id": "CORE-005",
+      "title": "Implement Decoder Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create Decoder class with __init__ accepting configuration parameters (strict, expand_paths) and decode() method stub that will delegate to decoder module",
+      "parent": "CORE-001",
+      "acceptanceCriteria": [
+        "Decoder.__init__ validates strict is bool",
+        "Decoder.__init__ validates expand_paths in [\"off\", \"safe\"]",
+        "Decoder.decode(toon_string) returns placeholder dict",
+        "ValueError raised for invalid config",
+        "Full type hints with Literal types",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/core/decoder.py",
+          "action": "create",
+          "purpose": "Main Decoder class"
+        },
+        {
+          "path": "tests/unit/test_core_decoder.py",
+          "action": "create",
+          "purpose": "Decoder class unit tests"
+        }
+      ],
+      "dependencies": [
+        "CORE-002",
+        "UTILS-002"
+      ],
+      "context": {
+        "specs": "docs/specs/core/spec.md",
+        "plans": "docs/specs/core/plan.md",
+        "tasks": "docs/specs/core/tasks.md"
+      },
+      "github": {
+        "issueNumber": 13,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/13"
+      }
+    },
+    {
+      "id": "CORE-006",
+      "title": "Implement Public API Functions",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create encode() and decode() top-level functions that instantiate Encoder/Decoder with defaults and delegate to their methods, including Google-style docstrings with examples",
+      "parent": "CORE-001",
+      "acceptanceCriteria": [
+        "encode(value, **kwargs) function with full signature",
+        "decode(toon_string, **kwargs) function with full signature",
+        "Keyword-only arguments (indent=2, delimiter=\",\", etc.)",
+        "Google-style docstrings with Args, Returns, Raises, Examples",
+        "Functions delegate to Encoder/Decoder classes",
+        "Basic unit tests for API surface",
+        "Roundtrip test stub: decode(encode(data)) works"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/__init__.py",
+          "action": "modify",
+          "purpose": "Add encode/decode functions"
+        },
+        {
+          "path": "tests/integration/test_roundtrip.py",
+          "action": "create",
+          "purpose": "Roundtrip fidelity tests"
+        }
+      ],
+      "dependencies": [
+        "CORE-004",
+        "CORE-005"
+      ],
+      "context": {
+        "specs": "docs/specs/core/spec.md",
+        "plans": "docs/specs/core/plan.md",
+        "tasks": "docs/specs/core/tasks.md"
+      },
+      "github": {
+        "issueNumber": 14,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/14"
+      }
+    },
+    {
+      "id": "UTILS-001",
+      "title": "Utilities Module Implementation",
+      "type": "epic",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Implement utilities: TokenCounter, FormatValidator, exception hierarchy",
+      "github": {
+        "issueNumber": 2,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/2"
+      },
+      "children": [
+        "UTILS-002",
+        "UTILS-003",
+        "UTILS-004"
+      ],
+      "docs": {
+        "spec": "docs/specs/utils/spec.md",
+        "plan": "docs/specs/utils/plan.md",
+        "tasks": "docs/specs/utils/tasks.md"
+      },
+      "version": "1.0",
+      "dependencies": []
+    },
+    {
+      "id": "UTILS-002",
+      "title": "Implement Exception Hierarchy",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create complete TOON exception hierarchy with TOONError as base, TOONEncodeError, TOONDecodeError, and TOONValidationError with descriptive docstrings",
+      "parent": "UTILS-001",
+      "acceptanceCriteria": [
+        "TOONError base class with docstring",
+        "TOONEncodeError inherits from TOONError",
+        "TOONDecodeError inherits from TOONError",
+        "TOONValidationError inherits from TOONDecodeError",
+        "All exceptions have descriptive docstrings with examples",
+        "Can catch broad (TOONError) or specific exceptions",
+        "Unit tests verify inheritance chain",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/utils/__init__.py",
+          "action": "create",
+          "purpose": "Utils module exports"
+        },
+        {
+          "path": "pytoon/utils/errors.py",
+          "action": "create",
+          "purpose": "Exception hierarchy"
+        },
+        {
+          "path": "tests/unit/test_errors.py",
+          "action": "create",
+          "purpose": "Exception hierarchy tests"
+        }
+      ],
+      "dependencies": [],
+      "context": {
+        "specs": "docs/specs/utils/spec.md",
+        "plans": "docs/specs/utils/plan.md",
+        "tasks": "docs/specs/utils/tasks.md"
+      },
+      "github": {
+        "issueNumber": 15,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/15"
+      }
+    },
+    {
+      "id": "UTILS-003",
+      "title": "Implement TokenCounter Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create TokenCounter class that uses tiktoken (optional) for GPT-5 o200k_base token counting with fallback to character estimation, including compare() method for JSON vs TOON savings",
+      "parent": "UTILS-001",
+      "acceptanceCriteria": [
+        "TokenCounter.__init__ gracefully handles missing tiktoken",
+        "count_tokens(text) returns int token count",
+        "Uses tiktoken o200k_base encoding when available",
+        "Falls back to len(text) // 4 estimation without tiktoken",
+        "compare(data) returns dict with json_tokens, toon_tokens, savings_percent",
+        "Savings percentage calculated correctly",
+        "Unit tests work with and without tiktoken installed",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/utils/tokens.py",
+          "action": "create",
+          "purpose": "TokenCounter class"
+        },
+        {
+          "path": "tests/unit/test_tokens.py",
+          "action": "create",
+          "purpose": "TokenCounter tests"
+        }
+      ],
+      "dependencies": [
+        "CORE-006"
+      ],
+      "context": {
+        "specs": "docs/specs/utils/spec.md",
+        "plans": "docs/specs/utils/plan.md",
+        "tasks": "docs/specs/utils/tasks.md"
+      },
+      "github": {
+        "issueNumber": 16,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/16"
+      }
+    },
+    {
+      "id": "UTILS-004",
+      "title": "Implement Common Helper Functions",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create helper functions for configuration validation including validate_indent(), validate_delimiter(), and is_safe_identifier() regex check",
+      "parent": "UTILS-001",
+      "acceptanceCriteria": [
+        "validate_indent(n) raises ValueError if n <= 0",
+        "validate_delimiter(d) raises ValueError if d not in [\",\", \"\\t\", \"|\"]",
+        "is_safe_identifier(key) returns bool for safe key folding",
+        "Consistent error message format across all validators",
+        "Used by Core Encoder/Decoder config validation",
+        "Unit tests cover all validation paths",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 2,
+        "estimatedDays": 0.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/utils/validation.py",
+          "action": "create",
+          "purpose": "Common helper functions"
+        },
+        {
+          "path": "tests/unit/test_validation.py",
+          "action": "create",
+          "purpose": "Validation helper tests"
+        }
+      ],
+      "dependencies": [],
+      "context": {
+        "specs": "docs/specs/utils/spec.md",
+        "plans": "docs/specs/utils/plan.md",
+        "tasks": "docs/specs/utils/tasks.md"
+      },
+      "github": {
+        "issueNumber": 17,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/17"
+      }
+    },
+    {
+      "id": "ENCODER-001",
+      "title": "Encoder Module Implementation",
+      "type": "epic",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Implement encoder components: TabularAnalyzer, ValueEncoder, ArrayEncoder, ObjectEncoder, QuotingEngine, KeyFoldingEngine",
+      "github": {
+        "issueNumber": 3,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/3"
+      },
+      "children": [
+        "ENCODER-002",
+        "ENCODER-003",
+        "ENCODER-004",
+        "ENCODER-005",
+        "ENCODER-006",
+        "ENCODER-007"
+      ],
+      "docs": {
+        "spec": "docs/specs/encoder/spec.md",
+        "plan": "docs/specs/encoder/plan.md",
+        "tasks": "docs/specs/encoder/tasks.md"
+      },
+      "version": "1.0",
+      "dependencies": [
+        "CORE-001",
+        "UTILS-001"
+      ]
+    },
+    {
+      "id": "ENCODER-002",
+      "title": "Implement ValueEncoder Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create ValueEncoder that normalizes Python primitives to TOON representation including None\u2192null, bool\u2192true/false, numbers without scientific notation, NaN/Inf\u2192null, -0.0\u21920",
+      "parent": "ENCODER-001",
+      "acceptanceCriteria": [
+        "encode_value(None) returns \"null\"",
+        "encode_value(True) returns \"true\" (lowercase)",
+        "encode_value(False) returns \"false\" (lowercase)",
+        "encode_value(1e6) returns \"1000000\" (no scientific notation)",
+        "encode_value(float('nan')) returns \"null\"",
+        "encode_value(-0.0) returns \"0\"",
+        "Raises TOONEncodeError for unsupported types",
+        "100+ unit tests for edge cases",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/encoder/__init__.py",
+          "action": "create",
+          "purpose": "Encoder module exports"
+        },
+        {
+          "path": "pytoon/encoder/value.py",
+          "action": "create",
+          "purpose": "ValueEncoder class"
+        },
+        {
+          "path": "tests/unit/test_value_encoder.py",
+          "action": "create",
+          "purpose": "ValueEncoder tests"
+        }
+      ],
+      "dependencies": [
+        "UTILS-002"
+      ],
+      "context": {
+        "specs": "docs/specs/encoder/spec.md",
+        "plans": "docs/specs/encoder/plan.md",
+        "tasks": "docs/specs/encoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 18,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/18"
+      }
+    },
+    {
+      "id": "ENCODER-003",
+      "title": "Implement QuotingEngine Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create context-aware QuotingEngine that determines when strings need quoting and applies escape sequences",
+      "parent": "ENCODER-001",
+      "acceptanceCriteria": [
+        "needs_quoting(\"\") returns True (empty string)",
+        "needs_quoting(\"true\") returns True (keyword)",
+        "needs_quoting(\"42\") returns True (looks like number)",
+        "needs_quoting(\"a,b\", \",\") returns True (contains delimiter)",
+        "needs_quoting(\"hello\") returns False (safe identifier)",
+        "quote_string() applies escapes: \\\", \\\\, \\n, \\r, \\t",
+        "Unit tests for all quoting rules",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/encoder/quoting.py",
+          "action": "create",
+          "purpose": "QuotingEngine class"
+        },
+        {
+          "path": "tests/unit/test_quoting.py",
+          "action": "create",
+          "purpose": "QuotingEngine tests"
+        }
+      ],
+      "dependencies": [
+        "CORE-002"
+      ],
+      "context": {
+        "specs": "docs/specs/encoder/spec.md",
+        "plans": "docs/specs/encoder/plan.md",
+        "tasks": "docs/specs/encoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 19,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/19"
+      }
+    },
+    {
+      "id": "ENCODER-004",
+      "title": "Implement TabularAnalyzer Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create TabularAnalyzer that analyzes arrays to determine tabular format eligibility by checking uniform keys and no nested structures",
+      "parent": "ENCODER-001",
+      "acceptanceCriteria": [
+        "analyze([]) returns (True, [], 0.0) for empty array",
+        "analyze([{\"id\": 1}]) returns (True, [\"id\"], 100.0)",
+        "analyze([{\"id\": 1}, {\"id\": 2, \"name\": \"X\"}]) returns (False, [], 0.0)",
+        "analyze([{\"id\": 1, \"meta\": {}}]) returns (False, ..., 0.0) - nested object",
+        "Returns field list in consistent order",
+        "O(n*m) time complexity",
+        "Unit tests for all edge cases",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/encoder/tabular.py",
+          "action": "create",
+          "purpose": "TabularAnalyzer class"
+        },
+        {
+          "path": "tests/unit/test_tabular.py",
+          "action": "create",
+          "purpose": "TabularAnalyzer tests"
+        }
+      ],
+      "dependencies": [],
+      "context": {
+        "specs": "docs/specs/encoder/spec.md",
+        "plans": "docs/specs/encoder/plan.md",
+        "tasks": "docs/specs/encoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 20,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/20"
+      }
+    },
+    {
+      "id": "ENCODER-005",
+      "title": "Implement ArrayEncoder Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create ArrayEncoder that dispatches to tabular, inline, or list format based on TabularAnalyzer results",
+      "parent": "ENCODER-001",
+      "acceptanceCriteria": [
+        "Tabular format: [{\"id\": 1}] \u2192 \"array[1]{id}:\\n  1\"",
+        "Inline format: [\"a\", \"b\"] \u2192 \"array[2]: a,b\"",
+        "List format: [{\"k\": \"v\"}, \"s\"] \u2192 \"array[2]:\\n  - k: v\\n  - s\"",
+        "Header includes delimiter hint for tab",
+        "Indentation correct for nested arrays",
+        "Token efficiency validated (30-60% savings)",
+        "Comprehensive test suite",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 8,
+        "estimatedDays": 4
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/encoder/array.py",
+          "action": "create",
+          "purpose": "ArrayEncoder class"
+        },
+        {
+          "path": "tests/unit/test_array_encoder.py",
+          "action": "create",
+          "purpose": "ArrayEncoder tests"
+        }
+      ],
+      "dependencies": [
+        "ENCODER-002",
+        "ENCODER-003",
+        "ENCODER-004"
+      ],
+      "context": {
+        "specs": "docs/specs/encoder/spec.md",
+        "plans": "docs/specs/encoder/plan.md",
+        "tasks": "docs/specs/encoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 21,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/21"
+      }
+    },
+    {
+      "id": "ENCODER-006",
+      "title": "Implement ObjectEncoder Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create ObjectEncoder that encodes Python dicts with proper indentation, key: value syntax, and recursive nesting",
+      "parent": "ENCODER-001",
+      "acceptanceCriteria": [
+        "Flat dict: {\"key\": \"value\"} \u2192 \"key: value\"",
+        "Nested dict proper indentation (2 spaces per level)",
+        "Preserves key order (Python 3.7+ dict order)",
+        "Detects arrays and delegates to ArrayEncoder",
+        "Handles empty dict correctly",
+        "Recursive encoding for deeply nested structures",
+        "Unit tests for nested structures",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/encoder/object.py",
+          "action": "create",
+          "purpose": "ObjectEncoder class"
+        },
+        {
+          "path": "tests/unit/test_object_encoder.py",
+          "action": "create",
+          "purpose": "ObjectEncoder tests"
+        }
+      ],
+      "dependencies": [
+        "ENCODER-002",
+        "ENCODER-005"
+      ],
+      "context": {
+        "specs": "docs/specs/encoder/spec.md",
+        "plans": "docs/specs/encoder/plan.md",
+        "tasks": "docs/specs/encoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 22,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/22"
+      }
+    },
+    {
+      "id": "ENCODER-007",
+      "title": "Implement KeyFoldingEngine Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create KeyFoldingEngine that collapses single-key wrapper chains into dotted paths when key_folding='safe' is enabled",
+      "parent": "ENCODER-001",
+      "acceptanceCriteria": [
+        "{\"a\": {\"b\": {\"c\": 1}}} \u2192 \"a.b.c: 1\" when folding enabled",
+        "Stops at multi-key objects",
+        "Stops at non-dict values",
+        "Only folds keys matching safe identifier pattern",
+        "Does NOT fold keys containing dots or special chars",
+        "Unit tests for folding logic",
+        "Integration with ObjectEncoder",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/encoder/keyfolding.py",
+          "action": "create",
+          "purpose": "KeyFoldingEngine class"
+        },
+        {
+          "path": "tests/unit/test_keyfolding.py",
+          "action": "create",
+          "purpose": "KeyFoldingEngine tests"
+        }
+      ],
+      "dependencies": [
+        "ENCODER-006",
+        "UTILS-004"
+      ],
+      "context": {
+        "specs": "docs/specs/encoder/spec.md",
+        "plans": "docs/specs/encoder/plan.md",
+        "tasks": "docs/specs/encoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 23,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/23"
+      }
+    },
+    {
+      "id": "DECODER-001",
+      "title": "Decoder Module Implementation",
+      "type": "epic",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Implement decoder components: Lexer, Parser, Validator, PathExpander, StateMachine",
+      "github": {
+        "issueNumber": 4,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/4"
+      },
+      "children": [
+        "DECODER-002",
+        "DECODER-003",
+        "DECODER-004",
+        "DECODER-005",
+        "DECODER-006"
+      ],
+      "docs": {
+        "spec": "docs/specs/decoder/spec.md",
+        "plan": "docs/specs/decoder/plan.md",
+        "tasks": "docs/specs/decoder/tasks.md"
+      },
+      "version": "1.0",
+      "dependencies": [
+        "CORE-001",
+        "UTILS-001"
+      ]
+    },
+    {
+      "id": "DECODER-002",
+      "title": "Implement Lexer Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create Lexer that tokenizes TOON input into token stream with position tracking for error reporting",
+      "parent": "DECODER-001",
+      "acceptanceCriteria": [
+        "TokenType enum with all token types",
+        "Token dataclass with type, value, line, column",
+        "tokenize() returns list[Token] ending with EOF",
+        "Handles identifiers, strings, numbers, booleans, null",
+        "Handles array headers: [3], [2]{id,name}",
+        "Tracks line and column for error reporting",
+        "Handles INDENT/DEDENT based on indentation",
+        "Unit tests for all token types",
+        "Error reporting includes position",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 8,
+        "estimatedDays": 4
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/decoder/__init__.py",
+          "action": "create",
+          "purpose": "Decoder module exports"
+        },
+        {
+          "path": "pytoon/decoder/lexer.py",
+          "action": "create",
+          "purpose": "Lexer class"
+        },
+        {
+          "path": "tests/unit/test_lexer.py",
+          "action": "create",
+          "purpose": "Lexer tests"
+        }
+      ],
+      "dependencies": [
+        "UTILS-002"
+      ],
+      "context": {
+        "specs": "docs/specs/decoder/spec.md",
+        "plans": "docs/specs/decoder/plan.md",
+        "tasks": "docs/specs/decoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 24,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/24"
+      }
+    },
+    {
+      "id": "DECODER-003",
+      "title": "Implement StateMachine Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create StateMachine that manages parser state transitions and indentation stack",
+      "parent": "DECODER-001",
+      "acceptanceCriteria": [
+        "ParserState enum with all states",
+        "Indentation stack tracking (list[int])",
+        "State transition methods",
+        "Tracks current indentation level",
+        "Detects dedentation to close nested structures",
+        "Validates indentation consistency",
+        "Unit tests for state transitions",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/decoder/statemachine.py",
+          "action": "create",
+          "purpose": "StateMachine class"
+        },
+        {
+          "path": "tests/unit/test_statemachine.py",
+          "action": "create",
+          "purpose": "StateMachine tests"
+        }
+      ],
+      "dependencies": [],
+      "context": {
+        "specs": "docs/specs/decoder/spec.md",
+        "plans": "docs/specs/decoder/plan.md",
+        "tasks": "docs/specs/decoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 25,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/25"
+      }
+    },
+    {
+      "id": "DECODER-004",
+      "title": "Implement Parser Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create Parser that builds hierarchical Python objects from token stream using StateMachine",
+      "parent": "DECODER-001",
+      "acceptanceCriteria": [
+        "parse() returns Python object (dict, list, or primitive)",
+        "Parses flat objects: \"key: value\" \u2192 {\"key\": \"value\"}",
+        "Parses nested objects with indentation",
+        "Parses tabular, inline, and list arrays",
+        "Handles array header parsing (length, fields)",
+        "Reconstructs proper Python types",
+        "Uses StateMachine for state management",
+        "O(n) time complexity",
+        "Comprehensive test suite",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 13,
+        "estimatedDays": 6.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/decoder/parser.py",
+          "action": "create",
+          "purpose": "Parser class"
+        },
+        {
+          "path": "tests/unit/test_parser.py",
+          "action": "create",
+          "purpose": "Parser tests"
+        }
+      ],
+      "dependencies": [
+        "DECODER-002",
+        "DECODER-003"
+      ],
+      "context": {
+        "specs": "docs/specs/decoder/spec.md",
+        "plans": "docs/specs/decoder/plan.md",
+        "tasks": "docs/specs/decoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 26,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/26"
+      }
+    },
+    {
+      "id": "DECODER-005",
+      "title": "Implement Validator Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create Validator that enforces TOON v1.5 spec rules in strict mode or lenient mode",
+      "parent": "DECODER-001",
+      "acceptanceCriteria": [
+        "Validator.__init__(strict=True) for strict mode",
+        "Validator.__init__(strict=False) for lenient mode",
+        "validate_array_length() raises/warns on mismatch",
+        "validate_field_consistency() checks count",
+        "Strict mode raises TOONValidationError with line info",
+        "Lenient mode collects warnings list",
+        "Error messages include line and column numbers",
+        "Unit tests for both modes",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/decoder/validator.py",
+          "action": "create",
+          "purpose": "Validator class"
+        },
+        {
+          "path": "tests/unit/test_validator.py",
+          "action": "create",
+          "purpose": "Validator tests"
+        }
+      ],
+      "dependencies": [
+        "UTILS-002"
+      ],
+      "context": {
+        "specs": "docs/specs/decoder/spec.md",
+        "plans": "docs/specs/decoder/plan.md",
+        "tasks": "docs/specs/decoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 27,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/27"
+      }
+    },
+    {
+      "id": "DECODER-006",
+      "title": "Implement PathExpander Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create PathExpander that reverses key folding by expanding dotted keys into nested dictionaries",
+      "parent": "DECODER-001",
+      "acceptanceCriteria": [
+        "expand({\"a.b.c\": 1}) returns {\"a\": {\"b\": {\"c\": 1}}}",
+        "Handles multiple dotted keys in same object",
+        "Handles mixed dotted and regular keys",
+        "Preserves non-dotted keys as-is",
+        "Raises error on key conflict",
+        "Only expands when expand_paths='safe' enabled",
+        "Unit tests for expansion logic",
+        "Integration with Decoder.decode()",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/decoder/pathexpander.py",
+          "action": "create",
+          "purpose": "PathExpander class"
+        },
+        {
+          "path": "tests/unit/test_pathexpander.py",
+          "action": "create",
+          "purpose": "PathExpander tests"
+        }
+      ],
+      "dependencies": [],
+      "context": {
+        "specs": "docs/specs/decoder/spec.md",
+        "plans": "docs/specs/decoder/plan.md",
+        "tasks": "docs/specs/decoder/tasks.md"
+      },
+      "github": {
+        "issueNumber": 28,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/28"
+      }
+    },
+    {
+      "id": "CLI-001",
+      "title": "CLI Interface Implementation",
+      "type": "epic",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Implement command-line interface with auto-detection and token statistics",
+      "github": {
+        "issueNumber": 5,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/5"
+      },
+      "children": [
+        "CLI-002",
+        "CLI-003",
+        "CLI-004",
+        "CLI-005",
+        "CLI-006"
+      ],
+      "docs": {
+        "spec": "docs/specs/cli/spec.md",
+        "plan": "docs/specs/cli/plan.md",
+        "tasks": "docs/specs/cli/tasks.md"
+      },
+      "version": "1.0",
+      "dependencies": [
+        "CORE-001",
+        "UTILS-001"
+      ]
+    },
+    {
+      "id": "CLI-002",
+      "title": "Implement Argument Parser",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create argument parser using argparse with subcommands and configuration flags",
+      "parent": "CLI-001",
+      "acceptanceCriteria": [
+        "argparse-based CLI with subcommands",
+        "encode subcommand with input file argument",
+        "decode subcommand with input file argument",
+        "-o/--output flag for output file",
+        "--indent N flag (default: 2)",
+        "--delimiter {comma,tab,pipe} flag",
+        "--version flag shows pytoon version",
+        "--help with clear usage examples",
+        "Unit tests for argument parsing",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/cli/__init__.py",
+          "action": "create",
+          "purpose": "CLI module exports"
+        },
+        {
+          "path": "pytoon/cli/main.py",
+          "action": "create",
+          "purpose": "CLI entry point"
+        },
+        {
+          "path": "tests/unit/test_cli.py",
+          "action": "create",
+          "purpose": "CLI tests"
+        }
+      ],
+      "dependencies": [
+        "CORE-003"
+      ],
+      "context": {
+        "specs": "docs/specs/cli/spec.md",
+        "plans": "docs/specs/cli/plan.md",
+        "tasks": "docs/specs/cli/tasks.md"
+      },
+      "github": {
+        "issueNumber": 29,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/29"
+      }
+    },
+    {
+      "id": "CLI-003",
+      "title": "Implement Encode Command",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create encode command handler that reads JSON and writes TOON",
+      "parent": "CLI-001",
+      "acceptanceCriteria": [
+        "Reads JSON from file when path provided",
+        "Reads JSON from stdin when no file",
+        "Writes TOON to file when -o/--output specified",
+        "Writes TOON to stdout when no output file",
+        "Respects --indent, --delimiter, --key-folding flags",
+        "Exit code 0 on success",
+        "Exit code 1 on error with descriptive message",
+        "Handles file not found gracefully",
+        "Handles invalid JSON gracefully",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/cli/main.py",
+          "action": "modify",
+          "purpose": "Add encode command handler"
+        }
+      ],
+      "dependencies": [
+        "CORE-006"
+      ],
+      "context": {
+        "specs": "docs/specs/cli/spec.md",
+        "plans": "docs/specs/cli/plan.md",
+        "tasks": "docs/specs/cli/tasks.md"
+      },
+      "github": {
+        "issueNumber": 30,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/30"
+      }
+    },
+    {
+      "id": "CLI-004",
+      "title": "Implement Decode Command",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Create decode command handler that reads TOON and writes JSON",
+      "parent": "CLI-001",
+      "acceptanceCriteria": [
+        "Reads TOON from file when path provided",
+        "Reads TOON from stdin when no file",
+        "Writes JSON to file when -o/--output specified",
+        "Writes JSON to stdout when no output file",
+        "Respects --strict/--lenient flag",
+        "Exit code 0 on success",
+        "Exit code 1 on error with descriptive message",
+        "Handles file not found gracefully",
+        "Handles invalid TOON syntax gracefully",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/cli/main.py",
+          "action": "modify",
+          "purpose": "Add decode command handler"
+        }
+      ],
+      "dependencies": [
+        "CORE-006"
+      ],
+      "context": {
+        "specs": "docs/specs/cli/spec.md",
+        "plans": "docs/specs/cli/plan.md",
+        "tasks": "docs/specs/cli/tasks.md"
+      },
+      "github": {
+        "issueNumber": 31,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/31"
+      }
+    },
+    {
+      "id": "CLI-005",
+      "title": "Configure Entry Point",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Add entry point in pyproject.toml and create __main__.py for CLI",
+      "parent": "CLI-001",
+      "acceptanceCriteria": [
+        "pyproject.toml has [project.scripts] pytoon entry",
+        "pytoon/cli/__main__.py enables python -m pytoon",
+        "After pip install, pytoon command works",
+        "After pip install, python -m pytoon works",
+        "Help text accessible: pytoon --help",
+        "Version accessible: pytoon --version",
+        "Tests verify entry point configuration",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 2,
+        "estimatedDays": 0.5
+      },
+      "targetFiles": [
+        {
+          "path": "pyproject.toml",
+          "action": "modify",
+          "purpose": "Add [project.scripts] entry point"
+        },
+        {
+          "path": "pytoon/cli/__main__.py",
+          "action": "create",
+          "purpose": "Enable python -m pytoon"
+        }
+      ],
+      "dependencies": [
+        "CLI-002"
+      ],
+      "context": {
+        "specs": "docs/specs/cli/spec.md",
+        "plans": "docs/specs/cli/plan.md",
+        "tasks": "docs/specs/cli/tasks.md"
+      },
+      "github": {
+        "issueNumber": 32,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/32"
+      }
+    },
+    {
+      "id": "CLI-006",
+      "title": "Implement Token Statistics Flag",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P0",
+      "description": "Add --stats flag that displays token count comparison after encoding",
+      "parent": "CLI-001",
+      "acceptanceCriteria": [
+        "--stats flag available on encode command",
+        "Output format: \"TOON: X tokens | JSON: Y tokens | Savings: Z%\"",
+        "Uses TokenCounter.compare() for accurate stats",
+        "Statistics printed to stderr (data to stdout)",
+        "Works with file output",
+        "Handles missing tiktoken gracefully",
+        "Unit tests for stats formatting",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 2,
+        "estimatedDays": 0.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/cli/main.py",
+          "action": "modify",
+          "purpose": "Add --stats flag handler"
+        }
+      ],
+      "dependencies": [
+        "UTILS-003"
+      ],
+      "context": {
+        "specs": "docs/specs/cli/spec.md",
+        "plans": "docs/specs/cli/plan.md",
+        "tasks": "docs/specs/cli/tasks.md"
+      },
+      "github": {
+        "issueNumber": 33,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/33"
+      }
+    },
+    {
+      "id": "DECISION-001",
+      "title": "Decision Engine Implementation (v1.1)",
+      "type": "epic",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Implement intelligent format selection: DecisionEngine, StructuralAnalyzer, DataMetrics, smart_encode() API",
+      "github": {
+        "issueNumber": 6,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/6"
+      },
+      "children": [
+        "DECISION-002",
+        "DECISION-003",
+        "DECISION-004",
+        "DECISION-005"
+      ],
+      "docs": {
+        "spec": "docs/specs/decision/spec.md",
+        "plan": "docs/specs/decision/plan.md",
+        "tasks": "docs/specs/decision/tasks.md"
+      },
+      "version": "1.1",
+      "dependencies": [
+        "CORE-001",
+        "ENCODER-001"
+      ]
+    },
+    {
+      "id": "DECISION-002",
+      "title": "Implement DataMetrics Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Create DataMetrics that computes structural metrics including nesting depth, uniformity score, tabular eligibility, and reference density",
+      "parent": "DECISION-001",
+      "acceptanceCriteria": [
+        "DataMetrics dataclass with all fields",
+        "_max_depth() computes maximum nesting depth",
+        "_uniformity_score() calculates array uniformity (0-100%)",
+        "_tabular_eligibility() uses TabularAnalyzer",
+        "_reference_density() tracks shared object references",
+        "total_size_bytes field for data size",
+        "O(n) traversal algorithm",
+        "Unit tests for all metrics",
+        "Benchmark on diverse datasets",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 8,
+        "estimatedDays": 4
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/decision/__init__.py",
+          "action": "create",
+          "purpose": "Decision module exports"
+        },
+        {
+          "path": "pytoon/decision/metrics.py",
+          "action": "create",
+          "purpose": "DataMetrics class"
+        },
+        {
+          "path": "tests/unit/test_data_metrics.py",
+          "action": "create",
+          "purpose": "DataMetrics tests"
+        }
+      ],
+      "dependencies": [
+        "ENCODER-004"
+      ],
+      "context": {
+        "specs": "docs/specs/decision/spec.md",
+        "plans": "docs/specs/decision/plan.md",
+        "tasks": "docs/specs/decision/tasks.md"
+      },
+      "github": {
+        "issueNumber": 34,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/34"
+      }
+    },
+    {
+      "id": "DECISION-003",
+      "title": "Implement DecisionEngine Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Create DecisionEngine that analyzes DataMetrics and recommends optimal format with confidence score and reasoning",
+      "parent": "DECISION-001",
+      "acceptanceCriteria": [
+        "FormatDecision dataclass with recommended_format, confidence, reasoning, metrics",
+        "analyze(data) returns FormatDecision",
+        "Depth > 6 levels: favors JSON",
+        "Uniformity > 80%: strongly favors TOON",
+        "Uniformity < 30%: favors JSON",
+        "Confidence score 0.0 - 1.0 range",
+        "Reasoning array with clear explanations",
+        "Unit tests for all heuristics",
+        ">90% accuracy on benchmark datasets",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 8,
+        "estimatedDays": 4
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/decision/engine.py",
+          "action": "create",
+          "purpose": "DecisionEngine class"
+        },
+        {
+          "path": "tests/unit/test_decision_engine.py",
+          "action": "create",
+          "purpose": "DecisionEngine tests"
+        }
+      ],
+      "dependencies": [
+        "DECISION-002"
+      ],
+      "context": {
+        "specs": "docs/specs/decision/spec.md",
+        "plans": "docs/specs/decision/plan.md",
+        "tasks": "docs/specs/decision/tasks.md"
+      },
+      "github": {
+        "issueNumber": 35,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/35"
+      }
+    },
+    {
+      "id": "DECISION-004",
+      "title": "Implement smart_encode API",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Create smart_encode() function that automatically selects optimal format using DecisionEngine",
+      "parent": "DECISION-001",
+      "acceptanceCriteria": [
+        "smart_encode(data, auto=True) signature",
+        "Returns tuple[str, FormatDecision]",
+        "When auto=True and decision is \"json\", uses json.dumps()",
+        "When auto=True and decision is \"toon\", uses pytoon.encode()",
+        "When auto=False, always uses TOON",
+        "Accepts **kwargs for encoding options",
+        "Added to pytoon.__init__.py exports",
+        "Google-style docstrings with examples",
+        "Integration tests",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/__init__.py",
+          "action": "modify",
+          "purpose": "Add smart_encode export"
+        }
+      ],
+      "dependencies": [
+        "DECISION-003",
+        "CORE-006"
+      ],
+      "context": {
+        "specs": "docs/specs/decision/spec.md",
+        "plans": "docs/specs/decision/plan.md",
+        "tasks": "docs/specs/decision/tasks.md"
+      },
+      "github": {
+        "issueNumber": 36,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/36"
+      }
+    },
+    {
+      "id": "DECISION-005",
+      "title": "Add CLI --auto-decide Flag",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Add --auto-decide and --explain flags to CLI encode command",
+      "parent": "DECISION-001",
+      "acceptanceCriteria": [
+        "--auto-decide flag on encode command",
+        "Uses smart_encode() when flag enabled",
+        "--explain flag prints reasoning to stderr",
+        "Format shows recommended format and reasons",
+        "Works with other encode flags",
+        "Unit tests for new flags",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 2,
+        "estimatedDays": 0.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/cli/main.py",
+          "action": "modify",
+          "purpose": "Add --auto-decide and --explain flags"
+        }
+      ],
+      "dependencies": [
+        "DECISION-004",
+        "CLI-003"
+      ],
+      "context": {
+        "specs": "docs/specs/decision/spec.md",
+        "plans": "docs/specs/decision/plan.md",
+        "tasks": "docs/specs/decision/tasks.md"
+      },
+      "github": {
+        "issueNumber": 37,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/37"
+      }
+    },
+    {
+      "id": "TYPES-001",
+      "title": "Type System Implementation (v1.1)",
+      "type": "epic",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Implement pluggable type system: TypeRegistry, built-in handlers (UUID, datetime, etc.), custom type registration",
+      "github": {
+        "issueNumber": 7,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/7"
+      },
+      "children": [
+        "TYPES-002",
+        "TYPES-003",
+        "TYPES-004"
+      ],
+      "docs": {
+        "spec": "docs/specs/types/spec.md",
+        "plan": "docs/specs/types/plan.md",
+        "tasks": "docs/specs/types/tasks.md"
+      },
+      "version": "1.1",
+      "dependencies": [
+        "ENCODER-001",
+        "DECODER-001"
+      ]
+    },
+    {
+      "id": "TYPES-002",
+      "title": "Implement TypeRegistry Class",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Create TypeRegistry that manages type handlers with registration and priority-based lookup",
+      "parent": "TYPES-001",
+      "acceptanceCriteria": [
+        "TypeRegistry class with private _handlers list",
+        "register(handler) adds handler to registry",
+        "encode_value(obj) finds matching handler and encodes",
+        "decode_value(s, hint) finds matching handler and decodes",
+        "Priority: user handlers checked before built-in",
+        "Returns None if no handler matches",
+        "Unit tests for registry operations",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/types/__init__.py",
+          "action": "create",
+          "purpose": "Types module exports"
+        },
+        {
+          "path": "pytoon/types/registry.py",
+          "action": "create",
+          "purpose": "TypeRegistry class"
+        },
+        {
+          "path": "pytoon/types/protocol.py",
+          "action": "create",
+          "purpose": "TypeHandler protocol"
+        }
+      ],
+      "dependencies": [],
+      "context": {
+        "specs": "docs/specs/types/spec.md",
+        "plans": "docs/specs/types/plan.md",
+        "tasks": "docs/specs/types/tasks.md"
+      },
+      "github": {
+        "issueNumber": 38,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/38"
+      }
+    },
+    {
+      "id": "TYPES-003",
+      "title": "Implement Built-in Type Handlers",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Create TypeHandler implementations for UUID, datetime, date, time, timedelta, bytes, Enum, Decimal, complex, Path, set, frozenset",
+      "parent": "TYPES-001",
+      "acceptanceCriteria": [
+        "TypeHandler Protocol with can_handle(), encode(), decode()",
+        "UUIDHandler: UUID \u2192 \"uuid:...\" string",
+        "DatetimeHandler: datetime \u2192 \"datetime:ISO8601\"",
+        "DateHandler: date \u2192 \"date:YYYY-MM-DD\"",
+        "TimeHandler: time \u2192 \"time:HH:MM:SS\"",
+        "TimedeltaHandler: timedelta \u2192 \"timedelta:seconds\"",
+        "BytesHandler: bytes \u2192 \"bytes:base64...\"",
+        "15+ handlers total",
+        "Roundtrip fidelity for all types",
+        "Unit tests for each handler",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 8,
+        "estimatedDays": 4
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/types/handlers.py",
+          "action": "create",
+          "purpose": "Built-in type handlers"
+        },
+        {
+          "path": "tests/unit/test_types.py",
+          "action": "create",
+          "purpose": "TypeRegistry and handlers tests"
+        }
+      ],
+      "dependencies": [
+        "TYPES-002"
+      ],
+      "context": {
+        "specs": "docs/specs/types/spec.md",
+        "plans": "docs/specs/types/plan.md",
+        "tasks": "docs/specs/types/tasks.md"
+      },
+      "github": {
+        "issueNumber": 39,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/39"
+      }
+    },
+    {
+      "id": "TYPES-004",
+      "title": "Integrate TypeRegistry with Encoder/Decoder",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Modify ValueEncoder to use TypeRegistry for custom types and Parser to use type hints for decoding",
+      "parent": "TYPES-001",
+      "acceptanceCriteria": [
+        "ValueEncoder checks TypeRegistry before raising error",
+        "encode({\"uuid\": uuid_obj}) works automatically",
+        "decode() with type hints reconstructs custom types",
+        "register_type_handler(handler) public API",
+        "Added to pytoon.__init__.py exports",
+        "User can register custom handlers",
+        "Global registry accessible",
+        "Integration tests with mixed types",
+        "Documentation with custom handler examples",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/encoder/value.py",
+          "action": "modify",
+          "purpose": "Integrate TypeRegistry"
+        },
+        {
+          "path": "pytoon/decoder/parser.py",
+          "action": "modify",
+          "purpose": "Integrate TypeRegistry"
+        },
+        {
+          "path": "pytoon/__init__.py",
+          "action": "modify",
+          "purpose": "Add register_type_handler export"
+        }
+      ],
+      "dependencies": [
+        "TYPES-002",
+        "TYPES-003",
+        "ENCODER-002",
+        "DECODER-004"
+      ],
+      "context": {
+        "specs": "docs/specs/types/spec.md",
+        "plans": "docs/specs/types/plan.md",
+        "tasks": "docs/specs/types/tasks.md"
+      },
+      "github": {
+        "issueNumber": 40,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/40"
+      }
+    },
+    {
+      "id": "REFS-001",
+      "title": "Reference Support Implementation (v1.1-1.2)",
+      "type": "epic",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Implement reference/graph support: schema-based references (v1.1), circular reference handling (v1.2)",
+      "github": {
+        "issueNumber": 8,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/8"
+      },
+      "children": [
+        "REFS-002",
+        "REFS-003",
+        "REFS-004"
+      ],
+      "docs": {
+        "spec": "docs/specs/references/spec.md",
+        "plan": "docs/specs/references/plan.md",
+        "tasks": "docs/specs/references/tasks.md"
+      },
+      "version": "1.1",
+      "dependencies": [
+        "ENCODER-001",
+        "DECODER-001"
+      ]
+    },
+    {
+      "id": "REFS-002",
+      "title": "Implement Reference Detection",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Create reference detection system that tracks shared objects via id() and generates schema metadata",
+      "parent": "REFS-001",
+      "acceptanceCriteria": [
+        "Track objects by id() during traversal",
+        "Detect shared references (same object multiple times)",
+        "Identify reference fields by naming pattern (*Id, *Ref)",
+        "Generate _schema section with type definitions",
+        "O(n) traversal with hash map for id tracking",
+        "Unit tests for reference detection",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/references/__init__.py",
+          "action": "create",
+          "purpose": "References module exports"
+        },
+        {
+          "path": "pytoon/references/encoder.py",
+          "action": "create",
+          "purpose": "ReferenceEncoder class"
+        }
+      ],
+      "dependencies": [],
+      "context": {
+        "specs": "docs/specs/references/spec.md",
+        "plans": "docs/specs/references/plan.md",
+        "tasks": "docs/specs/references/tasks.md"
+      },
+      "github": {
+        "issueNumber": 41,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/41"
+      }
+    },
+    {
+      "id": "REFS-003",
+      "title": "Implement ReferenceEncoder/Decoder",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P1",
+      "description": "Create ReferenceEncoder that generates schema-based TOON and ReferenceDecoder that resolves references",
+      "parent": "REFS-001",
+      "acceptanceCriteria": [
+        "ReferenceEncoder.encode_refs(data, mode='schema')",
+        "Schema section format: _schema: {type_name: {fields}}",
+        "Reference placeholders: $1, $2, etc.",
+        "ReferenceDecoder.decode_refs(toon_str, resolve=True)",
+        "Resolves $1, $2 back to actual objects",
+        "When resolve=False, returns with placeholder IDs",
+        "Roundtrip fidelity for relational data",
+        "Integration tests with shared objects",
+        "Added to pytoon.__init__.py exports",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 8,
+        "estimatedDays": 4
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/references/decoder.py",
+          "action": "create",
+          "purpose": "ReferenceDecoder class"
+        },
+        {
+          "path": "pytoon/__init__.py",
+          "action": "modify",
+          "purpose": "Add encode_refs, decode_refs exports"
+        },
+        {
+          "path": "tests/unit/test_references.py",
+          "action": "create",
+          "purpose": "Reference encoding/decoding tests"
+        }
+      ],
+      "dependencies": [
+        "REFS-002",
+        "ENCODER-006",
+        "DECODER-004"
+      ],
+      "context": {
+        "specs": "docs/specs/references/spec.md",
+        "plans": "docs/specs/references/plan.md",
+        "tasks": "docs/specs/references/tasks.md"
+      },
+      "github": {
+        "issueNumber": 42,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/42"
+      }
+    },
+    {
+      "id": "REFS-004",
+      "title": "Implement GraphEncoder/Decoder",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P2",
+      "description": "Create GraphEncoder that normalizes circular references with object IDs and GraphDecoder that reconstructs cycles",
+      "parent": "REFS-001",
+      "acceptanceCriteria": [
+        "encode_graph(data) detects circular references",
+        "Object ID assignment during traversal",
+        "Reference placeholder for cycles: $ref:1",
+        "_graph: true flag in output",
+        "decode_graph(toon_str) reconstructs cycles",
+        "No infinite recursion on circular data",
+        "Roundtrip fidelity for graph structures",
+        "Unit tests with circular references",
+        "Added to pytoon.__init__.py exports",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 3,
+        "estimatedDays": 1.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/references/graph.py",
+          "action": "create",
+          "purpose": "Graph normalization"
+        },
+        {
+          "path": "pytoon/__init__.py",
+          "action": "modify",
+          "purpose": "Add encode_graph, decode_graph exports"
+        },
+        {
+          "path": "tests/unit/test_graph.py",
+          "action": "create",
+          "purpose": "Graph encoding/decoding tests"
+        }
+      ],
+      "dependencies": [
+        "REFS-003"
+      ],
+      "context": {
+        "specs": "docs/specs/references/spec.md",
+        "plans": "docs/specs/references/plan.md",
+        "tasks": "docs/specs/references/tasks.md"
+      },
+      "github": {
+        "issueNumber": 43,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/43"
+      }
+    },
+    {
+      "id": "SPARSE-001",
+      "title": "Sparse Array Implementation (v1.2)",
+      "type": "epic",
+      "state": "UNPROCESSED",
+      "priority": "P2",
+      "description": "Implement sparse and polymorphic array support: SparseArrayEncoder, PolymorphicArrayEncoder",
+      "github": {
+        "issueNumber": 9,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/9"
+      },
+      "children": [
+        "SPARSE-002",
+        "SPARSE-003",
+        "SPARSE-004"
+      ],
+      "docs": {
+        "spec": "docs/specs/sparse/spec.md",
+        "plan": "docs/specs/sparse/plan.md",
+        "tasks": "docs/specs/sparse/tasks.md"
+      },
+      "version": "1.2",
+      "dependencies": [
+        "ENCODER-001"
+      ]
+    },
+    {
+      "id": "SPARSE-002",
+      "title": "Implement Sparsity Analysis",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P2",
+      "description": "Create sparsity analyzer that calculates field presence rates and determines sparse format eligibility",
+      "parent": "SPARSE-001",
+      "acceptanceCriteria": [
+        "analyze_sparsity(array) returns dict[str, float] presence rates",
+        "Presence rate = count / len(array) * 100",
+        "Threshold: 30%+ missing values triggers sparse format",
+        "Handles None values and missing keys",
+        "O(n*m) where n=rows, m=fields",
+        "Unit tests for presence calculation",
+        "Threshold tuning with benchmarks",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/sparse/__init__.py",
+          "action": "create",
+          "purpose": "Sparse module exports"
+        },
+        {
+          "path": "pytoon/sparse/sparse.py",
+          "action": "create",
+          "purpose": "SparseArrayEncoder class"
+        }
+      ],
+      "dependencies": [
+        "ENCODER-004"
+      ],
+      "context": {
+        "specs": "docs/specs/sparse/spec.md",
+        "plans": "docs/specs/sparse/plan.md",
+        "tasks": "docs/specs/sparse/tasks.md"
+      },
+      "github": {
+        "issueNumber": 44,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/44"
+      }
+    },
+    {
+      "id": "SPARSE-003",
+      "title": "Implement SparseArrayEncoder",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P2",
+      "description": "Create SparseArrayEncoder that generates optional field markers and uses empty-as-null convention",
+      "parent": "SPARSE-001",
+      "acceptanceCriteria": [
+        "encode_sparse(array) generates [N]{field1,field2?}: format",
+        "Optional fields marked with ? suffix",
+        "Empty string represents null/missing value",
+        "Consistent field ordering",
+        "Token savings 40%+ on sparse tabular data",
+        "Integration with ArrayEncoder dispatch",
+        "Roundtrip fidelity with SparseArrayDecoder",
+        "Unit tests for sparse encoding",
+        "Benchmark token savings",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 5,
+        "estimatedDays": 2.5
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/sparse/sparse.py",
+          "action": "modify",
+          "purpose": "Complete SparseArrayEncoder"
+        },
+        {
+          "path": "tests/unit/test_sparse.py",
+          "action": "create",
+          "purpose": "Sparse array tests"
+        }
+      ],
+      "dependencies": [
+        "SPARSE-002",
+        "ENCODER-005"
+      ],
+      "context": {
+        "specs": "docs/specs/sparse/spec.md",
+        "plans": "docs/specs/sparse/plan.md",
+        "tasks": "docs/specs/sparse/tasks.md"
+      },
+      "github": {
+        "issueNumber": 45,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/45"
+      }
+    },
+    {
+      "id": "SPARSE-004",
+      "title": "Implement PolymorphicArrayEncoder",
+      "type": "story",
+      "state": "UNPROCESSED",
+      "priority": "P2",
+      "description": "Create PolymorphicArrayEncoder that groups array elements by discriminator and generates sub-tables",
+      "parent": "SPARSE-001",
+      "acceptanceCriteria": [
+        "encode_polymorphic(array, type_field='type')",
+        "Groups elements by discriminator value",
+        "@type:{name} section headers",
+        "Per-type optimal schema (only fields for that type)",
+        "Maintains overall array length",
+        "Configurable discriminator field name",
+        "Roundtrip fidelity preserves type information",
+        "Token savings on heterogeneous collections",
+        "Integration tests with mixed types",
+        "mypy --strict passes"
+      ],
+      "effort": {
+        "storyPoints": 6,
+        "estimatedDays": 3
+      },
+      "targetFiles": [
+        {
+          "path": "pytoon/sparse/polymorphic.py",
+          "action": "create",
+          "purpose": "PolymorphicArrayEncoder class"
+        },
+        {
+          "path": "pytoon/encoder/array.py",
+          "action": "modify",
+          "purpose": "Integrate sparse/polymorphic detection"
+        },
+        {
+          "path": "tests/unit/test_polymorphic.py",
+          "action": "create",
+          "purpose": "Polymorphic array tests"
+        }
+      ],
+      "dependencies": [
+        "SPARSE-003"
+      ],
+      "context": {
+        "specs": "docs/specs/sparse/spec.md",
+        "plans": "docs/specs/sparse/plan.md",
+        "tasks": "docs/specs/sparse/tasks.md"
+      },
+      "github": {
+        "issueNumber": 46,
+        "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/46"
+      }
+    }
+  ]
+}
