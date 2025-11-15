@@ -655,8 +655,10 @@
       "id": "ENCODER-006",
       "title": "Implement ObjectEncoder Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
+      "startedAt": "2025-11-16T00:00:00Z",
+      "completedAt": "2025-11-16T00:00:00Z",
       "description": "Create ObjectEncoder that encodes Python dicts with proper indentation, key: value syntax, and recursive nesting",
       "parent": "ENCODER-001",
       "acceptanceCriteria": [
