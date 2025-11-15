@@ -156,7 +156,7 @@ class PathExpander:
             >>> expander.has_dotted_keys({"simple": 1})
             False
         """
-        return any("." in key for key in data.keys())
+        return any("." in key for key in data)
 
     def validate_no_conflicts(self, data: dict[str, Any]) -> None:
         """Validate that expanding keys won't cause conflicts.
@@ -179,7 +179,7 @@ class PathExpander:
         # Build path tree to check for conflicts
         path_tree: dict[str, Any] = {}
 
-        for key in data.keys():
+        for key in data:
             parts = key.split(".")
 
             current = path_tree
