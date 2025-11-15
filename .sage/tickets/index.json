@@ -705,8 +705,10 @@
       "id": "ENCODER-007",
       "title": "Implement KeyFoldingEngine Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
+      "startedAt": "2025-11-16T00:00:00Z",
+      "completedAt": "2025-11-16T00:00:00Z",
       "description": "Create KeyFoldingEngine that collapses single-key wrapper chains into dotted paths when key_folding='safe' is enabled",
       "parent": "ENCODER-001",
       "acceptanceCriteria": [
