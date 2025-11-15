@@ -511,7 +511,7 @@
       "id": "ENCODER-003",
       "title": "Implement QuotingEngine Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create context-aware QuotingEngine that determines when strings need quoting and applies escape sequences",
       "parent": "ENCODER-001",
@@ -552,13 +552,14 @@
       "github": {
         "issueNumber": 19,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/19"
-      }
+      },
+      "completedAt": "2025-11-16T00:00:00Z"
     },
     {
       "id": "ENCODER-004",
       "title": "Implement TabularAnalyzer Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create TabularAnalyzer that analyzes arrays to determine tabular format eligibility by checking uniform keys and no nested structures",
       "parent": "ENCODER-001",
@@ -597,15 +598,17 @@
       "github": {
         "issueNumber": 20,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/20"
-      }
+      },
+      "completedAt": "2025-11-16T00:00:00Z"
     },
     {
       "id": "ENCODER-005",
       "title": "Implement ArrayEncoder Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create ArrayEncoder that dispatches to tabular, inline, or list format based on TabularAnalyzer results",
+      "startedAt": "2025-11-16T00:00:00Z",
       "parent": "ENCODER-001",
       "acceptanceCriteria": [
         "Tabular format: [{\"id\": 1}] → \"array[1]{id}:\\n  1\"",
