@@ -755,7 +755,7 @@
       "id": "DECODER-001",
       "title": "Decoder Module Implementation",
       "type": "epic",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Implement decoder components: Lexer, Parser, Validator, PathExpander, StateMachine",
       "github": {
@@ -778,13 +778,14 @@
       "dependencies": [
         "CORE-001",
         "UTILS-001"
-      ]
+      ],
+      "updated": "2025-11-15T22:25:00Z"
     },
     {
       "id": "DECODER-002",
       "title": "Implement Lexer Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create Lexer that tokenizes TOON input into token stream with position tracking for error reporting",
       "parent": "DECODER-001",
@@ -832,13 +833,14 @@
       "github": {
         "issueNumber": 24,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/24"
-      }
+      },
+      "updated": "2025-11-15T22:25:00Z"
     },
     {
       "id": "DECODER-003",
       "title": "Implement StateMachine Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create StateMachine that manages parser state transitions and indentation stack",
       "parent": "DECODER-001",
@@ -877,13 +879,14 @@
       "github": {
         "issueNumber": 25,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/25"
-      }
+      },
+      "updated": "2025-11-15T22:25:00Z"
     },
     {
       "id": "DECODER-004",
       "title": "Implement Parser Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create Parser that builds hierarchical Python objects from token stream using StateMachine",
       "parent": "DECODER-001",
@@ -927,13 +930,14 @@
       "github": {
         "issueNumber": 26,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/26"
-      }
+      },
+      "updated": "2025-11-15T22:25:00Z"
     },
     {
       "id": "DECODER-005",
       "title": "Implement Validator Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create Validator that enforces TOON v1.5 spec rules in strict mode or lenient mode",
       "parent": "DECODER-001",
@@ -975,13 +979,14 @@
       "github": {
         "issueNumber": 27,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/27"
-      }
+      },
+      "updated": "2025-11-15T22:25:00Z"
     },
     {
       "id": "DECODER-006",
       "title": "Implement PathExpander Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create PathExpander that reverses key folding by expanding dotted keys into nested dictionaries",
       "parent": "DECODER-001",
@@ -1021,7 +1026,8 @@
       "github": {
         "issueNumber": 28,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/28"
-      }
+      },
+      "updated": "2025-11-15T22:25:00Z"
     },
     {
       "id": "CLI-001",
