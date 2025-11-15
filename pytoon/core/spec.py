@@ -234,10 +234,7 @@ class TOONSpec:
             return True
 
         # Check if looks like array header
-        if cls.ARRAY_HEADER_PATTERN.match(value):
-            return True
-
-        return False
+        return bool(cls.ARRAY_HEADER_PATTERN.match(value))
 
     @classmethod
     def validate_delimiter(cls, delimiter: str) -> None:
