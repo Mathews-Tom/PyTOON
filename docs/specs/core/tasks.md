@@ -38,12 +38,12 @@
 
 **CORE-003: Create Package Structure**
 
-- **Description:** Set up pytoon package structure with __init__.py, __version__.py, py.typed marker, and core module exports
+- **Description:** Set up pytoon package structure with **init**.py, **version**.py, py.typed marker, and core module exports
 - **Acceptance:**
-  - [ ] pytoon/__init__.py created with public API stubs
-  - [ ] pytoon/__version__.py with __version__ = "1.0.0"
+  - [ ] pytoon/**init**.py created with public API stubs
+  - [ ] pytoon/**version**.py with **version** = "1.0.0"
   - [ ] pytoon/py.typed marker for PEP 561
-  - [ ] pytoon/core/__init__.py exports Encoder, Decoder, TOONSpec
+  - [ ] pytoon/core/**init**.py exports Encoder, Decoder, TOONSpec
   - [ ] All imports work: `from pytoon import encode, decode`
 - **Effort:** 2 story points (3-4 hours)
 - **Owner:** Backend Developer
@@ -59,11 +59,11 @@
 
 **CORE-004: Implement Encoder Class**
 
-- **Description:** Create Encoder class with __init__ accepting configuration parameters (indent, delimiter, key_folding) and encode() method stub that will delegate to encoder module
+- **Description:** Create Encoder class with **init** accepting configuration parameters (indent, delimiter, key_folding) and encode() method stub that will delegate to encoder module
 - **Acceptance:**
-  - [ ] Encoder.__init__ validates indent > 0
-  - [ ] Encoder.__init__ validates delimiter in [",", "\t", "|"]
-  - [ ] Encoder.__init__ validates key_folding in ["off", "safe"]
+  - [ ] Encoder.**init** validates indent > 0
+  - [ ] Encoder.**init** validates delimiter in [",", "\t", "|"]
+  - [ ] Encoder.**init** validates key_folding in ["off", "safe"]
   - [ ] Encoder.encode(value) returns placeholder string
   - [ ] ValueError raised for invalid config with descriptive message
   - [ ] Full type hints with Literal types
@@ -75,10 +75,10 @@
 
 **CORE-005: Implement Decoder Class**
 
-- **Description:** Create Decoder class with __init__ accepting configuration parameters (strict, expand_paths) and decode() method stub that will delegate to decoder module
+- **Description:** Create Decoder class with **init** accepting configuration parameters (strict, expand_paths) and decode() method stub that will delegate to decoder module
 - **Acceptance:**
-  - [ ] Decoder.__init__ validates strict is bool
-  - [ ] Decoder.__init__ validates expand_paths in ["off", "safe"]
+  - [ ] Decoder.**init** validates strict is bool
+  - [ ] Decoder.**init** validates expand_paths in ["off", "safe"]
   - [ ] Decoder.decode(toon_string) returns placeholder dict
   - [ ] ValueError raised for invalid config
   - [ ] Full type hints with Literal types

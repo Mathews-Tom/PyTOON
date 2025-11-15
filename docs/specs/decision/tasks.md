@@ -84,7 +84,7 @@
   - [ ] When auto=True and decision is "toon", uses pytoon.encode()
   - [ ] When auto=False, always uses TOON
   - [ ] Accepts **kwargs for encoding options
-  - [ ] Added to pytoon.__init__.py exports
+  - [ ] Added to pytoon.**init**.py exports
   - [ ] Google-style docstrings with examples
   - [ ] Integration tests
   - [ ] mypy --strict passes

@@ -39,7 +39,7 @@
   - [ ] mypy --strict passes
 - **Effort:** 3 story points (1 day)
 - **Owner:** Backend Developer
-- **Dependencies:** CORE-003 (__version__)
+- **Dependencies:** CORE-003 (**version**)
 - **Priority:** P0 (Blocker - CLI foundation)
 
 **CLI-003: Implement Encode Command**
@@ -91,10 +91,10 @@
 
 **CLI-005: Configure Entry Point**
 
-- **Description:** Add [project.scripts] entry point in pyproject.toml so pytoon command is available after pip install, and create __main__.py for python -m pytoon
+- **Description:** Add [project.scripts] entry point in pyproject.toml so pytoon command is available after pip install, and create **main**.py for python -m pytoon
 - **Acceptance:**
   - [ ] pyproject.toml has [project.scripts] pytoon = "pytoon.cli:main"
-  - [ ] pytoon/cli/__main__.py enables python -m pytoon
+  - [ ] pytoon/cli/**main**.py enables python -m pytoon
   - [ ] After pip install, pytoon command works
   - [ ] After pip install, python -m pytoon works
   - [ ] Help text accessible: pytoon --help

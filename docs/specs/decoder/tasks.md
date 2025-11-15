@@ -100,8 +100,8 @@
 
 - **Description:** Create Validator that enforces TOON v1.5 spec rules in strict mode (raises errors) or lenient mode (collects warnings) for array length mismatch, field inconsistency, and delimiter errors
 - **Acceptance:**
-  - [ ] Validator.__init__(strict=True) for strict mode
-  - [ ] Validator.__init__(strict=False) for lenient mode
+  - [ ] Validator.**init**(strict=True) for strict mode
+  - [ ] Validator.**init**(strict=False) for lenient mode
   - [ ] validate_array_length(declared, actual, line) raises/warns on mismatch
   - [ ] validate_field_consistency(fields, row_values, line) checks count
   - [ ] validate_delimiter_consistency() checks uniform delimiter

@@ -87,7 +87,7 @@
   - [ ] encode({"uuid": uuid_obj}) works automatically
   - [ ] decode() with type hints reconstructs custom types
   - [ ] register_type_handler(handler) public API
-  - [ ] Added to pytoon.__init__.py exports
+  - [ ] Added to pytoon.**init**.py exports
   - [ ] User can register custom handlers
   - [ ] Global registry accessible
   - [ ] Integration tests with mixed types

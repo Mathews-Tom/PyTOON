@@ -27,7 +27,7 @@
 - **Acceptance:**
   - [ ] Track objects by id() during traversal
   - [ ] Detect shared references (same object multiple times)
-  - [ ] Identify reference fields by naming pattern (*Id, *Ref)
+  - [ ] Identify reference fields by naming pattern (*Id,*Ref)
   - [ ] Generate _schema section with type definitions
   - [ ] O(n) traversal with hash map for id tracking
   - [ ] Unit tests for reference detection
@@ -56,7 +56,7 @@
   - [ ] When resolve=False, returns with placeholder IDs
   - [ ] Roundtrip fidelity for relational data
   - [ ] Integration tests with shared objects
-  - [ ] Added to pytoon.__init__.py exports
+  - [ ] Added to pytoon.**init**.py exports
   - [ ] mypy --strict passes
 - **Effort:** 8 story points (4-5 days)
 - **Owner:** Backend Developer
@@ -82,7 +82,7 @@
   - [ ] No infinite recursion on circular data
   - [ ] Roundtrip fidelity for graph structures
   - [ ] Unit tests with circular references
-  - [ ] Added to pytoon.__init__.py exports
+  - [ ] Added to pytoon.**init**.py exports
   - [ ] mypy --strict passes
 - **Effort:** 3 story points (1-2 days)
 - **Owner:** Backend Developer
