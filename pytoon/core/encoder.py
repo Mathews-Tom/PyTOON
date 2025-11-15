@@ -163,9 +163,7 @@ class Encoder:
             TOONEncodeError: If value type is unsupported
         """
         if depth > TOONSpec.MAX_NESTING_DEPTH:
-            raise TOONEncodeError(
-                f"Maximum nesting depth exceeded: {TOONSpec.MAX_NESTING_DEPTH}"
-            )
+            raise TOONEncodeError(f"Maximum nesting depth exceeded: {TOONSpec.MAX_NESTING_DEPTH}")
 
         if value is None:
             return TOONSpec.NULL_VALUE
@@ -268,9 +266,7 @@ class Encoder:
                     indent = " " * self._indent
                     rows = []
                     for item in value:
-                        row_values = [
-                            self._encode_value(item[key], depth + 1) for key in keys
-                        ]
+                        row_values = [self._encode_value(item[key], depth + 1) for key in keys]
                         rows.append(f"{indent}{self._delimiter.join(row_values)}")
                     return header + "\n" + "\n".join(rows)
 

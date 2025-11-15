@@ -9,7 +9,7 @@ from pytoon.core.encoder import Encoder
 from pytoon.core.spec import TOONSpec
 
 __all__: list[str] = [
-    "TOONSpec",
-    "Encoder",
     "Decoder",
+    "Encoder",
+    "TOONSpec",
 ]

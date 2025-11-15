@@ -6,7 +6,6 @@ of TOON format strings back to Python objects.
 
 from __future__ import annotations
 
-import re
 from typing import Any, Literal
 
 from pytoon.core.spec import TOONSpec
@@ -205,7 +204,7 @@ class Decoder:
         header_part = header_line
         if ":" in header_line:
             colon_idx = header_line.index(":")
-            header_part = header_line[:colon_idx + 1]  # Include colon for pattern match
+            header_part = header_line[: colon_idx + 1]  # Include colon for pattern match
 
         match = TOONSpec.ARRAY_HEADER_PATTERN.match(header_part)
         if not match:
@@ -339,9 +338,7 @@ class Decoder:
 
         return result
 
-    def _parse_list_array(
-        self, data_lines: list[str], declared_length: int
-    ) -> list[Any]:
+    def _parse_list_array(self, data_lines: list[str], declared_length: int) -> list[Any]:
         """Parse a list-style array (one item per line with '- ' prefix).
 
         Args:
@@ -433,7 +430,7 @@ class Decoder:
                             # Check if it's an array header
                             if value_part.startswith("["):
                                 # Collect remaining lines for array
-                                remaining = "\n".join([value_part] + lines[i + 1 :])
+                                remaining = "\n".join([value_part, *lines[i + 1 :]])
                                 result[current_key] = self._parse_array(remaining)
                                 return result
                             else:

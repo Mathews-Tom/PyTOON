@@ -18,12 +18,7 @@ from pytoon.__version__ import __version__, __version_info__
 from pytoon.core.decoder import Decoder
 from pytoon.core.encoder import Encoder
 from pytoon.core.spec import TOONSpec
-from pytoon.utils.errors import (
-    TOONDecodeError,
-    TOONEncodeError,
-    TOONError,
-    TOONValidationError,
-)
+from pytoon.utils.errors import TOONDecodeError, TOONEncodeError, TOONError, TOONValidationError
 
 
 def encode(
@@ -131,7 +126,7 @@ __all__ = [
     # Core API
     "encode",
     "decode",
-    # Exceptions
+    # TOON Exceptions
     "TOONError",
     "TOONEncodeError",
     "TOONDecodeError",

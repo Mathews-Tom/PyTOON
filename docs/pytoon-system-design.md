@@ -132,7 +132,7 @@ graph TB
 
 ### Repository Structure
 
-```
+```plaintext
 PyToon/
 ├── .github/
 │   ├── workflows/
