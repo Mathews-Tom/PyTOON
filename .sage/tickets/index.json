@@ -458,7 +458,7 @@
       "id": "ENCODER-002",
       "title": "Implement ValueEncoder Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create ValueEncoder that normalizes Python primitives to TOON representation including None→null, bool→true/false, numbers without scientific notation, NaN/Inf→null, -0.0→0",
       "parent": "ENCODER-001",
