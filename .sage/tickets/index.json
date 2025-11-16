@@ -1033,7 +1033,7 @@
       "id": "CLI-001",
       "title": "CLI Interface Implementation",
       "type": "epic",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Implement command-line interface with auto-detection and token statistics",
       "github": {
@@ -1056,16 +1056,20 @@
       "dependencies": [
         "CORE-001",
         "UTILS-001"
-      ]
+      ],
+      "updated": "2025-11-16T00:01:00Z",
+      "completedAt": "2025-11-16T00:01:00Z"
     },
     {
       "id": "CLI-002",
       "title": "Implement Argument Parser",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create argument parser using argparse with subcommands and configuration flags",
       "parent": "CLI-001",
+      "updated": "2025-11-16T10:30:00Z",
+      "completedAt": "2025-11-16T10:30:00Z",
       "acceptanceCriteria": [
         "argparse-based CLI with subcommands",
         "encode subcommand with input file argument",
@@ -1116,10 +1120,12 @@
       "id": "CLI-003",
       "title": "Implement Encode Command",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create encode command handler that reads JSON and writes TOON",
       "parent": "CLI-001",
+      "startedAt": "2025-11-16T12:00:00Z",
+      "completedAt": "2025-11-16T12:30:00Z",
       "acceptanceCriteria": [
         "Reads JSON from file when path provided",
         "Reads JSON from stdin when no file",
@@ -1160,10 +1166,12 @@
       "id": "CLI-004",
       "title": "Implement Decode Command",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Create decode command handler that reads TOON and writes JSON",
       "parent": "CLI-001",
+      "startedAt": "2025-11-16T13:00:00Z",
+      "completedAt": "2025-11-16T13:30:00Z",
       "acceptanceCriteria": [
         "Reads TOON from file when path provided",
         "Reads TOON from stdin when no file",
@@ -1204,10 +1212,12 @@
       "id": "CLI-005",
       "title": "Configure Entry Point",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Add entry point in pyproject.toml and create __main__.py for CLI",
       "parent": "CLI-001",
+      "startedAt": "2025-11-16T16:00:00Z",
+      "completedAt": "2025-11-16T16:30:00Z",
       "acceptanceCriteria": [
         "pyproject.toml has [project.scripts] pytoon entry",
         "pytoon/cli/__main__.py enables python -m pytoon",
@@ -1251,10 +1261,12 @@
       "id": "CLI-006",
       "title": "Implement Token Statistics Flag",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P0",
       "description": "Add --stats flag that displays token count comparison after encoding",
       "parent": "CLI-001",
+      "startedAt": "2025-11-16T14:00:00Z",
+      "completedAt": "2025-11-16T15:00:00Z",
       "acceptanceCriteria": [
         "--stats flag available on encode command",
         "Output format: \"TOON: X tokens | JSON: Y tokens | Savings: Z%\"",
