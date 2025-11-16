@@ -307,11 +307,11 @@ class TestObjectEncoderKeyQuoting:
     """Tests for key quoting scenarios."""
 
     def test_key_with_hyphen(self) -> None:
-        """Key containing hyphen (not a structural char, no quoting needed)."""
+        """Key containing hyphen requires quoting (not a valid identifier char)."""
         encoder = ObjectEncoder()
         result = encoder.encode({"user-id": 123})
-        # Hyphen is not a structural character, so no quoting
-        assert "user-id: 123" in result
+        # Hyphen is not a valid identifier character, so quoting is required
+        assert '"user-id": 123' in result
 
     def test_key_with_space(self) -> None:
         """Key containing space (embedded space, no leading/trailing)."""
@@ -595,7 +595,7 @@ class TestObjectEncoderIntegration:
         assert "email: alice@example.com" in result
         assert "active: true" in result
         assert "metadata:" in result
-        assert "  created: 2024-01-01" in result
+        assert '  created: "2024-01-01"' in result  # Date strings with hyphens are quoted
         assert "  logins: 100" in result
         assert "roles: array[2]: admin,user" in result
 
