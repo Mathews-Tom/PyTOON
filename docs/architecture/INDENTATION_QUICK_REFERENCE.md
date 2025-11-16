@@ -3,6 +3,7 @@
 ## The Core Problem
 
 **Current Implementation (BROKEN)**:
+
 ```python
 # pytoon/core/decoder.py:361
 stripped = line.strip()  # ← DESTROYS INDENTATION INFO
@@ -37,7 +38,7 @@ items[2]:              # depth=0, array header
     name: Second       # depth=1, sibling field
 ```
 
-### Parsing Rules:
+### Parsing Rules
 
 1. **List items** start with `"- "` at `item_depth = array_depth + 1`
 2. **First field** is on the hyphen line (after `"- "`)
@@ -104,11 +105,13 @@ class LineCursor:
 ## Encoder Fix
 
 **Current (BROKEN)**:
+
 ```python
 lines.append(f"{indent}- {encoded}")  # Multi-line encoded goes AFTER "-"
 ```
 
 **Correct**:
+
 ```python
 # First field ON the hyphen line
 lines.append(f"{indent}- {first_key}: {first_value}")

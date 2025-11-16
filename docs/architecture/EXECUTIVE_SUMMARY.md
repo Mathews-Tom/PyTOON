@@ -11,6 +11,7 @@ The PyToon decoder **cannot properly parse nested objects within list-format arr
 ## Root Cause Analysis
 
 ### Current Implementation (BROKEN)
+
 ```python
 # pytoon/core/decoder.py:361
 stripped = line.strip()          # Destroys indentation info
@@ -18,6 +19,7 @@ if stripped.startswith("- "):    # Heuristic pattern matching
 ```
 
 ### Reference Implementation (CORRECT)
+
 ```typescript
 // TOON TypeScript reference
 const depth = Math.floor(indent / indentSize)  // Preserve depth
@@ -31,6 +33,7 @@ if (line.depth === targetDepth && ...)          // Depth comparison
 ### 1. TOON v2.0 Specification Requirements
 
 From official spec §10 (Objects as List Items):
+
 - First field goes **on the hyphen line**: `- key: value`
 - Sibling fields at **depth + 1** (one deeper than hyphen)
 - Nested object fields at **depth + 2**
@@ -39,6 +42,7 @@ From official spec §10 (Objects as List Items):
 ### 2. Encoder Bug
 
 `pytoon/core/encoder.py:286` incorrectly places entire encoded value after "- ":
+
 ```python
 lines.append(f"{indent}- {encoded}")  # WRONG: entire dict after hyphen
 ```
@@ -48,6 +52,7 @@ Should be: first field on hyphen line, rest indented below.
 ### 3. Decoder Bug
 
 `pytoon/core/decoder.py:361` destroys depth information:
+
 ```python
 stripped = line.strip()  # LOSES ALL DEPTH CONTEXT
 ```
