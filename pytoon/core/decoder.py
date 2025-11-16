@@ -9,6 +9,7 @@ from __future__ import annotations
 from typing import Any, Literal
 
 from pytoon.core.spec import TOONSpec
+from pytoon.decoder.depth_decoder import decode_toon as depth_decode
 from pytoon.utils.errors import TOONDecodeError, TOONValidationError
 
 
@@ -118,9 +119,30 @@ class Decoder:
             True
 
         Note:
-            This is a stub implementation that handles basic formats.
-            Full parsing with indentation tracking, state machine,
-            and validation will be implemented in decoder module components.
+            Uses depth-based parsing per TOON v2.0 specification for proper
+            handling of nested objects within list-format arrays.
+        """
+        if not isinstance(toon_string, str):
+            raise TOONDecodeError(f"Expected string, got: {type(toon_string).__name__}")
+
+        # Use new depth-based decoder
+        return depth_decode(
+            toon_string,
+            indent_size=TOONSpec.DEFAULT_INDENT,
+            strict=self._strict,
+        )
+
+    def decode_legacy(self, toon_string: str) -> Any:
+        """Legacy decoder implementation (deprecated).
+
+        This is the old implementation that doesn't properly handle
+        nested objects in list-format arrays. Kept for comparison.
+
+        Args:
+            toon_string: TOON-formatted string to decode
+
+        Returns:
+            Python object (dict, list, or primitive)
         """
         if not isinstance(toon_string, str):
             raise TOONDecodeError(f"Expected string, got: {type(toon_string).__name__}")
@@ -351,7 +373,7 @@ class Decoder:
         Raises:
             TOONValidationError: If length mismatch in strict mode
         """
-        result = []
+        result: list[Any] = []
 
         # Group lines by list item (each item starts with "- ")
         items: list[list[str]] = []
