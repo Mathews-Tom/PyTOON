@@ -50,10 +50,11 @@ class TestNeedsQuoting:
         assert QuotingEngine.needs_quoting("100.0") is True
 
     def test_not_number_with_trailing_chars(self) -> None:
-        """Strings that look like numbers but have extra chars don't match."""
-        assert QuotingEngine.needs_quoting("42px") is False
-        assert QuotingEngine.needs_quoting("3.14rad") is False
-        assert QuotingEngine.needs_quoting("10%") is False
+        """Strings starting with digits but not valid numbers need quoting."""
+        # These start with digits but aren't valid numbers, causing lexer ambiguity
+        assert QuotingEngine.needs_quoting("42px") is True
+        assert QuotingEngine.needs_quoting("3.14rad") is True
+        assert QuotingEngine.needs_quoting("10%") is True
 
     def test_contains_comma_delimiter(self) -> None:
         """Strings containing comma delimiter need quoting."""
@@ -107,11 +108,12 @@ class TestNeedsQuoting:
         assert QuotingEngine.needs_quoting("- list marker") is True
 
     def test_not_list_marker_without_space(self) -> None:
-        """Dash without space is not a list marker."""
+        """Dash without space is not a list marker, but hyphens need quoting."""
         # "-item" is not a number (no digit after -) and not "- " marker
+        # But it starts with hyphen which can confuse lexer
         assert QuotingEngine.needs_quoting("-item") is False
-        # But dash in middle is fine
-        assert QuotingEngine.needs_quoting("some-thing") is False
+        # Dash in middle needs quoting to avoid lexer confusion (UUIDs, dates, etc.)
+        assert QuotingEngine.needs_quoting("some-thing") is True
 
     def test_contains_colon_needs_quoting(self) -> None:
         """Strings containing colon need quoting."""
@@ -331,9 +333,9 @@ class TestIntegration:
         assert QuotingEngine.is_safe_identifier("key.name") is False
         assert QuotingEngine.needs_quoting("key.name") is False  # No structural chars
 
-        # This has dash, not safe identifier but doesn't need quoting
+        # This has dash, not safe identifier and needs quoting (lexer ambiguity)
         assert QuotingEngine.is_safe_identifier("some-thing") is False
-        assert QuotingEngine.needs_quoting("some-thing") is False
+        assert QuotingEngine.needs_quoting("some-thing") is True  # Hyphens cause lexer issues
 
 
 class TestEdgeCases:
@@ -380,17 +382,19 @@ class TestEdgeCases:
         assert QuotingEngine.needs_quoting("-123.456") is True
 
     def test_scientific_notation_not_matched(self) -> None:
-        """Scientific notation is not matched as number pattern."""
-        # TOON doesn't use scientific notation, so "1e6" shouldn't match our pattern
-        assert QuotingEngine.needs_quoting("1e6") is False  # Not our number pattern
-        assert QuotingEngine.needs_quoting("2.5e-3") is False
+        """Scientific notation is not matched as number pattern, but starts with digit."""
+        # TOON doesn't use scientific notation, so "1e6" isn't our number pattern
+        # BUT it starts with a digit, so it needs quoting to avoid lexer ambiguity
+        assert QuotingEngine.needs_quoting("1e6") is True  # Starts with digit
+        assert QuotingEngine.needs_quoting("2.5e-3") is True  # Contains hyphen
 
     def test_leading_zeros(self) -> None:
-        """Numbers with leading zeros."""
+        """Numbers with leading zeros need quoting."""
         # Our pattern matches "0" but not "00" or "007"
+        # But they start with digits, so need quoting for lexer safety
         assert QuotingEngine.needs_quoting("0") is True
-        assert QuotingEngine.needs_quoting("00") is False  # Not matched by pattern
-        assert QuotingEngine.needs_quoting("007") is False  # Not matched by pattern
+        assert QuotingEngine.needs_quoting("00") is True  # Starts with digit
+        assert QuotingEngine.needs_quoting("007") is True  # Starts with digit
 
     def test_decimal_without_whole_part(self) -> None:
         """Decimal without whole number part."""

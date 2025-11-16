@@ -229,8 +229,22 @@ class TOONSpec:
         if cls.INTEGER_PATTERN.match(value) or cls.FLOAT_PATTERN.match(value):
             return True
 
+        # Check if starts with digit but isn't a valid number (e.g., UUIDs)
+        if value and value[0].isdigit() and not (
+            cls.INTEGER_PATTERN.match(value) or cls.FLOAT_PATTERN.match(value)
+        ):
+            return True
+
         # Check if starts with list marker
         if value.startswith("- "):
+            return True
+
+        # Check for hyphens (UUIDs, dates, etc.) - need quoting to avoid lexer confusion
+        if "-" in value and not value.startswith("-"):
+            return True
+
+        # Check for slashes (URLs, paths) - need quoting
+        if "/" in value:
             return True
 
         # Check if looks like array header
