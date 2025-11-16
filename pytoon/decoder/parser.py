@@ -213,6 +213,9 @@ class Parser:
             header = self._peek()
             count = self._extract_array_count(header.value)
             self._advance()
+            # Consume the colon after array header (e.g., [3]:)
+            if not self._at_end() and self._peek().type == TokenType.COLON:
+                self._advance()
             self._skip_newlines()
 
         # Parse list items
@@ -225,6 +228,11 @@ class Parser:
             if self._peek().type == TokenType.DEDENT:
                 self._advance()
                 break
+
+            # Skip INDENT tokens that appear before dashes
+            if self._peek().type == TokenType.INDENT:
+                self._advance()
+                continue
 
             if self._peek().type != TokenType.DASH:
                 break
@@ -266,10 +274,74 @@ class Parser:
             self._advance()
             return None
         elif token.type == TokenType.IDENTIFIER:
+            # Check if this is start of an object (identifier followed by colon)
+            if self._pos + 1 < len(self._tokens):
+                next_token = self._tokens[self._pos + 1]
+                if next_token.type == TokenType.COLON:
+                    # This is an object - parse it as key-value pairs
+                    return self._parse_inline_object()
+            # Otherwise it's a standalone value
             self._advance()
             return token.value
         else:
             return None
+
+    def _parse_inline_object(self) -> dict[str, Any]:
+        """Parse an inline object in a list (key-value pairs until next dash or dedent).
+
+        This handles the case where a list item is an object with key-value pairs
+        that appear on subsequent lines, ending when another dash (list item) or
+        dedent/end is encountered.
+
+        Returns:
+            Parsed dictionary object
+
+        Examples:
+            >>> # Input:
+            >>> # -   id: 1
+            >>> # type: signup
+            >>> # timestamp: "2025-11-06"
+            >>> # -   id: 2
+            >>> # Result: {'id': 1, 'type': 'signup', 'timestamp': '2025-11-06'}
+        """
+        result: dict[str, Any] = {}
+
+        while not self._at_end():
+            self._skip_newlines()
+
+            if self._at_end() or self._peek().type == TokenType.EOF:
+                break
+
+            token = self._peek()
+
+            # Stop if we hit a dash (next list item) or dedent
+            if token.type == TokenType.DASH:
+                break
+            if token.type == TokenType.DEDENT:
+                break
+
+            # Expect identifier (key)
+            if token.type != TokenType.IDENTIFIER:
+                break
+
+            key = token.value
+            self._advance()
+
+            # Expect colon
+            if self._at_end() or self._peek().type != TokenType.COLON:
+                raise TOONDecodeError(
+                    f"Expected ':' after key {key!r} at line {token.line}"
+                )
+            self._advance()
+
+            # Parse value
+            value = self._parse_value()
+
+            if key in result:
+                raise TOONDecodeError(f"Duplicate key: {key!r} at line {token.line}")
+            result[key] = value
+
+        return result
 
     def _parse_tabular_array(self) -> list[dict[str, Any]]:
         """Parse a tabular array with field headers."""

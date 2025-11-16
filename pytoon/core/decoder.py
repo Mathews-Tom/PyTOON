@@ -353,18 +353,53 @@ class Decoder:
         """
         result = []
 
+        # Group lines by list item (each item starts with "- ")
+        items: list[list[str]] = []
+        current_item_lines: list[str] = []
+
         for line in data_lines:
-            line = line.strip()
-            if not line:
+            stripped = line.strip()
+            if not stripped:
                 continue
 
-            if line.startswith("- "):
-                item_str = line[2:].strip()
+            if stripped.startswith("- "):
+                # Start of a new list item
+                if current_item_lines:
+                    items.append(current_item_lines)
+                # Start new item with the content after "- "
+                first_line_content = stripped[2:].strip()
+                current_item_lines = [first_line_content] if first_line_content else []
+            else:
+                # Continuation of current item (part of multi-line object)
+                if current_item_lines is not None:
+                    current_item_lines.append(stripped)
+
+        # Don't forget the last item
+        if current_item_lines:
+            items.append(current_item_lines)
+
+        # Parse each item
+        for item_lines in items:
+            if not item_lines:
+                result.append(None)
+                continue
+
+            if len(item_lines) == 1:
+                # Single line item - try to parse as primitive
+                item_str = item_lines[0]
                 parsed = self._try_parse_primitive(item_str)
                 if parsed is not None:
                     result.append(parsed[0])
                 else:
-                    result.append(item_str)
+                    # Check if it's a key-value pair (object with one field)
+                    if ":" in item_str:
+                        result.append(self._parse_object(item_str))
+                    else:
+                        result.append(item_str)
+            else:
+                # Multi-line item - parse as object
+                item_str = "\n".join(item_lines)
+                result.append(self._parse_object(item_str))
 
         if self._strict and len(result) != declared_length:
             raise TOONValidationError(
