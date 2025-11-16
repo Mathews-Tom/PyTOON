@@ -1655,7 +1655,7 @@
       "id": "TYPES-004",
       "title": "Integrate TypeRegistry with Encoder/Decoder",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Modify ValueEncoder to use TypeRegistry for custom types and Parser to use type hints for decoding",
       "parent": "TYPES-001",
@@ -1706,7 +1706,9 @@
       "github": {
         "issueNumber": 40,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/40"
-      }
+      },
+      "updated": "2025-11-16T15:44:17Z",
+      "completedAt": "2025-11-16T15:44:17Z"
     },
     {
       "id": "REFS-001",

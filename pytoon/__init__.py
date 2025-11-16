@@ -27,6 +27,7 @@ from pytoon.core.decoder import Decoder
 from pytoon.core.encoder import Encoder
 from pytoon.core.spec import TOONSpec
 from pytoon.decision.engine import DecisionEngine, FormatDecision
+from pytoon.types import get_type_registry, register_type_handler
 from pytoon.utils.errors import TOONDecodeError, TOONEncodeError, TOONError, TOONValidationError
 
 
@@ -220,6 +221,9 @@ __all__ = [
     "encode",
     "decode",
     "smart_encode",
+    # Type System
+    "register_type_handler",
+    "get_type_registry",
     # Decision Engine
     "FormatDecision",
     # TOON Exceptions

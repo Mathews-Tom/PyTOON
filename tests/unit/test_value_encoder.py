@@ -399,19 +399,19 @@ class TestValueEncoderUnsupportedTypes:
             encoder.encode_value((1, 2, 3))
         assert "tuple" in str(exc_info.value)
 
-    def test_encode_set_raises_error(self) -> None:
-        """Set encoding raises TOONEncodeError."""
+    def test_encode_set_uses_type_registry(self) -> None:
+        """Set encoding uses TypeRegistry handler."""
         encoder = ValueEncoder()
-        with pytest.raises(TOONEncodeError) as exc_info:
-            encoder.encode_value({1, 2, 3})
-        assert "set" in str(exc_info.value)
+        # Set is now supported via TypeRegistry
+        result = encoder.encode_value({1, 2, 3})
+        assert "set:" in result
 
-    def test_encode_bytes_raises_error(self) -> None:
-        """Bytes encoding raises TOONEncodeError."""
+    def test_encode_bytes_uses_type_registry(self) -> None:
+        """Bytes encoding uses TypeRegistry handler."""
         encoder = ValueEncoder()
-        with pytest.raises(TOONEncodeError) as exc_info:
-            encoder.encode_value(b"hello")
-        assert "bytes" in str(exc_info.value)
+        # Bytes is now supported via TypeRegistry
+        result = encoder.encode_value(b"hello")
+        assert "bytes:" in result
 
     def test_encode_object_raises_error(self) -> None:
         """Object encoding raises TOONEncodeError."""
@@ -431,12 +431,12 @@ class TestValueEncoderUnsupportedTypes:
             encoder.encode_value(MyClass())
         assert "MyClass" in str(exc_info.value)
 
-    def test_encode_complex_raises_error(self) -> None:
-        """Complex number encoding raises TOONEncodeError."""
+    def test_encode_complex_uses_type_registry(self) -> None:
+        """Complex number encoding uses TypeRegistry handler."""
         encoder = ValueEncoder()
-        with pytest.raises(TOONEncodeError) as exc_info:
-            encoder.encode_value(1 + 2j)
-        assert "complex" in str(exc_info.value)
+        # Complex is now supported via TypeRegistry
+        result = encoder.encode_value(1 + 2j)
+        assert "complex:" in result
 
     def test_encode_function_raises_error(self) -> None:
         """Function encoding raises TOONEncodeError."""
@@ -580,9 +580,6 @@ class TestValueEncoderParametrized:
             [],
             {},
             (),
-            {1, 2},
-            b"bytes",
-            1 + 2j,
             object(),
         ],
     )
@@ -591,6 +588,22 @@ class TestValueEncoderParametrized:
         encoder = ValueEncoder()
         with pytest.raises(TOONEncodeError):
             encoder.encode_value(invalid_value)
+
+    @pytest.mark.parametrize(
+        "supported_value,expected_prefix",
+        [
+            ({1, 2}, "set:"),
+            (b"bytes", "bytes:"),
+            (1 + 2j, "complex:"),
+        ],
+    )
+    def test_encode_type_registry_supported_types(
+        self, supported_value: object, expected_prefix: str
+    ) -> None:
+        """Test types now supported via TypeRegistry."""
+        encoder = ValueEncoder()
+        result = encoder.encode_value(supported_value)
+        assert result.startswith(expected_prefix)
 
     @pytest.mark.parametrize(
         "float_val",

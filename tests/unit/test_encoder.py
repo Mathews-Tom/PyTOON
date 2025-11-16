@@ -321,11 +321,12 @@ class TestEncodeDepthLimits:
 class TestEncodeUnsupportedTypes:
     """Test handling of unsupported types."""
 
-    def test_encode_set_raises_error(self) -> None:
-        """Sets should raise TOONEncodeError."""
+    def test_encode_set_uses_type_registry(self) -> None:
+        """Sets are now supported via TypeRegistry."""
         encoder = Encoder()
-        with pytest.raises(TOONEncodeError, match="Cannot encode type"):
-            encoder.encode({1, 2, 3})  # type: ignore
+        # Set is now supported via TypeRegistry
+        result = encoder.encode({1, 2, 3})  # type: ignore
+        assert "set:" in result
 
     def test_encode_tuple_raises_error(self) -> None:
         """Tuples should raise TOONEncodeError."""
