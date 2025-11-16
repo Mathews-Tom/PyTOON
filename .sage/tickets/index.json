@@ -1716,7 +1716,7 @@
       "id": "REFS-001",
       "title": "Reference Support Implementation (v1.1-1.2)",
       "type": "epic",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Implement reference/graph support: schema-based references (v1.1), circular reference handling (v1.2)",
       "github": {
@@ -1737,13 +1737,15 @@
       "dependencies": [
         "ENCODER-001",
         "DECODER-001"
-      ]
+      ],
+      "updated": "2025-11-16T16:34:04Z",
+      "completedAt": "2025-11-16T16:34:04Z"
     },
     {
       "id": "REFS-002",
       "title": "Implement Reference Detection",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Create reference detection system that tracks shared objects via id() and generates schema metadata",
       "parent": "REFS-001",
@@ -1781,13 +1783,16 @@
       "github": {
         "issueNumber": 41,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/41"
-      }
+      },
+      "startedAt": "2025-11-16T16:00:00Z",
+      "completedAt": "2025-11-16T16:30:00Z",
+      "updated": "2025-11-16T16:30:00Z"
     },
     {
       "id": "REFS-003",
       "title": "Implement ReferenceEncoder/Decoder",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Create ReferenceEncoder that generates schema-based TOON and ReferenceDecoder that resolves references",
       "parent": "REFS-001",
@@ -1837,7 +1842,10 @@
       "github": {
         "issueNumber": 42,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/42"
-      }
+      },
+      "startedAt": "2025-11-16T17:00:00Z",
+      "completedAt": "2025-11-16T17:30:00Z",
+      "updated": "2025-11-16T17:30:00Z"
     },
     {
       "id": "REFS-004",
