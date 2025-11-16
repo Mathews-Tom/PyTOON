@@ -27,6 +27,7 @@ from pytoon.core.decoder import Decoder
 from pytoon.core.encoder import Encoder
 from pytoon.core.spec import TOONSpec
 from pytoon.decision.engine import DecisionEngine, FormatDecision
+from pytoon.references import GraphDecoder, GraphEncoder, ReferenceDecoder, ReferenceEncoder
 from pytoon.types import get_type_registry, register_type_handler
 from pytoon.utils.errors import TOONDecodeError, TOONEncodeError, TOONError, TOONValidationError
 
@@ -213,6 +214,194 @@ def smart_encode(
     return encoded, decision
 
 
+def encode_refs(
+    data: Any,
+    mode: str = "schema",
+    *,
+    indent: int = 2,
+    delimiter: str = ",",
+) -> str:
+    """Encode data with reference tracking using schema-based format.
+
+    Detects shared object references in the data and encodes them using
+    placeholders ($1, $2, etc.) with a schema section describing the
+    shared types. This enables efficient encoding of relational data.
+
+    Args:
+        data: Python object to encode (dict, list, or primitive).
+        mode: Encoding mode - currently only 'schema' is supported.
+        indent: Number of spaces per indentation level (default: 2).
+        delimiter: Field delimiter for tabular arrays (default: ',').
+
+    Returns:
+        TOON-formatted string with _schema section and reference placeholders.
+
+    Raises:
+        TOONEncodeError: If mode is invalid or encoding fails.
+        ValueError: If configuration parameters are invalid.
+
+    Examples:
+        >>> user = {"id": 1, "name": "Alice"}
+        >>> data = {"users": [user], "admins": [user]}
+        >>> result = encode_refs(data)
+        >>> "_schema:" in result
+        True
+        >>> "$1" in result
+        True
+
+        >>> # Simple case with no shared references
+        >>> data = {"a": 1, "b": 2}
+        >>> result = encode_refs(data)
+        >>> "_schema:" not in result  # No schema if no shared refs
+        True
+
+    Note:
+        This is part of the v1.1 Reference Support feature for relational data.
+    """
+    encoder = ReferenceEncoder()
+    return encoder.encode_refs(data, mode=mode, indent=indent, delimiter=delimiter)
+
+
+def decode_refs(toon_string: str, resolve: bool = True) -> Any:
+    """Decode TOON string with reference resolution.
+
+    Parses a TOON string that may contain a _schema section and reference
+    placeholders ($1, $2, etc.). When resolve=True, shared objects are
+    reconstructed with proper Python object identity.
+
+    Args:
+        toon_string: TOON-formatted string to decode.
+        resolve: If True, resolve placeholders to actual shared objects.
+                If False, keep placeholder strings in the result.
+
+    Returns:
+        Python object (dict, list, or primitive) with resolved references.
+        When resolve=True, shared objects are the SAME Python object (identity).
+
+    Raises:
+        TOONDecodeError: If string cannot be parsed or references are invalid.
+
+    Examples:
+        >>> toon = '''users: [2]: $1,$2
+        ... admins: [1]: $1'''
+        >>> result = decode_refs(toon, resolve=True)
+        >>> result["users"][0] is result["admins"][0]
+        True
+
+        >>> # Without schema, decode normally
+        >>> toon = "name: Alice"
+        >>> decode_refs(toon)
+        {'name': 'Alice'}
+
+        >>> # Keep placeholders as strings
+        >>> toon = "items: [2]: $1,$1"
+        >>> decode_refs(toon, resolve=False)
+        {'items': ['$1', '$1']}
+
+    Note:
+        This is part of the v1.1 Reference Support feature for relational data.
+    """
+    decoder = ReferenceDecoder()
+    return decoder.decode_refs(toon_string, resolve=resolve)
+
+
+def encode_graph(
+    data: Any,
+    *,
+    indent: int = 2,
+    delimiter: str = ",",
+) -> str:
+    """Encode data with circular reference handling.
+
+    Detects circular references in the data and encodes them using
+    object ID placeholders ($ref:1, $ref:2, etc.). Adds _graph: true
+    flag to indicate graph mode encoding.
+
+    Args:
+        data: Python object to encode (dict, list, or primitive).
+        indent: Number of spaces per indentation level (default: 2).
+        delimiter: Field delimiter for inline arrays (default: ',').
+
+    Returns:
+        TOON-formatted string with _graph: true flag and $ref:N placeholders.
+
+    Raises:
+        TOONEncodeError: If encoding fails due to unsupported types.
+
+    Examples:
+        >>> user1 = {"id": 1, "name": "Alice"}
+        >>> user2 = {"id": 2, "name": "Bob"}
+        >>> user1["friend"] = user2
+        >>> user2["friend"] = user1  # Circular reference
+        >>> result = encode_graph({"users": [user1, user2]})
+        >>> "_graph: true" in result
+        True
+        >>> "$ref:" in result
+        True
+
+        >>> # Self-referencing object
+        >>> obj = {"id": 1}
+        >>> obj["self"] = obj
+        >>> result = encode_graph(obj)
+        >>> "_graph: true" in result
+        True
+
+    Note:
+        This is part of the v1.2 Graph Support feature for circular references.
+        Uses $ref:N syntax (with colon) to distinguish from $N schema references.
+    """
+    encoder = GraphEncoder()
+    return encoder.encode_graph(data, indent=indent, delimiter=delimiter)
+
+
+def decode_graph(toon_string: str) -> Any:
+    """Decode TOON string with circular reference reconstruction.
+
+    Parses a TOON string that contains _graph: true flag and $ref:N
+    placeholders. Reconstructs circular references in the resulting
+    Python objects.
+
+    Args:
+        toon_string: TOON-formatted string to decode.
+
+    Returns:
+        Python object (dict, list, or primitive) with circular references.
+        Circular structures are properly reconstructed.
+
+    Raises:
+        TOONDecodeError: If string cannot be parsed or graph format invalid.
+
+    Examples:
+        >>> toon = '''_graph: true
+        ... user1:
+        ...   id: 1
+        ...   friend: $ref:2
+        ... user2:
+        ...   id: 2
+        ...   friend: $ref:1'''
+        >>> result = decode_graph(toon)
+        >>> result["user1"]["friend"] is result["user2"]
+        True
+        >>> result["user2"]["friend"] is result["user1"]
+        True
+
+        >>> # Self-referencing
+        >>> toon = '''_graph: true
+        ... obj:
+        ...   id: 1
+        ...   self: $ref:1'''
+        >>> result = decode_graph(toon)
+        >>> result["obj"]["self"] is result["obj"]
+        True
+
+    Note:
+        This is part of the v1.2 Graph Support feature for circular references.
+        Requires _graph: true flag at the beginning of the TOON string.
+    """
+    decoder = GraphDecoder()
+    return decoder.decode_graph(toon_string)
+
+
 __all__ = [
     # Version info
     "__version__",
@@ -221,6 +410,12 @@ __all__ = [
     "encode",
     "decode",
     "smart_encode",
+    # Reference API (v1.1)
+    "encode_refs",
+    "decode_refs",
+    # Graph API (v1.2)
+    "encode_graph",
+    "decode_graph",
     # Type System
     "register_type_handler",
     "get_type_registry",
