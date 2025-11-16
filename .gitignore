@@ -221,3 +221,4 @@ __marimo__/
 !.sage/config.json
 
 *-coverage.json
+benchmarks/tier*
