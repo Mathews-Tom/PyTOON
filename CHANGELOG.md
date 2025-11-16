@@ -8,11 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.1] - 2025-11-17
 
 ### Changed
+
 - Renamed PyPI package from `pytoon` to `toon-codec` (module import remains `pytoon`)
 - Updated license format in pyproject.toml to comply with PEP 639 (SPDX expression)
-- Removed deprecated license classifier
 
 ### Documentation
+
 - Comprehensive README rewrite with:
   - Installation instructions and badges
   - Quick start guide with code examples
@@ -30,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 #### Core TOON v1.5+ Implementation
+
 - **Bidirectional JSON-TOON conversion** with full specification compliance
 - **30-60% token savings** over JSON for structured LLM input/output
 - **`encode()` function** - Convert Python objects to TOON format
@@ -44,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Roundtrip fidelity guarantee: `decode(encode(data)) == data`
 
 #### Encoder Components
+
 - **TabularAnalyzer** - Detects uniform arrays qualifying for TOON's tabular format
 - **ValueEncoder** - Normalizes primitives (null, bool, numbers, strings) to TOON types
 - **ArrayEncoder** - Dispatches to tabular/inline/list formats based on data uniformity
@@ -52,6 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **KeyFoldingEngine** - Collapses single-key wrapper chains into dotted paths
 
 #### Decoder Components
+
 - **Lexer** - Tokenizes TOON input into structural elements
 - **Parser** - Builds hierarchical Python objects using state machine
 - **Validator** - Enforces TOON v1.5 spec rules in strict mode
@@ -60,6 +64,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Depth-based decoder** - Advanced parsing with line scanning and depth computation
 
 #### Decision Engine (v1.1 Feature)
+
 - **`smart_encode()` function** - Automatic format selection based on data characteristics
 - **DecisionEngine** - Analyzes data and recommends optimal format (TOON, JSON, graph, hybrid)
 - **DataMetrics** - Computes nesting depth, uniformity score, reference density
@@ -67,6 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **FormatDecision** - Contains recommended format, confidence level, and reasoning
 
 #### Type System (v1.1 Feature)
+
 - **TypeRegistry** - Pluggable type handler system with protocol-based design
 - **12 built-in type handlers** with roundtrip fidelity:
   - UUID - Universally unique identifiers
@@ -86,6 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Automatic custom type support integrated with encoder
 
 #### Reference Support (v1.1-1.2 Feature)
+
 - **`encode_refs()` function** - Schema-based reference encoding
   - Detects shared object references
   - Uses placeholders ($1, $2, etc.) with _schema section
@@ -95,6 +102,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Supports both resolved and placeholder modes
 
 #### Graph Support (v1.2 Feature)
+
 - **`encode_graph()` function** - Circular reference handling
   - Detects circular references in data
   - Uses $ref:N placeholders with _graph flag
@@ -104,24 +112,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Reconstructs circular references properly
 
 #### Sparse/Polymorphic Arrays (v1.2 Feature)
+
 - **SparseArrayEncoder** - Optional field markers (`field?`)
 - **PolymorphicArrayEncoder** - Discriminator-based sub-tables (`@type:` sections)
 - Automatic sparsity detection (30%+ missing values)
 - Empty-as-null convention support
 
 #### CLI Interface
+
 - **`pytoon` command** - Command-line tool for TOON operations
 - Conversion between JSON and TOON formats
 - Batch processing support
 - Planned: `--auto-decide`, `--explain`, `--debug` flags (v1.1-1.3)
 
 #### Error Handling
+
 - **TOONError** - Base exception for all TOON-related errors
 - **TOONEncodeError** - Encoding failures (unsupported types, circular references)
 - **TOONDecodeError** - Decoding failures (invalid syntax, parse errors)
 - **TOONValidationError** - Validation failures (array length mismatch, field inconsistency)
 
 #### Package Infrastructure
+
 - **Zero external dependencies** for core functionality
 - **Optional tiktoken dependency** for accurate GPT token counting
 - **py.typed marker** - Full PEP 561 type hint support
@@ -131,12 +143,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Technical Details
 
 #### Performance Characteristics
+
 - **Time Complexity**: O(n) for both encoding and decoding
 - **Space Complexity**: O(n) for output strings and reconstructed data
 - **Performance Target**: <100ms for 1-10KB datasets
 - **Validation Overhead**: <5% in strict mode
 
 #### Type Conversion Rules
+
 - `None` → `null`
 - Booleans → lowercase `true`/`false`
 - Numbers → decimal notation (no scientific notation)
@@ -144,6 +158,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `-0.0` → `0` (normalized to positive zero)
 
 #### Quality Assurance
+
 - **Property-based testing** with Hypothesis for random data generation
 - **85%+ test coverage** enforced
 - **mypy strict mode** compliance
