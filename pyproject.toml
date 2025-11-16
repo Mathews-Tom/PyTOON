@@ -47,6 +47,9 @@ Homepage = "https://github.com/AetherForge/PyToon"
 Documentation = "https://github.com/AetherForge/PyToon#readme"
 Repository = "https://github.com/AetherForge/PyToon"
 
+[project.scripts]
+pytoon = "pytoon.cli.main:main"
+
 [tool.setuptools.packages.find]
 include = ["pytoon*"]
 
