@@ -1603,7 +1603,7 @@
       "id": "TYPES-003",
       "title": "Implement Built-in Type Handlers",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Create TypeHandler implementations for UUID, datetime, date, time, timedelta, bytes, Enum, Decimal, complex, Path, set, frozenset",
       "parent": "TYPES-001",
@@ -1647,7 +1647,9 @@
       "github": {
         "issueNumber": 39,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/39"
-      }
+      },
+      "updated": "2025-11-16T15:36:38Z",
+      "completedAt": "2025-11-16T15:36:38Z"
     },
     {
       "id": "TYPES-004",
