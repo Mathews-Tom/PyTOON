@@ -105,10 +105,15 @@ class TestEncodeFunction:
         """encode() should encode floats."""
         assert encode(3.14) == "3.14"
 
+    def test_encode_set_uses_type_registry(self) -> None:
+        """encode() should encode sets via TypeRegistry."""
+        result = encode({1, 2, 3})  # type: ignore
+        assert "set:" in result
+
     def test_encode_invalid_type_raises_error(self) -> None:
         """encode() should raise TOONEncodeError for invalid types."""
         with pytest.raises(TOONEncodeError):
-            encode({1, 2, 3})  # type: ignore
+            encode((1, 2, 3))  # type: ignore  # tuples are truly unsupported
 
     def test_encode_invalid_config_raises_value_error(self) -> None:
         """encode() should raise ValueError for invalid config."""

@@ -96,6 +96,14 @@ class ValueEncoder:
         if isinstance(value, str):
             return value
 
+        # Try type registry before failing
+        from pytoon.types import get_type_registry
+
+        registry = get_type_registry()
+        result = registry.encode_value(value)
+        if result is not None:
+            return result
+
         raise TOONEncodeError(f"Cannot encode type: {type(value).__name__}")
 
     def _encode_float(self, value: float) -> str:

@@ -199,6 +199,14 @@ class Encoder:
         if isinstance(value, dict):
             return self._encode_dict(value, depth)
 
+        # Try type registry before failing
+        from pytoon.types import get_type_registry
+
+        registry = get_type_registry()
+        type_encoded = registry.encode_value(value)
+        if type_encoded is not None:
+            return self._encode_string(type_encoded)
+
         raise TOONEncodeError(f"Cannot encode type: {type(value)}")
 
     def _encode_string(self, value: str) -> str:
