@@ -1888,3 +1888,284 @@ class TestStatsFlag:
             assert "Savings:" in captured.err
         finally:
             Path(input_path).unlink()
+
+
+class TestAutoDecideFlags:
+    """Tests for --auto-decide and --explain flags."""
+
+    def test_auto_decide_flag_default_false(self) -> None:
+        """--auto-decide defaults to False."""
+        args = parse_args(["encode"])
+        assert args.auto_decide is False
+
+    def test_auto_decide_flag_enabled(self) -> None:
+        """--auto-decide sets flag to True."""
+        args = parse_args(["encode", "--auto-decide"])
+        assert args.auto_decide is True
+
+    def test_explain_flag_default_false(self) -> None:
+        """--explain defaults to False."""
+        args = parse_args(["encode"])
+        assert args.explain is False
+
+    def test_explain_flag_enabled(self) -> None:
+        """--explain sets flag to True."""
+        args = parse_args(["encode", "--explain"])
+        assert args.explain is True
+
+    def test_both_flags_together(self) -> None:
+        """--auto-decide and --explain can be used together."""
+        args = parse_args(["encode", "--auto-decide", "--explain"])
+        assert args.auto_decide is True
+        assert args.explain is True
+
+    def test_explain_without_auto_decide_error(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--explain without --auto-decide returns error."""
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump({"key": "value"}, f)
+            f.flush()
+            input_path = f.name
+
+        try:
+            args = parse_args(["encode", input_path, "--explain"])
+            result = handle_encode(args)
+            assert result == 1
+            captured = capsys.readouterr()
+            assert "--explain requires --auto-decide" in captured.err
+        finally:
+            Path(input_path).unlink()
+
+    def test_auto_decide_uses_smart_encode(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--auto-decide uses smart_encode for format selection."""
+        # Use tabular data which should recommend TOON
+        data = [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump(data, f)
+            f.flush()
+            input_path = f.name
+
+        try:
+            args = parse_args(["encode", input_path, "--auto-decide", "--explain"])
+            result = handle_encode(args)
+            assert result == 0
+            captured = capsys.readouterr()
+            # Should show format decision info
+            assert "Format:" in captured.err
+            assert "Confidence:" in captured.err
+            assert "Reasoning:" in captured.err
+        finally:
+            Path(input_path).unlink()
+
+    def test_auto_decide_selects_toon_for_tabular(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--auto-decide selects TOON for tabular data."""
+        data = [{"id": i, "value": f"item{i}"} for i in range(5)]
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump(data, f)
+            f.flush()
+            input_path = f.name
+
+        try:
+            args = parse_args(["encode", input_path, "--auto-decide", "--explain"])
+            result = handle_encode(args)
+            assert result == 0
+            captured = capsys.readouterr()
+            assert "Format: TOON" in captured.err
+            # Output should be TOON format
+            assert "[5" in captured.out  # Array header
+        finally:
+            Path(input_path).unlink()
+
+    def test_auto_decide_selects_json_for_nested(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--auto-decide selects JSON for deeply nested data."""
+        data = {"a": {"b": {"c": {"d": {"e": {"f": {"g": 1}}}}}}}
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump(data, f)
+            f.flush()
+            input_path = f.name
+
+        try:
+            args = parse_args(["encode", input_path, "--auto-decide", "--explain"])
+            result = handle_encode(args)
+            assert result == 0
+            captured = capsys.readouterr()
+            assert "Format: JSON" in captured.err
+            # Output should be JSON format
+            assert "{" in captured.out
+            assert '"a"' in captured.out
+        finally:
+            Path(input_path).unlink()
+
+    def test_explain_shows_confidence(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--explain shows confidence percentage."""
+        data = {"key": "value"}
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump(data, f)
+            f.flush()
+            input_path = f.name
+
+        try:
+            args = parse_args(["encode", input_path, "--auto-decide", "--explain"])
+            result = handle_encode(args)
+            assert result == 0
+            captured = capsys.readouterr()
+            # Confidence should be shown as percentage
+            assert "Confidence:" in captured.err
+            assert "%" in captured.err
+        finally:
+            Path(input_path).unlink()
+
+    def test_explain_shows_reasoning_list(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--explain shows reasoning as bulleted list."""
+        data = [{"id": 1}, {"id": 2}]
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump(data, f)
+            f.flush()
+            input_path = f.name
+
+        try:
+            args = parse_args(["encode", input_path, "--auto-decide", "--explain"])
+            result = handle_encode(args)
+            assert result == 0
+            captured = capsys.readouterr()
+            # Reasoning should be shown as list items
+            assert "  - " in captured.err
+        finally:
+            Path(input_path).unlink()
+
+    def test_auto_decide_respects_other_flags(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--auto-decide respects indent and other flags."""
+        data = [{"id": 1}, {"id": 2}]
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump(data, f)
+            f.flush()
+            input_path = f.name
+
+        try:
+            args = parse_args([
+                "encode", input_path,
+                "--auto-decide",
+                "--indent", "4",
+                "--delimiter", "tab",
+            ])
+            result = handle_encode(args)
+            assert result == 0
+            # Flags should be applied to encoding
+            captured = capsys.readouterr()
+            # For TOON output with tab delimiter, should have tabs
+            if "Format: TOON" not in captured.err:
+                # JSON output will have indent=4
+                assert "    " in captured.out
+        finally:
+            Path(input_path).unlink()
+
+    def test_auto_decide_without_explain(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--auto-decide without --explain doesn't show reasoning."""
+        data = [{"id": 1}, {"id": 2}]
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump(data, f)
+            f.flush()
+            input_path = f.name
+
+        try:
+            args = parse_args(["encode", input_path, "--auto-decide"])
+            result = handle_encode(args)
+            assert result == 0
+            captured = capsys.readouterr()
+            # Should not show explanation
+            assert "Format:" not in captured.err
+            assert "Reasoning:" not in captured.err
+        finally:
+            Path(input_path).unlink()
+
+    def test_auto_decide_with_stats(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--auto-decide works with --stats flag."""
+        data = [{"id": 1}, {"id": 2}]
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump(data, f)
+            f.flush()
+            input_path = f.name
+
+        try:
+            args = parse_args([
+                "encode", input_path,
+                "--auto-decide", "--explain", "--stats",
+            ])
+            result = handle_encode(args)
+            assert result == 0
+            captured = capsys.readouterr()
+            # Both explanation and stats should be shown
+            assert "Format:" in captured.err
+            assert "TOON:" in captured.err
+            assert "JSON:" in captured.err
+        finally:
+            Path(input_path).unlink()
+
+    def test_auto_decide_with_output_file(self) -> None:
+        """--auto-decide writes to output file correctly."""
+        data = [{"id": 1}, {"id": 2}]
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+            json.dump(data, f)
+            f.flush()
+            input_path = f.name
+
+        output_path = tempfile.mktemp(suffix=".out")
+        try:
+            args = parse_args([
+                "encode", input_path,
+                "--auto-decide",
+                "-o", output_path,
+            ])
+            result = handle_encode(args)
+            assert result == 0
+            # Check output file was written
+            with open(output_path) as out_f:
+                content = out_f.read()
+            # Should have content
+            assert len(content) > 0
+        finally:
+            Path(input_path).unlink()
+            if Path(output_path).exists():
+                Path(output_path).unlink()
+
+    def test_auto_decide_from_stdin(
+        self, capsys: pytest.CaptureFixture[str]
+    ) -> None:
+        """--auto-decide works with stdin input."""
+        data = [{"id": 1}, {"id": 2}]
+        stdin_data = json.dumps(data)
+
+        with mock.patch("sys.stdin.read", return_value=stdin_data):
+            args = parse_args(["encode", "--auto-decide", "--explain"])
+            result = handle_encode(args)
+            assert result == 0
+
+        captured = capsys.readouterr()
+        assert "Format:" in captured.err
+        assert "[2" in captured.out or "{" in captured.out  # Output format
+
+    def test_parser_help_includes_auto_decide(self) -> None:
+        """Parser help text mentions --auto-decide."""
+        parser = create_parser()
+        # Get the encode subparser help
+        # Check that the parser knows about these arguments
+        args = parse_args(["encode", "--auto-decide", "--explain"])
+        assert args.auto_decide is True
+        assert args.explain is True

@@ -31,6 +31,7 @@ from typing import Any, Sequence
 from pytoon.__version__ import __version__
 from pytoon import encode as pytoon_encode
 from pytoon import decode as pytoon_decode
+from pytoon import smart_encode as pytoon_smart_encode
 from pytoon.utils.errors import TOONDecodeError, TOONEncodeError, TOONValidationError
 from pytoon.utils.tokens import TokenCounter
 
@@ -72,6 +73,9 @@ Examples:
 
   With key folding enabled:
     pytoon encode data.json --key-folding safe
+
+  Auto-decide format with explanation:
+    pytoon encode data.json --auto-decide --explain
 """,
     )
 
@@ -101,6 +105,7 @@ Examples:
   echo '{"key": "value"}' | pytoon encode
   pytoon encode input.json --delimiter tab --indent 4
   pytoon encode data.json --key-folding safe
+  pytoon encode data.json --auto-decide --explain
 """,
     )
     encode_parser.add_argument(
@@ -134,6 +139,19 @@ Examples:
         default="off",
         dest="key_folding",
         help="Key folding mode: off (no folding) or safe (fold single-key chains) (default: off)",
+    )
+    encode_parser.add_argument(
+        "--auto-decide",
+        action="store_true",
+        default=False,
+        dest="auto_decide",
+        help="Automatically select optimal format (TOON or JSON) based on data analysis",
+    )
+    encode_parser.add_argument(
+        "--explain",
+        action="store_true",
+        default=False,
+        help="Print decision reasoning to stderr (requires --auto-decide)",
     )
     encode_parser.add_argument(
         "--stats",
@@ -260,11 +278,11 @@ def handle_encode(args: argparse.Namespace) -> int:
     """Handle the encode command.
 
     Reads JSON from file or stdin, encodes to TOON format, and writes
-    to file or stdout.
+    to file or stdout. Supports auto-decide mode for intelligent format selection.
 
     Args:
         args: Parsed command-line arguments containing input, output,
-            indent, delimiter, and key_folding options.
+            indent, delimiter, key_folding, auto_decide, and explain options.
 
     Returns:
         int: Exit code (0 for success, 1 for error).
@@ -278,9 +296,26 @@ def handle_encode(args: argparse.Namespace) -> int:
             ...     output=None,
             ...     indent=2,
             ...     delimiter='comma',
-            ...     key_folding='off'
+            ...     key_folding='off',
+            ...     auto_decide=False,
+            ...     explain=False,
+            ...     stats=False,
             ... )
             >>> # Would read from stdin and write to stdout
+
+        Handle encode with auto-decide::
+
+            >>> ns = argparse.Namespace(
+            ...     input=None,
+            ...     output=None,
+            ...     indent=2,
+            ...     delimiter='comma',
+            ...     key_folding='off',
+            ...     auto_decide=True,
+            ...     explain=True,
+            ...     stats=False,
+            ... )
+            >>> # Uses smart_encode and prints reasoning to stderr
     """
     # Validate indent
     if args.indent <= 0:
@@ -292,6 +327,13 @@ def handle_encode(args: argparse.Namespace) -> int:
         delimiter_char = get_delimiter_char(args.delimiter)
     except ValueError as e:
         print(f"Error: {e}", file=sys.stderr)
+        return 1
+
+    # Validate --explain requires --auto-decide
+    auto_decide = getattr(args, "auto_decide", False)
+    explain = getattr(args, "explain", False)
+    if explain and not auto_decide:
+        print("Error: --explain requires --auto-decide flag", file=sys.stderr)
         return 1
 
     # Read JSON input
@@ -326,14 +368,34 @@ def handle_encode(args: argparse.Namespace) -> int:
         print(f"Error: failed to read input: {e}", file=sys.stderr)
         return 1
 
-    # Encode to TOON
+    # Encode to output format
+    encoded_output: str
     try:
-        toon_output = pytoon_encode(
-            json_data,
-            indent=args.indent,
-            delimiter=delimiter_char,  # type: ignore[arg-type]
-            key_folding=args.key_folding,
-        )
+        if auto_decide:
+            # Use smart_encode for intelligent format selection
+            encoded_output, decision = pytoon_smart_encode(
+                json_data,
+                auto=True,
+                indent=args.indent,
+                delimiter=delimiter_char,  # type: ignore[arg-type]
+                key_folding=args.key_folding,
+            )
+
+            # Print decision explanation if requested
+            if explain:
+                print(f"Format: {decision.recommended_format.upper()}", file=sys.stderr)
+                print(f"Confidence: {decision.confidence:.1%}", file=sys.stderr)
+                print("Reasoning:", file=sys.stderr)
+                for reason in decision.reasoning:
+                    print(f"  - {reason}", file=sys.stderr)
+        else:
+            # Standard TOON encoding
+            encoded_output = pytoon_encode(
+                json_data,
+                indent=args.indent,
+                delimiter=delimiter_char,  # type: ignore[arg-type]
+                key_folding=args.key_folding,
+            )
     except TOONEncodeError as e:
         print(f"Error: encoding failed: {e}", file=sys.stderr)
         return 1
@@ -341,16 +403,16 @@ def handle_encode(args: argparse.Namespace) -> int:
         print(f"Error: invalid configuration: {e}", file=sys.stderr)
         return 1
 
-    # Write TOON output
+    # Write output
     try:
         if args.output is None:
             # Write to stdout
-            print(toon_output)
+            print(encoded_output)
         else:
             # Write to file
             try:
                 with open(args.output, "w", encoding="utf-8") as f:
-                    f.write(toon_output)
+                    f.write(encoded_output)
                     f.write("\n")  # Add trailing newline
             except PermissionError:
                 print(f"Error: permission denied: {args.output}", file=sys.stderr)

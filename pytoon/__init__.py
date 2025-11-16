@@ -10,14 +10,23 @@ Basic Usage:
     >>> toon = encode(data)
     >>> recovered = decode(toon)
     >>> assert recovered == data
+
+Intelligent Format Selection (v1.1):
+    >>> from pytoon import smart_encode
+    >>> data = [{"id": 1}, {"id": 2}]
+    >>> encoded, decision = smart_encode(data)
+    >>> decision.recommended_format
+    'toon'
 """
 
+import json
 from typing import Any, Literal
 
 from pytoon.__version__ import __version__, __version_info__
 from pytoon.core.decoder import Decoder
 from pytoon.core.encoder import Encoder
 from pytoon.core.spec import TOONSpec
+from pytoon.decision.engine import DecisionEngine, FormatDecision
 from pytoon.utils.errors import TOONDecodeError, TOONEncodeError, TOONError, TOONValidationError
 
 
@@ -119,6 +128,90 @@ def decode(
     return decoder.decode(toon_string)
 
 
+def smart_encode(
+    value: Any,
+    *,
+    auto: bool = True,
+    indent: int = TOONSpec.DEFAULT_INDENT,
+    delimiter: Literal[",", "\t", "|"] = ",",
+    key_folding: Literal["off", "safe"] = "off",
+    ensure_ascii: bool = False,
+    sort_keys: bool = False,
+) -> tuple[str, FormatDecision]:
+    """Automatically select optimal format and encode data.
+
+    Analyzes data structure to recommend the best serialization format
+    (TOON, JSON, graph, or hybrid), then encodes accordingly.
+
+    Args:
+        value: Python object to encode (dict, list, or primitive).
+        auto: If True, uses recommended format. If False, always uses TOON.
+        indent: Number of spaces per indentation level (default: 2).
+        delimiter: Field delimiter for tabular arrays - ',', '\\t', or '|' (default: ',').
+        key_folding: Key folding mode - 'off' or 'safe' (default: 'off').
+        ensure_ascii: Escape non-ASCII characters (default: False).
+        sort_keys: Sort dictionary keys alphabetically (default: False).
+
+    Returns:
+        Tuple of (encoded_string, FormatDecision) where:
+            - encoded_string: The serialized data in the chosen format
+            - FormatDecision: Contains recommended format, confidence, and reasoning
+
+    Raises:
+        TOONEncodeError: If value cannot be encoded (unsupported type, circular reference).
+        ValueError: If configuration parameters are invalid.
+
+    Examples:
+        >>> # Tabular data -> TOON recommended
+        >>> data = [{"id": 1, "name": "Alice"}, {"id": 2, "name": "Bob"}]
+        >>> encoded, decision = smart_encode(data)
+        >>> decision.recommended_format
+        'toon'
+        >>> decision.confidence > 0.8
+        True
+
+        >>> # Override with auto=False to force TOON
+        >>> encoded, decision = smart_encode(data, auto=False)
+        >>> # Always uses TOON regardless of recommendation
+
+        >>> # Access reasoning
+        >>> encoded, decision = smart_encode(data)
+        >>> for reason in decision.reasoning:
+        ...     print(reason)
+        High uniformity (100.0%) strongly favors TOON
+        ...
+
+    Note:
+        - When auto=True and decision is 'json', uses json.dumps()
+        - When auto=True and decision is 'toon' or 'hybrid', uses pytoon.encode()
+        - When auto=True and decision is 'graph', uses pytoon.encode() (graph support v1.2+)
+        - When auto=False, always uses pytoon.encode()
+    """
+    engine = DecisionEngine()
+    decision = engine.analyze(value)
+
+    if auto and decision.recommended_format == "json":
+        # Use JSON encoding
+        encoded = json.dumps(
+            value,
+            ensure_ascii=ensure_ascii,
+            sort_keys=sort_keys,
+            indent=indent if indent > 0 else None,
+        )
+    else:
+        # Use TOON encoding (for toon, hybrid, graph, or when auto=False)
+        encoded = encode(
+            value,
+            indent=indent,
+            delimiter=delimiter,
+            key_folding=key_folding,
+            ensure_ascii=ensure_ascii,
+            sort_keys=sort_keys,
+        )
+
+    return encoded, decision
+
+
 __all__ = [
     # Version info
     "__version__",
@@ -126,6 +219,9 @@ __all__ = [
     # Core API
     "encode",
     "decode",
+    "smart_encode",
+    # Decision Engine
+    "FormatDecision",
     # TOON Exceptions
     "TOONError",
     "TOONEncodeError",
