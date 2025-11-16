@@ -1,4 +1,4 @@
-# toon-codec
+# PyTOON
 
 > Token-Oriented Object Notation (TOON) codec for Python — 30-60% token savings over JSON for LLM applications
 
