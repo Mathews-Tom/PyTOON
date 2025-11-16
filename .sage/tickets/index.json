@@ -1305,7 +1305,7 @@
       "id": "DECISION-001",
       "title": "Decision Engine Implementation (v1.1)",
       "type": "epic",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Implement intelligent format selection: DecisionEngine, StructuralAnalyzer, DataMetrics, smart_encode() API",
       "github": {
@@ -1327,13 +1327,14 @@
       "dependencies": [
         "CORE-001",
         "ENCODER-001"
-      ]
+      ],
+      "completedAt": "2025-11-16T00:00:00Z"
     },
     {
       "id": "DECISION-002",
       "title": "Implement DataMetrics Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Create DataMetrics that computes structural metrics including nesting depth, uniformity score, tabular eligibility, and reference density",
       "parent": "DECISION-001",
@@ -1387,7 +1388,7 @@
       "id": "DECISION-003",
       "title": "Implement DecisionEngine Class",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Create DecisionEngine that analyzes DataMetrics and recommends optimal format with confidence score and reasoning",
       "parent": "DECISION-001",
@@ -1436,7 +1437,7 @@
       "id": "DECISION-004",
       "title": "Implement smart_encode API",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Create smart_encode() function that automatically selects optimal format using DecisionEngine",
       "parent": "DECISION-001",
@@ -1481,7 +1482,7 @@
       "id": "DECISION-005",
       "title": "Add CLI --auto-decide Flag",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P1",
       "description": "Add --auto-decide and --explain flags to CLI encode command",
       "parent": "DECISION-001",
