@@ -7,8 +7,8 @@
     "toon_bytes": 32939,
     "toon_tokens": 8234,
     "savings_pct": 59.32822919239318,
-    "encode_ms": 3.351874998770654,
-    "decode_ms": 2.171125030145049,
+    "encode_ms": 3.335665969643742,
+    "decode_ms": 4.748041043058038,
     "roundtrip": "PASS"
   },
   {
@@ -19,8 +19,8 @@
     "toon_bytes": 123022,
     "toon_tokens": 30755,
     "savings_pct": 44.07470041641663,
-    "encode_ms": 8.231792016886175,
-    "decode_ms": 4.5313750160858035,
+    "encode_ms": 8.367499976884574,
+    "decode_ms": 15.618374978657812,
     "roundtrip": "PASS"
   },
   {
@@ -31,8 +31,8 @@
     "toon_bytes": 12261,
     "toon_tokens": 3065,
     "savings_pct": 43.9875730994152,
-    "encode_ms": 0.8581249858252704,
-    "decode_ms": 0.424250029027462,
+    "encode_ms": 0.8927499875426292,
+    "decode_ms": 1.6134579782374203,
     "roundtrip": "PASS"
   },
   {
@@ -43,8 +43,8 @@
     "toon_bytes": 50186,
     "toon_tokens": 12546,
     "savings_pct": 55.783463734404734,
-    "encode_ms": 4.868459014687687,
-    "decode_ms": 2.1496250410564244,
+    "encode_ms": 4.797959001734853,
+    "decode_ms": 6.218958005774766,
     "roundtrip": "PASS"
   },
   {
@@ -55,8 +55,8 @@
     "toon_bytes": 221741,
     "toon_tokens": 55435,
     "savings_pct": 41.212963159345904,
-    "encode_ms": 10.937416984234005,
-    "decode_ms": 5.6175829959101975,
+    "encode_ms": 11.279625003226101,
+    "decode_ms": 25.441333011258394,
     "roundtrip": "PASS"
   },
   {
@@ -67,8 +67,8 @@
     "toon_bytes": 21785,
     "toon_tokens": 5446,
     "savings_pct": 41.42826414282641,
-    "encode_ms": 1.1758750188164413,
-    "decode_ms": 0.5410409648902714,
+    "encode_ms": 1.2340410030446947,
+    "decode_ms": 2.4484170135110617,
     "roundtrip": "PASS"
   },
   {
@@ -76,11 +76,11 @@
     "tier": "A",
     "json_bytes": 181327,
     "json_tokens": 45331,
-    "toon_bytes": 188725,
-    "toon_tokens": 47181,
-    "savings_pct": -4.081092409168119,
-    "encode_ms": 7.1204580017365515,
-    "decode_ms": 8.258584013674408,
+    "toon_bytes": 200965,
+    "toon_tokens": 50241,
+    "savings_pct": -10.831439853521863,
+    "encode_ms": 7.172833022195846,
+    "decode_ms": 20.637916051782668,
     "roundtrip": "PASS"
   },
   {
@@ -88,11 +88,11 @@
     "tier": "A",
     "json_bytes": 18572,
     "json_tokens": 4643,
-    "toon_bytes": 19307,
-    "toon_tokens": 4826,
-    "savings_pct": -3.941417187163476,
-    "encode_ms": 0.7616250077262521,
-    "decode_ms": 0.7981660310178995,
+    "toon_bytes": 20555,
+    "toon_tokens": 5138,
+    "savings_pct": -10.661210424294643,
+    "encode_ms": 0.841541972476989,
+    "decode_ms": 2.0937499939464033,
     "roundtrip": "PASS"
   },
   {
@@ -100,24 +100,24 @@
     "tier": "A",
     "json_bytes": 95039,
     "json_tokens": 23759,
-    "toon_bytes": 98021,
-    "toon_tokens": 24505,
-    "savings_pct": -3.1398627888379105,
-    "encode_ms": 3.7699589738622308,
-    "decode_ms": 4.3811670038849115,
-    "roundtrip": "FAIL"
+    "toon_bytes": 104223,
+    "toon_tokens": 26055,
+    "savings_pct": -9.663706384948867,
+    "encode_ms": 3.8020419888198376,
+    "decode_ms": 9.891125024296343,
+    "roundtrip": "PASS"
   },
   {
     "file": "B1_richtypes_audit_M.json",
     "tier": "B",
     "json_bytes": 221261,
     "json_tokens": 55315,
-    "toon_bytes": 232266,
-    "toon_tokens": 58066,
-    "savings_pct": -4.973334538551932,
-    "encode_ms": 8.047624956816435,
-    "decode_ms": 6.381542014423758,
-    "roundtrip": "FAIL"
+    "toon_bytes": 240266,
+    "toon_tokens": 60066,
+    "savings_pct": -8.588990328120772,
+    "encode_ms": 7.973166008014232,
+    "decode_ms": 20.922583003994077,
+    "roundtrip": "PASS"
   },
   {
     "file": "B1_richtypes_transactions_L.json",
@@ -127,8 +127,8 @@
     "toon_bytes": 177635,
     "toon_tokens": 44408,
     "savings_pct": 46.90642149185208,
-    "encode_ms": 13.684167002793401,
-    "decode_ms": 5.547415988985449,
+    "encode_ms": 13.79712502239272,
+    "decode_ms": 23.4813749557361,
     "roundtrip": "PASS"
   },
   {
@@ -136,13 +136,13 @@
     "tier": "B",
     "json_bytes": 199123,
     "json_tokens": 49780,
-    "toon_bytes": 180550,
-    "toon_tokens": 45137,
-    "savings_pct": 9.327038971474488,
-    "encode_ms": 8.98300000699237,
-    "decode_ms": 0.7165829883888364,
+    "toon_bytes": 173598,
+    "toon_tokens": 43399,
+    "savings_pct": 12.81840096424267,
+    "encode_ms": 8.861291978973895,
+    "decode_ms": 5.464749992825091,
     "roundtrip": "DECODE_FAIL",
-    "error": "Array declares 500 items but found 1"
+    "error": "Missing colon after key"
   },
   {
     "file": "B2_relational_orgchart_S.json",
@@ -152,8 +152,8 @@
     "toon_bytes": 8215,
     "toon_tokens": 2053,
     "savings_pct": 56.38410877416613,
-    "encode_ms": 0.8891249890439212,
-    "decode_ms": 0.37879199953749776,
+    "encode_ms": 0.9876660187728703,
+    "decode_ms": 1.0785420308820903,
     "roundtrip": "PASS"
   },
   {
@@ -161,49 +161,48 @@
     "tier": "B",
     "json_bytes": 35817,
     "json_tokens": 8954,
-    "toon_bytes": 127885,
-    "toon_tokens": 31971,
-    "savings_pct": -257.05829796738885,
-    "encode_ms": 2.641625003889203,
-    "decode_ms": 0.46024995390325785,
-    "roundtrip": "DECODE_FAIL",
-    "error": "Array declares 4 items but found 0"
+    "toon_bytes": 68317,
+    "toon_tokens": 17079,
+    "savings_pct": -90.7415680142953,
+    "encode_ms": 1.6997919883579016,
+    "decode_ms": 5.704667011741549,
+    "roundtrip": "FAIL"
   },
   {
     "file": "B3_nested_menu_L.json",
     "tier": "B",
     "json_bytes": 124636,
     "json_tokens": 31159,
-    "toon_bytes": 558571,
-    "toon_tokens": 139642,
-    "savings_pct": -348.15944029012485,
-    "encode_ms": 10.034499980974942,
-    "decode_ms": 1.578915980644524,
-    "roundtrip": "DECODE_FAIL",
-    "error": "Array declares 4 items but found 0"
+    "toon_bytes": 254997,
+    "toon_tokens": 63749,
+    "savings_pct": -104.5925735742482,
+    "encode_ms": 5.997541011311114,
+    "decode_ms": 18.562500015832484,
+    "roundtrip": "FAIL"
   },
   {
     "file": "C1_semistructured_api_L.json",
     "tier": "C",
     "json_bytes": 229771,
     "json_tokens": 57442,
-    "toon_bytes": 262527,
-    "toon_tokens": 65631,
-    "savings_pct": -14.256119215904729,
-    "encode_ms": 9.789833042304963,
-    "decode_ms": 10.837458015885204,
-    "roundtrip": "FAIL"
+    "toon_bytes": 252027,
+    "toon_tokens": 63006,
+    "savings_pct": -9.686292260018803,
+    "encode_ms": 9.453500038944185,
+    "decode_ms": 8.30391701310873,
+    "roundtrip": "DECODE_FAIL",
+    "error": "Array declares 10 rows but found 0"
   },
   {
     "file": "C1_semistructured_posts_M.json",
     "tier": "C",
     "json_bytes": 528552,
     "json_tokens": 132138,
-    "toon_bytes": 534364,
-    "toon_tokens": 133591,
-    "savings_pct": -1.0996079855908114,
-    "encode_ms": 6.683374987915158,
-    "decode_ms": 8.355416008271277,
+    "toon_bytes": 544664,
+    "toon_tokens": 136166,
+    "savings_pct": -3.0483282628766872,
+    "encode_ms": 7.1522920043207705,
+    "decode_ms": 45.35887500969693,
     "roundtrip": "FAIL"
   },
   {
@@ -211,36 +210,36 @@
     "tier": "C",
     "json_bytes": 105537,
     "json_tokens": 26384,
-    "toon_bytes": 127997,
-    "toon_tokens": 31999,
-    "savings_pct": -21.281837477258936,
-    "encode_ms": 2.6167090400122106,
-    "decode_ms": 0.5875420174561441,
+    "toon_bytes": 114941,
+    "toon_tokens": 28735,
+    "savings_pct": -8.910703456640379,
+    "encode_ms": 3.194166987668723,
+    "decode_ms": 2.7191669796593487,
     "roundtrip": "DECODE_FAIL",
-    "error": "Array declares 3 items but found 0"
+    "error": "Array declares 2 rows but found 0"
   },
   {
     "file": "C2_partial_search_M.json",
     "tier": "C",
     "json_bytes": 101042,
     "json_tokens": 25260,
-    "toon_bytes": 102944,
-    "toon_tokens": 25736,
-    "savings_pct": -1.8844022169437924,
-    "encode_ms": 3.9850830216892064,
-    "decode_ms": 4.183624987490475,
-    "roundtrip": "PASS"
+    "toon_bytes": 108524,
+    "toon_tokens": 27131,
+    "savings_pct": -7.406967537608877,
+    "encode_ms": 4.235416010487825,
+    "decode_ms": 10.407374997157604,
+    "roundtrip": "FAIL"
   },
   {
     "file": "C3_config_flags_S.json",
     "tier": "C",
     "json_bytes": 16370,
     "json_tokens": 4092,
-    "toon_bytes": 17325,
-    "toon_tokens": 4331,
-    "savings_pct": -5.840664711632448,
-    "encode_ms": 0.7208749884739518,
-    "decode_ms": 0.8066659793257713,
+    "toon_bytes": 18139,
+    "toon_tokens": 4534,
+    "savings_pct": -10.80156402737047,
+    "encode_ms": 0.8191670058295131,
+    "decode_ms": 1.725125010125339,
     "roundtrip": "FAIL"
   },
   {
@@ -251,8 +250,8 @@
     "toon_bytes": 2576416,
     "toon_tokens": 644104,
     "savings_pct": -691.0493220672038,
-    "encode_ms": 43.66958397440612,
-    "decode_ms": 4.312874982133508,
+    "encode_ms": 46.81345901917666,
+    "decode_ms": 107.98208398045972,
     "roundtrip": "FAIL"
   },
   {
@@ -260,38 +259,39 @@
     "tier": "D",
     "json_bytes": 112749,
     "json_tokens": 28187,
-    "toon_bytes": 160809,
-    "toon_tokens": 40202,
-    "savings_pct": -42.626033277752164,
-    "encode_ms": 9.318750002421439,
-    "decode_ms": 4.84083394985646,
-    "roundtrip": "FAIL"
+    "toon_bytes": 159961,
+    "toon_tokens": 39990,
+    "savings_pct": -41.873913506226266,
+    "encode_ms": 10.032541991677135,
+    "decode_ms": 6.672708026599139,
+    "roundtrip": "DECODE_FAIL",
+    "error": "Missing colon after key"
   },
   {
     "file": "D2_hetero_forms_L.json",
     "tier": "D",
     "json_bytes": 185649,
     "json_tokens": 46412,
-    "toon_bytes": 257710,
-    "toon_tokens": 64427,
-    "savings_pct": -38.81539257088684,
-    "encode_ms": 14.541500015184283,
-    "decode_ms": 1.7169580096378922,
+    "toon_bytes": 231798,
+    "toon_tokens": 57949,
+    "savings_pct": -24.857795397741956,
+    "encode_ms": 13.461167050991207,
+    "decode_ms": 21.20454201940447,
     "roundtrip": "DECODE_FAIL",
-    "error": "Array declares 3 items but found 0"
+    "error": "Array declares 3 rows but found 0"
   },
   {
     "file": "D2_hetero_responses_M.json",
     "tier": "D",
     "json_bytes": 19660,
     "json_tokens": 4915,
-    "toon_bytes": 24285,
-    "toon_tokens": 6071,
-    "savings_pct": -23.519837232960317,
-    "encode_ms": 1.3009579852223396,
-    "decode_ms": 0.4991249879822135,
+    "toon_bytes": 23249,
+    "toon_tokens": 5812,
+    "savings_pct": -18.250254323499494,
+    "encode_ms": 1.2066669878549874,
+    "decode_ms": 1.137666986323893,
     "roundtrip": "DECODE_FAIL",
-    "error": "Array declares 3 items but found 0"
+    "error": "Array declares 500 items but found 3"
   },
   {
     "file": "D3_compact_coordinates_L.json",
@@ -301,9 +301,9 @@
     "toon_bytes": 30093,
     "toon_tokens": 7523,
     "savings_pct": -30.35869000173279,
-    "encode_ms": 1.7792920116335154,
-    "decode_ms": 1.187250018119812,
-    "roundtrip": "FAIL"
+    "encode_ms": 1.8947079661302269,
+    "decode_ms": 4.5524169690907,
+    "roundtrip": "PASS"
   },
   {
     "file": "D3_compact_ids_XL.json",
@@ -313,8 +313,8 @@
     "toon_bytes": 60007,
     "toon_tokens": 15001,
     "savings_pct": 14.280000000000005,
-    "encode_ms": 6.135292001999915,
-    "decode_ms": 1.6672080382704735,
+    "encode_ms": 6.213082990143448,
+    "decode_ms": 6.285874987952411,
     "roundtrip": "PASS"
   }
 ]
