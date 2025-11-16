@@ -1851,7 +1851,7 @@
       "id": "REFS-004",
       "title": "Implement GraphEncoder/Decoder",
       "type": "story",
-      "state": "UNPROCESSED",
+      "state": "COMPLETED",
       "priority": "P2",
       "description": "Create GraphEncoder that normalizes circular references with object IDs and GraphDecoder that reconstructs cycles",
       "parent": "REFS-001",
@@ -1899,7 +1899,9 @@
       "github": {
         "issueNumber": 43,
         "issueUrl": "https://github.com/Mathews-Tom/PyToon/issues/43"
-      }
+      },
+      "updated": "2025-11-16T22:00:00Z",
+      "completedAt": "2025-11-16T22:00:00Z"
     },
     {
       "id": "SPARSE-001",
