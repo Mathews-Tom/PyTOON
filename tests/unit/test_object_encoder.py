@@ -240,7 +240,8 @@ class TestObjectEncoderArrays:
         """Dict with tabular array (uniform dicts)."""
         encoder = ObjectEncoder()
         result = encoder.encode({"users": [{"id": 1}, {"id": 2}]})
-        expected = "users: array[2]{id}:\n  1\n  2"
+        # Tabular arrays are displayed on new lines with proper indentation
+        expected = "users:\n  [2]{id}:\n  1\n  2"
         assert result == expected
 
     def test_multiple_arrays(self) -> None:
@@ -615,7 +616,9 @@ class TestObjectEncoderIntegration:
         assert "status: success" in result
         assert "code: 200" in result
         assert "data:" in result
-        assert "items: array[2]{id}:" in result
+        # Tabular arrays are now displayed on new lines with proper indentation
+        assert "items:" in result
+        assert "[2]{id}:" in result
         assert "total: 2" in result
         assert "errors: null" in result
 

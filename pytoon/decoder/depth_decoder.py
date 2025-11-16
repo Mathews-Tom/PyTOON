@@ -179,13 +179,42 @@ def decode_key_value(
     rest = content[after_colon:].strip()
 
     if not rest:
-        # No value after colon → nested object or empty string
+        # No value after colon → nested object, nested array, or empty string
         next_line = cursor.peek()
         if next_line and next_line.depth > base_depth:
+            # Check if nested value is an anonymous array header
+            nested_header = parse_array_header(next_line.content)
+            if nested_header and not nested_header[0].key:
+                # Anonymous array as value (e.g., key:\n  [N]:)
+                cursor.advance()
+                value = decode_array_from_header(
+                    nested_header[0],
+                    nested_header[1],
+                    cursor,
+                    base_depth + 1,
+                    indent_size,
+                    strict,
+                )
+                return key, value
+            # Otherwise nested object
             nested = decode_object(cursor, base_depth + 1, indent_size, strict)
             return key, nested
         # Empty string (no nested content)
         return key, ""
+
+    # Check if the rest is an inline array header (e.g., "[0]:" or "[3]: 1,2,3")
+    inline_array_header = parse_array_header(rest)
+    if inline_array_header and not inline_array_header[0].key:
+        # This is an anonymous array as inline value
+        value = decode_array_from_header(
+            inline_array_header[0],
+            inline_array_header[1],
+            cursor,
+            base_depth,
+            indent_size,
+            strict,
+        )
+        return key, value
 
     # Inline primitive value
     value = parse_primitive_token(rest)

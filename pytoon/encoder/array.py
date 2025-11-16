@@ -219,7 +219,17 @@ class ArrayEncoder:
 
         for item in array:
             encoded_item = self._encode_list_item(item, indent, delimiter, current_depth)
-            items.append(f"{item_indent}- {encoded_item}")
+            # Handle multi-line items by adding item_indent to each line
+            if "\n" in encoded_item:
+                item_lines = encoded_item.split("\n")
+                # First line gets "- " prefix
+                formatted_item = f"{item_indent}- {item_lines[0]}"
+                # Subsequent lines get item_indent added (they already have relative indent)
+                for line in item_lines[1:]:
+                    formatted_item += f"\n{item_indent}{line}"
+                items.append(formatted_item)
+            else:
+                items.append(f"{item_indent}- {encoded_item}")
 
         return header + "\n" + "\n".join(items)
 
@@ -285,10 +295,38 @@ class ArrayEncoder:
             if isinstance(value, list):
                 # Nested array
                 encoded_value = self.encode(value, indent, delimiter, current_depth + 2)
-                if i == 0:
-                    parts.append(f"{key}: {encoded_value}")
+                if "\n" in encoded_value:
+                    # Multi-line array - header goes on its own line
+                    array_lines = encoded_value.split("\n")
+                    first_line = array_lines[0]  # e.g., "array[N]{fields}:"
+                    rest_lines = array_lines[1:]
+
+                    # Strip "array" prefix from header - just use [N]: format
+                    if first_line.startswith("array"):
+                        first_line = first_line[5:]  # Remove "array" prefix
+
+                    # Compute indentation for nested array content
+                    # The array header will be at nested_indent + indent (one level deeper)
+                    array_content_indent = " " * (indent * (current_depth + 3))
+
+                    if i == 0:
+                        part = f"{key}{first_line}"  # e.g., "items[2]{x,y}:"
+                        for line in rest_lines:
+                            if line.strip():
+                                part += f"\n{array_content_indent}{line.lstrip()}"
+                        parts.append(part)
+                    else:
+                        part = f"{nested_indent}{key}{first_line}"
+                        for line in rest_lines:
+                            if line.strip():
+                                part += f"\n{array_content_indent}{line.lstrip()}"
+                        parts.append(part)
                 else:
-                    parts.append(f"{nested_indent}{key}: {encoded_value}")
+                    # Inline array
+                    if i == 0:
+                        parts.append(f"{key}: {encoded_value}")
+                    else:
+                        parts.append(f"{nested_indent}{key}: {encoded_value}")
             elif isinstance(value, dict):
                 # Nested dict - recursively encode
                 encoded_value = self._encode_dict_item(value, indent, delimiter, current_depth + 1)

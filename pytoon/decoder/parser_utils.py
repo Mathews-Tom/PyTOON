@@ -75,6 +75,11 @@ def parse_array_header(
     if key == "":
         key = None
 
+    # Check if key contains a colon - this means it's a key-value pair, not an array header
+    # e.g., "results: [0]:" should be parsed as key="results" value="[0]:", not as array with key="results:"
+    if key and ":" in key:
+        return None
+
     # Parse bracket content for length and delimiter
     bracket_content = content[bracket_start + 1 : bracket_end]
     length, delimiter = parse_bracket_segment(bracket_content, default_delimiter)
