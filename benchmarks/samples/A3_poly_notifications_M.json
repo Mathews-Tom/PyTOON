@@ -1,0 +1,5603 @@
+[
+  {
+    "id": 1,
+    "type": "webhook",
+    "createdAt": "2025-11-14T19:40:21Z",
+    "userId": 9348,
+    "read": false,
+    "url": "https://webhook.site/03d5a95f-c573-41e9-a7e1-66174edaec9a",
+    "payload": {
+      "event": "notification",
+      "id": 1
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 2,
+    "type": "webhook",
+    "createdAt": "2025-11-12T23:27:27Z",
+    "userId": 9699,
+    "read": true,
+    "url": "https://webhook.site/32217563-af76-45f1-82e9-2f51a7dc05d1",
+    "payload": {
+      "event": "notification",
+      "id": 2
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 3,
+    "type": "webhook",
+    "createdAt": "2025-11-14T04:50:00Z",
+    "userId": 3069,
+    "read": true,
+    "url": "https://webhook.site/6dc7b53d-3503-4c94-bf82-3a27e426b71d",
+    "payload": {
+      "event": "notification",
+      "id": 3
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 4,
+    "type": "webhook",
+    "createdAt": "2025-11-13T16:20:15Z",
+    "userId": 3630,
+    "read": true,
+    "url": "https://webhook.site/9245504e-3c0b-4755-9bf1-11b428b03c7f",
+    "payload": {
+      "event": "notification",
+      "id": 4
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 5,
+    "type": "sms",
+    "createdAt": "2025-11-09T02:03:31Z",
+    "userId": 2692,
+    "read": false,
+    "phoneNumber": "+18377352971",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 6,
+    "type": "sms",
+    "createdAt": "2025-11-08T22:50:33Z",
+    "userId": 9163,
+    "read": true,
+    "phoneNumber": "+12112718826",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 7,
+    "type": "in_app",
+    "createdAt": "2025-11-12T02:51:46Z",
+    "userId": 1290,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 8,
+    "type": "push",
+    "createdAt": "2025-11-13T12:42:00Z",
+    "userId": 9761,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 9,
+    "type": "push",
+    "createdAt": "2025-11-15T01:57:39Z",
+    "userId": 1127,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 10,
+    "type": "sms",
+    "createdAt": "2025-11-10T05:53:24Z",
+    "userId": 1922,
+    "read": false,
+    "phoneNumber": "+17940473457",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 11,
+    "type": "push",
+    "createdAt": "2025-11-08T21:32:26Z",
+    "userId": 2422,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 12,
+    "type": "email",
+    "createdAt": "2025-11-15T22:33:32Z",
+    "userId": 695,
+    "read": false,
+    "subject": "Notification #12",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user695@example.com"
+  },
+  {
+    "id": 13,
+    "type": "webhook",
+    "createdAt": "2025-11-10T23:42:05Z",
+    "userId": 9975,
+    "read": true,
+    "url": "https://webhook.site/30a42c8d-935d-4dd5-9861-6ad44d89807d",
+    "payload": {
+      "event": "notification",
+      "id": 13
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 14,
+    "type": "push",
+    "createdAt": "2025-11-14T09:38:24Z",
+    "userId": 7725,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 15,
+    "type": "in_app",
+    "createdAt": "2025-11-11T04:41:36Z",
+    "userId": 4450,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 16,
+    "type": "email",
+    "createdAt": "2025-11-10T20:56:37Z",
+    "userId": 8793,
+    "read": true,
+    "subject": "Notification #16",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8793@example.com"
+  },
+  {
+    "id": 17,
+    "type": "email",
+    "createdAt": "2025-11-13T23:50:04Z",
+    "userId": 6525,
+    "read": false,
+    "subject": "Notification #17",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6525@example.com"
+  },
+  {
+    "id": 18,
+    "type": "sms",
+    "createdAt": "2025-11-11T19:29:36Z",
+    "userId": 9311,
+    "read": true,
+    "phoneNumber": "+12365278781",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 19,
+    "type": "webhook",
+    "createdAt": "2025-11-12T02:18:08Z",
+    "userId": 5290,
+    "read": false,
+    "url": "https://webhook.site/d47d5e6e-40e8-4890-ab67-f7e9a8a711bd",
+    "payload": {
+      "event": "notification",
+      "id": 19
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 20,
+    "type": "push",
+    "createdAt": "2025-11-11T03:12:55Z",
+    "userId": 8908,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 21,
+    "type": "in_app",
+    "createdAt": "2025-11-12T04:24:07Z",
+    "userId": 6576,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 22,
+    "type": "sms",
+    "createdAt": "2025-11-14T18:47:26Z",
+    "userId": 466,
+    "read": true,
+    "phoneNumber": "+17293287178",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 23,
+    "type": "email",
+    "createdAt": "2025-11-08T20:40:43Z",
+    "userId": 5272,
+    "read": true,
+    "subject": "Notification #23",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user5272@example.com"
+  },
+  {
+    "id": 24,
+    "type": "webhook",
+    "createdAt": "2025-11-13T00:17:09Z",
+    "userId": 9765,
+    "read": true,
+    "url": "https://webhook.site/55e0faf3-ff03-4edb-aa5d-660a333fb305",
+    "payload": {
+      "event": "notification",
+      "id": 24
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 25,
+    "type": "push",
+    "createdAt": "2025-11-09T02:52:59Z",
+    "userId": 2864,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 26,
+    "type": "email",
+    "createdAt": "2025-11-12T04:40:46Z",
+    "userId": 2593,
+    "read": true,
+    "subject": "Notification #26",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2593@example.com"
+  },
+  {
+    "id": 27,
+    "type": "in_app",
+    "createdAt": "2025-11-10T15:18:39Z",
+    "userId": 2714,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 28,
+    "type": "push",
+    "createdAt": "2025-11-11T02:46:48Z",
+    "userId": 2102,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 29,
+    "type": "in_app",
+    "createdAt": "2025-11-08T15:08:14Z",
+    "userId": 6540,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 30,
+    "type": "sms",
+    "createdAt": "2025-11-12T12:39:50Z",
+    "userId": 7646,
+    "read": false,
+    "phoneNumber": "+12188670625",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 31,
+    "type": "email",
+    "createdAt": "2025-11-12T02:02:07Z",
+    "userId": 3382,
+    "read": false,
+    "subject": "Notification #31",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user3382@example.com"
+  },
+  {
+    "id": 32,
+    "type": "in_app",
+    "createdAt": "2025-11-10T09:22:29Z",
+    "userId": 5380,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 33,
+    "type": "email",
+    "createdAt": "2025-11-13T23:03:31Z",
+    "userId": 8784,
+    "read": true,
+    "subject": "Notification #33",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8784@example.com"
+  },
+  {
+    "id": 34,
+    "type": "in_app",
+    "createdAt": "2025-11-13T00:56:49Z",
+    "userId": 9380,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 35,
+    "type": "sms",
+    "createdAt": "2025-11-10T19:18:32Z",
+    "userId": 2436,
+    "read": true,
+    "phoneNumber": "+16695384602",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 36,
+    "type": "push",
+    "createdAt": "2025-11-16T02:58:30Z",
+    "userId": 7122,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 37,
+    "type": "push",
+    "createdAt": "2025-11-13T07:16:07Z",
+    "userId": 1722,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 38,
+    "type": "sms",
+    "createdAt": "2025-11-13T17:57:18Z",
+    "userId": 7954,
+    "read": false,
+    "phoneNumber": "+18070573851",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 39,
+    "type": "push",
+    "createdAt": "2025-11-09T13:37:15Z",
+    "userId": 6926,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 40,
+    "type": "push",
+    "createdAt": "2025-11-09T02:52:34Z",
+    "userId": 1461,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 2
+  },
+  {
+    "id": 41,
+    "type": "in_app",
+    "createdAt": "2025-11-11T04:55:48Z",
+    "userId": 3992,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 42,
+    "type": "push",
+    "createdAt": "2025-11-15T21:58:02Z",
+    "userId": 6606,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 43,
+    "type": "push",
+    "createdAt": "2025-11-12T01:11:38Z",
+    "userId": 6285,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 44,
+    "type": "webhook",
+    "createdAt": "2025-11-11T19:33:17Z",
+    "userId": 9596,
+    "read": true,
+    "url": "https://webhook.site/e3d477d9-1ce1-4d75-9d95-26e7e45cf032",
+    "payload": {
+      "event": "notification",
+      "id": 44
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 45,
+    "type": "in_app",
+    "createdAt": "2025-11-12T08:33:39Z",
+    "userId": 56,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 46,
+    "type": "webhook",
+    "createdAt": "2025-11-13T06:41:16Z",
+    "userId": 3454,
+    "read": false,
+    "url": "https://webhook.site/61156f2d-4669-40be-b13c-4df5a6e4d5c0",
+    "payload": {
+      "event": "notification",
+      "id": 46
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 47,
+    "type": "in_app",
+    "createdAt": "2025-11-10T04:15:03Z",
+    "userId": 2076,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 48,
+    "type": "sms",
+    "createdAt": "2025-11-13T05:18:19Z",
+    "userId": 410,
+    "read": false,
+    "phoneNumber": "+17032156160",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 49,
+    "type": "email",
+    "createdAt": "2025-11-11T10:42:30Z",
+    "userId": 219,
+    "read": true,
+    "subject": "Notification #49",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user219@example.com"
+  },
+  {
+    "id": 50,
+    "type": "webhook",
+    "createdAt": "2025-11-16T09:07:17Z",
+    "userId": 2288,
+    "read": true,
+    "url": "https://webhook.site/1afd1f56-9e2f-4dfd-bc1a-ae9300c268d4",
+    "payload": {
+      "event": "notification",
+      "id": 50
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 51,
+    "type": "in_app",
+    "createdAt": "2025-11-14T07:19:06Z",
+    "userId": 7909,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 52,
+    "type": "email",
+    "createdAt": "2025-11-14T03:41:12Z",
+    "userId": 3836,
+    "read": false,
+    "subject": "Notification #52",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user3836@example.com"
+  },
+  {
+    "id": 53,
+    "type": "push",
+    "createdAt": "2025-11-15T00:40:09Z",
+    "userId": 4218,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 54,
+    "type": "sms",
+    "createdAt": "2025-11-13T23:10:18Z",
+    "userId": 9156,
+    "read": true,
+    "phoneNumber": "+12153083483",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 55,
+    "type": "in_app",
+    "createdAt": "2025-11-15T07:30:36Z",
+    "userId": 2841,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 56,
+    "type": "push",
+    "createdAt": "2025-11-09T09:08:55Z",
+    "userId": 1402,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 57,
+    "type": "sms",
+    "createdAt": "2025-11-14T17:26:26Z",
+    "userId": 5050,
+    "read": true,
+    "phoneNumber": "+15878213927",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 58,
+    "type": "sms",
+    "createdAt": "2025-11-15T20:26:53Z",
+    "userId": 8692,
+    "read": true,
+    "phoneNumber": "+13275523641",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 59,
+    "type": "push",
+    "createdAt": "2025-11-15T19:44:07Z",
+    "userId": 9823,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 60,
+    "type": "email",
+    "createdAt": "2025-11-14T06:27:20Z",
+    "userId": 6115,
+    "read": true,
+    "subject": "Notification #60",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6115@example.com"
+  },
+  {
+    "id": 61,
+    "type": "push",
+    "createdAt": "2025-11-10T22:35:12Z",
+    "userId": 7231,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 62,
+    "type": "push",
+    "createdAt": "2025-11-15T04:53:36Z",
+    "userId": 5007,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 63,
+    "type": "webhook",
+    "createdAt": "2025-11-15T18:05:14Z",
+    "userId": 3336,
+    "read": true,
+    "url": "https://webhook.site/b735aa0c-480d-4b71-85a0-fb914e57c467",
+    "payload": {
+      "event": "notification",
+      "id": 63
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 64,
+    "type": "email",
+    "createdAt": "2025-11-11T00:57:21Z",
+    "userId": 8833,
+    "read": true,
+    "subject": "Notification #64",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8833@example.com"
+  },
+  {
+    "id": 65,
+    "type": "push",
+    "createdAt": "2025-11-14T10:18:53Z",
+    "userId": 8723,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 1
+  },
+  {
+    "id": 66,
+    "type": "webhook",
+    "createdAt": "2025-11-09T19:31:07Z",
+    "userId": 3748,
+    "read": true,
+    "url": "https://webhook.site/c49a9beb-b489-4a34-891a-d65a416cfde6",
+    "payload": {
+      "event": "notification",
+      "id": 66
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 67,
+    "type": "push",
+    "createdAt": "2025-11-16T09:35:19Z",
+    "userId": 3010,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 2
+  },
+  {
+    "id": 68,
+    "type": "push",
+    "createdAt": "2025-11-10T12:46:12Z",
+    "userId": 9514,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 1
+  },
+  {
+    "id": 69,
+    "type": "in_app",
+    "createdAt": "2025-11-13T03:17:39Z",
+    "userId": 2451,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 70,
+    "type": "in_app",
+    "createdAt": "2025-11-10T07:41:14Z",
+    "userId": 8220,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 71,
+    "type": "sms",
+    "createdAt": "2025-11-16T04:01:38Z",
+    "userId": 9563,
+    "read": true,
+    "phoneNumber": "+13648973169",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 72,
+    "type": "in_app",
+    "createdAt": "2025-11-13T00:18:13Z",
+    "userId": 3986,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 73,
+    "type": "email",
+    "createdAt": "2025-11-16T03:09:56Z",
+    "userId": 872,
+    "read": true,
+    "subject": "Notification #73",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user872@example.com"
+  },
+  {
+    "id": 74,
+    "type": "in_app",
+    "createdAt": "2025-11-10T02:20:09Z",
+    "userId": 5501,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 75,
+    "type": "webhook",
+    "createdAt": "2025-11-11T17:55:58Z",
+    "userId": 2119,
+    "read": false,
+    "url": "https://webhook.site/b51f069c-450a-4155-947b-e02049b94e66",
+    "payload": {
+      "event": "notification",
+      "id": 75
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 76,
+    "type": "webhook",
+    "createdAt": "2025-11-16T00:47:24Z",
+    "userId": 8354,
+    "read": false,
+    "url": "https://webhook.site/5f4e82a7-a42d-433b-b186-9904d722dd6d",
+    "payload": {
+      "event": "notification",
+      "id": 76
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 77,
+    "type": "sms",
+    "createdAt": "2025-11-10T02:47:12Z",
+    "userId": 4917,
+    "read": true,
+    "phoneNumber": "+16137980052",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 78,
+    "type": "sms",
+    "createdAt": "2025-11-12T11:16:50Z",
+    "userId": 558,
+    "read": true,
+    "phoneNumber": "+15623873815",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 79,
+    "type": "sms",
+    "createdAt": "2025-11-10T02:33:08Z",
+    "userId": 7921,
+    "read": true,
+    "phoneNumber": "+19808451687",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 80,
+    "type": "sms",
+    "createdAt": "2025-11-15T04:26:38Z",
+    "userId": 3729,
+    "read": true,
+    "phoneNumber": "+13292368577",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 81,
+    "type": "in_app",
+    "createdAt": "2025-11-16T03:23:58Z",
+    "userId": 142,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 82,
+    "type": "webhook",
+    "createdAt": "2025-11-14T20:33:03Z",
+    "userId": 7296,
+    "read": false,
+    "url": "https://webhook.site/c432dc91-4878-4c91-b385-9349772d5ef9",
+    "payload": {
+      "event": "notification",
+      "id": 82
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 83,
+    "type": "in_app",
+    "createdAt": "2025-11-15T00:36:25Z",
+    "userId": 5569,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 84,
+    "type": "in_app",
+    "createdAt": "2025-11-14T09:27:54Z",
+    "userId": 910,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 85,
+    "type": "in_app",
+    "createdAt": "2025-11-10T12:34:19Z",
+    "userId": 579,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 86,
+    "type": "webhook",
+    "createdAt": "2025-11-14T00:49:09Z",
+    "userId": 5274,
+    "read": false,
+    "url": "https://webhook.site/1f001502-7074-4cb6-a52d-965a8a6849b1",
+    "payload": {
+      "event": "notification",
+      "id": 86
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 87,
+    "type": "email",
+    "createdAt": "2025-11-13T20:10:08Z",
+    "userId": 115,
+    "read": true,
+    "subject": "Notification #87",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user115@example.com"
+  },
+  {
+    "id": 88,
+    "type": "push",
+    "createdAt": "2025-11-13T19:06:52Z",
+    "userId": 6656,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 89,
+    "type": "in_app",
+    "createdAt": "2025-11-13T23:58:59Z",
+    "userId": 2234,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 90,
+    "type": "push",
+    "createdAt": "2025-11-16T02:00:57Z",
+    "userId": 2917,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 91,
+    "type": "email",
+    "createdAt": "2025-11-10T18:15:33Z",
+    "userId": 6808,
+    "read": true,
+    "subject": "Notification #91",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6808@example.com"
+  },
+  {
+    "id": 92,
+    "type": "push",
+    "createdAt": "2025-11-13T23:38:43Z",
+    "userId": 3470,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 7
+  },
+  {
+    "id": 93,
+    "type": "email",
+    "createdAt": "2025-11-13T06:21:09Z",
+    "userId": 5509,
+    "read": false,
+    "subject": "Notification #93",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user5509@example.com"
+  },
+  {
+    "id": 94,
+    "type": "in_app",
+    "createdAt": "2025-11-12T23:26:34Z",
+    "userId": 7227,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 95,
+    "type": "in_app",
+    "createdAt": "2025-11-14T00:26:02Z",
+    "userId": 7306,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 96,
+    "type": "push",
+    "createdAt": "2025-11-15T16:03:31Z",
+    "userId": 5106,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 97,
+    "type": "push",
+    "createdAt": "2025-11-10T14:59:00Z",
+    "userId": 3654,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 98,
+    "type": "push",
+    "createdAt": "2025-11-11T10:21:24Z",
+    "userId": 1550,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 99,
+    "type": "sms",
+    "createdAt": "2025-11-15T06:50:03Z",
+    "userId": 810,
+    "read": true,
+    "phoneNumber": "+12163555742",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 100,
+    "type": "webhook",
+    "createdAt": "2025-11-14T03:58:53Z",
+    "userId": 7549,
+    "read": true,
+    "url": "https://webhook.site/458332fe-9bb5-4c06-aca2-a0f9bbef6fb1",
+    "payload": {
+      "event": "notification",
+      "id": 100
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 101,
+    "type": "push",
+    "createdAt": "2025-11-08T23:54:23Z",
+    "userId": 117,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 102,
+    "type": "email",
+    "createdAt": "2025-11-08T21:37:28Z",
+    "userId": 7035,
+    "read": true,
+    "subject": "Notification #102",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user7035@example.com"
+  },
+  {
+    "id": 103,
+    "type": "in_app",
+    "createdAt": "2025-11-13T06:46:17Z",
+    "userId": 9042,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 104,
+    "type": "email",
+    "createdAt": "2025-11-14T07:52:57Z",
+    "userId": 1819,
+    "read": true,
+    "subject": "Notification #104",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user1819@example.com"
+  },
+  {
+    "id": 105,
+    "type": "sms",
+    "createdAt": "2025-11-12T07:29:31Z",
+    "userId": 9902,
+    "read": true,
+    "phoneNumber": "+18142388392",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 106,
+    "type": "in_app",
+    "createdAt": "2025-11-14T22:14:44Z",
+    "userId": 2580,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 107,
+    "type": "webhook",
+    "createdAt": "2025-11-14T23:04:22Z",
+    "userId": 8524,
+    "read": true,
+    "url": "https://webhook.site/3406d03b-411b-4158-b252-6289342d0385",
+    "payload": {
+      "event": "notification",
+      "id": 107
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 108,
+    "type": "push",
+    "createdAt": "2025-11-11T11:04:32Z",
+    "userId": 7479,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 109,
+    "type": "email",
+    "createdAt": "2025-11-14T03:21:57Z",
+    "userId": 226,
+    "read": true,
+    "subject": "Notification #109",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user226@example.com"
+  },
+  {
+    "id": 110,
+    "type": "email",
+    "createdAt": "2025-11-09T19:21:59Z",
+    "userId": 2981,
+    "read": true,
+    "subject": "Notification #110",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2981@example.com"
+  },
+  {
+    "id": 111,
+    "type": "email",
+    "createdAt": "2025-11-09T07:03:58Z",
+    "userId": 2884,
+    "read": true,
+    "subject": "Notification #111",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2884@example.com"
+  },
+  {
+    "id": 112,
+    "type": "email",
+    "createdAt": "2025-11-10T10:09:29Z",
+    "userId": 8698,
+    "read": true,
+    "subject": "Notification #112",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8698@example.com"
+  },
+  {
+    "id": 113,
+    "type": "webhook",
+    "createdAt": "2025-11-14T22:22:35Z",
+    "userId": 4516,
+    "read": true,
+    "url": "https://webhook.site/35255f98-001d-4b49-b307-5bbd8aa76234",
+    "payload": {
+      "event": "notification",
+      "id": 113
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 114,
+    "type": "sms",
+    "createdAt": "2025-11-11T14:16:37Z",
+    "userId": 1123,
+    "read": false,
+    "phoneNumber": "+14435456099",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 115,
+    "type": "in_app",
+    "createdAt": "2025-11-09T09:51:40Z",
+    "userId": 4170,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 116,
+    "type": "email",
+    "createdAt": "2025-11-12T22:53:38Z",
+    "userId": 2731,
+    "read": false,
+    "subject": "Notification #116",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2731@example.com"
+  },
+  {
+    "id": 117,
+    "type": "in_app",
+    "createdAt": "2025-11-13T22:26:20Z",
+    "userId": 161,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 118,
+    "type": "webhook",
+    "createdAt": "2025-11-16T11:34:34Z",
+    "userId": 5614,
+    "read": true,
+    "url": "https://webhook.site/9756fe3f-7ade-43f3-98a9-2c99b0f93387",
+    "payload": {
+      "event": "notification",
+      "id": 118
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 119,
+    "type": "email",
+    "createdAt": "2025-11-14T16:01:37Z",
+    "userId": 4661,
+    "read": false,
+    "subject": "Notification #119",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4661@example.com"
+  },
+  {
+    "id": 120,
+    "type": "email",
+    "createdAt": "2025-11-14T03:40:32Z",
+    "userId": 8574,
+    "read": true,
+    "subject": "Notification #120",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8574@example.com"
+  },
+  {
+    "id": 121,
+    "type": "push",
+    "createdAt": "2025-11-08T17:18:22Z",
+    "userId": 4139,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 7
+  },
+  {
+    "id": 122,
+    "type": "in_app",
+    "createdAt": "2025-11-14T06:28:04Z",
+    "userId": 814,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 123,
+    "type": "push",
+    "createdAt": "2025-11-09T05:03:27Z",
+    "userId": 7881,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 124,
+    "type": "sms",
+    "createdAt": "2025-11-11T05:31:22Z",
+    "userId": 191,
+    "read": true,
+    "phoneNumber": "+16257131984",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 125,
+    "type": "email",
+    "createdAt": "2025-11-11T10:44:01Z",
+    "userId": 3972,
+    "read": true,
+    "subject": "Notification #125",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user3972@example.com"
+  },
+  {
+    "id": 126,
+    "type": "webhook",
+    "createdAt": "2025-11-14T00:11:46Z",
+    "userId": 1889,
+    "read": true,
+    "url": "https://webhook.site/c6c121ee-9dd0-4e2c-ad88-9243669c73ca",
+    "payload": {
+      "event": "notification",
+      "id": 126
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 127,
+    "type": "webhook",
+    "createdAt": "2025-11-11T11:37:04Z",
+    "userId": 7681,
+    "read": true,
+    "url": "https://webhook.site/cd3fee3e-49b2-4056-b6b2-a54f447d363e",
+    "payload": {
+      "event": "notification",
+      "id": 127
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 128,
+    "type": "push",
+    "createdAt": "2025-11-15T10:38:25Z",
+    "userId": 75,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 7
+  },
+  {
+    "id": 129,
+    "type": "webhook",
+    "createdAt": "2025-11-10T23:54:11Z",
+    "userId": 5075,
+    "read": true,
+    "url": "https://webhook.site/affbdcb2-ff7d-4538-b206-731c1cb8d33d",
+    "payload": {
+      "event": "notification",
+      "id": 129
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 130,
+    "type": "push",
+    "createdAt": "2025-11-09T10:11:04Z",
+    "userId": 3593,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 131,
+    "type": "sms",
+    "createdAt": "2025-11-14T09:07:19Z",
+    "userId": 3123,
+    "read": true,
+    "phoneNumber": "+14755245434",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 132,
+    "type": "push",
+    "createdAt": "2025-11-12T11:04:54Z",
+    "userId": 2650,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 7
+  },
+  {
+    "id": 133,
+    "type": "webhook",
+    "createdAt": "2025-11-15T04:44:16Z",
+    "userId": 1453,
+    "read": true,
+    "url": "https://webhook.site/3957b057-b2ea-45f6-bae4-a407275a32d5",
+    "payload": {
+      "event": "notification",
+      "id": 133
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 134,
+    "type": "push",
+    "createdAt": "2025-11-13T07:26:57Z",
+    "userId": 9091,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 135,
+    "type": "push",
+    "createdAt": "2025-11-10T00:01:51Z",
+    "userId": 5699,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 136,
+    "type": "push",
+    "createdAt": "2025-11-10T19:04:28Z",
+    "userId": 2733,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 7
+  },
+  {
+    "id": 137,
+    "type": "email",
+    "createdAt": "2025-11-08T20:50:51Z",
+    "userId": 3670,
+    "read": true,
+    "subject": "Notification #137",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user3670@example.com"
+  },
+  {
+    "id": 138,
+    "type": "email",
+    "createdAt": "2025-11-08T19:11:28Z",
+    "userId": 6784,
+    "read": false,
+    "subject": "Notification #138",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6784@example.com"
+  },
+  {
+    "id": 139,
+    "type": "webhook",
+    "createdAt": "2025-11-14T18:43:46Z",
+    "userId": 3799,
+    "read": true,
+    "url": "https://webhook.site/611b3dc1-75f5-42f5-baa9-bc14d079c28c",
+    "payload": {
+      "event": "notification",
+      "id": 139
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 140,
+    "type": "email",
+    "createdAt": "2025-11-11T07:33:01Z",
+    "userId": 4388,
+    "read": true,
+    "subject": "Notification #140",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4388@example.com"
+  },
+  {
+    "id": 141,
+    "type": "sms",
+    "createdAt": "2025-11-12T23:57:40Z",
+    "userId": 1049,
+    "read": false,
+    "phoneNumber": "+19362156298",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 142,
+    "type": "sms",
+    "createdAt": "2025-11-10T13:06:59Z",
+    "userId": 9659,
+    "read": false,
+    "phoneNumber": "+15304723159",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 143,
+    "type": "sms",
+    "createdAt": "2025-11-15T17:40:17Z",
+    "userId": 4993,
+    "read": false,
+    "phoneNumber": "+12784276039",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 144,
+    "type": "push",
+    "createdAt": "2025-11-11T22:56:32Z",
+    "userId": 1241,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 7
+  },
+  {
+    "id": 145,
+    "type": "in_app",
+    "createdAt": "2025-11-09T10:04:50Z",
+    "userId": 1919,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 146,
+    "type": "sms",
+    "createdAt": "2025-11-14T01:12:07Z",
+    "userId": 469,
+    "read": false,
+    "phoneNumber": "+16685893273",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 147,
+    "type": "push",
+    "createdAt": "2025-11-11T23:46:37Z",
+    "userId": 3509,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 1
+  },
+  {
+    "id": 148,
+    "type": "sms",
+    "createdAt": "2025-11-15T13:37:33Z",
+    "userId": 9339,
+    "read": true,
+    "phoneNumber": "+13768963389",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 149,
+    "type": "sms",
+    "createdAt": "2025-11-15T03:19:11Z",
+    "userId": 1620,
+    "read": false,
+    "phoneNumber": "+15415953082",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 150,
+    "type": "email",
+    "createdAt": "2025-11-13T06:00:15Z",
+    "userId": 5864,
+    "read": false,
+    "subject": "Notification #150",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user5864@example.com"
+  },
+  {
+    "id": 151,
+    "type": "sms",
+    "createdAt": "2025-11-14T18:13:58Z",
+    "userId": 7188,
+    "read": false,
+    "phoneNumber": "+12352342304",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 152,
+    "type": "sms",
+    "createdAt": "2025-11-11T15:44:57Z",
+    "userId": 9700,
+    "read": false,
+    "phoneNumber": "+13637551806",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 153,
+    "type": "webhook",
+    "createdAt": "2025-11-11T00:19:28Z",
+    "userId": 7411,
+    "read": false,
+    "url": "https://webhook.site/cdf0e748-f018-4b56-8806-7c1d64dc4d45",
+    "payload": {
+      "event": "notification",
+      "id": 153
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 154,
+    "type": "email",
+    "createdAt": "2025-11-09T06:17:36Z",
+    "userId": 1445,
+    "read": true,
+    "subject": "Notification #154",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user1445@example.com"
+  },
+  {
+    "id": 155,
+    "type": "sms",
+    "createdAt": "2025-11-10T03:43:33Z",
+    "userId": 1248,
+    "read": false,
+    "phoneNumber": "+14416077138",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 156,
+    "type": "in_app",
+    "createdAt": "2025-11-12T04:47:12Z",
+    "userId": 40,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 157,
+    "type": "push",
+    "createdAt": "2025-11-15T00:35:31Z",
+    "userId": 2847,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 7
+  },
+  {
+    "id": 158,
+    "type": "email",
+    "createdAt": "2025-11-14T01:00:20Z",
+    "userId": 2038,
+    "read": false,
+    "subject": "Notification #158",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2038@example.com"
+  },
+  {
+    "id": 159,
+    "type": "webhook",
+    "createdAt": "2025-11-09T10:16:12Z",
+    "userId": 6723,
+    "read": true,
+    "url": "https://webhook.site/beec7a33-c6a5-4283-93c6-1ad45b09d2f5",
+    "payload": {
+      "event": "notification",
+      "id": 159
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 160,
+    "type": "sms",
+    "createdAt": "2025-11-12T23:51:47Z",
+    "userId": 2532,
+    "read": false,
+    "phoneNumber": "+14455899063",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 161,
+    "type": "sms",
+    "createdAt": "2025-11-16T03:42:12Z",
+    "userId": 9634,
+    "read": false,
+    "phoneNumber": "+14044451074",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 162,
+    "type": "email",
+    "createdAt": "2025-11-12T11:32:43Z",
+    "userId": 668,
+    "read": true,
+    "subject": "Notification #162",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user668@example.com"
+  },
+  {
+    "id": 163,
+    "type": "push",
+    "createdAt": "2025-11-10T06:32:39Z",
+    "userId": 6319,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 7
+  },
+  {
+    "id": 164,
+    "type": "email",
+    "createdAt": "2025-11-13T11:31:37Z",
+    "userId": 387,
+    "read": true,
+    "subject": "Notification #164",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user387@example.com"
+  },
+  {
+    "id": 165,
+    "type": "sms",
+    "createdAt": "2025-11-16T10:41:47Z",
+    "userId": 1084,
+    "read": false,
+    "phoneNumber": "+12546863598",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 166,
+    "type": "in_app",
+    "createdAt": "2025-11-15T22:21:56Z",
+    "userId": 4663,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 167,
+    "type": "webhook",
+    "createdAt": "2025-11-15T09:11:49Z",
+    "userId": 1439,
+    "read": true,
+    "url": "https://webhook.site/0d15498f-0b3d-4136-bb82-f16c3571215a",
+    "payload": {
+      "event": "notification",
+      "id": 167
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 168,
+    "type": "sms",
+    "createdAt": "2025-11-09T19:23:03Z",
+    "userId": 5790,
+    "read": true,
+    "phoneNumber": "+13008677572",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 169,
+    "type": "email",
+    "createdAt": "2025-11-12T09:31:52Z",
+    "userId": 2678,
+    "read": false,
+    "subject": "Notification #169",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2678@example.com"
+  },
+  {
+    "id": 170,
+    "type": "sms",
+    "createdAt": "2025-11-10T03:42:05Z",
+    "userId": 2726,
+    "read": true,
+    "phoneNumber": "+19155898542",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 171,
+    "type": "in_app",
+    "createdAt": "2025-11-12T19:35:17Z",
+    "userId": 3864,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 172,
+    "type": "sms",
+    "createdAt": "2025-11-14T13:59:56Z",
+    "userId": 4328,
+    "read": true,
+    "phoneNumber": "+14545083168",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 173,
+    "type": "email",
+    "createdAt": "2025-11-15T18:25:12Z",
+    "userId": 2774,
+    "read": false,
+    "subject": "Notification #173",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2774@example.com"
+  },
+  {
+    "id": 174,
+    "type": "webhook",
+    "createdAt": "2025-11-11T10:34:48Z",
+    "userId": 1840,
+    "read": false,
+    "url": "https://webhook.site/a03c8363-ede1-4665-a0b8-46a3171b9280",
+    "payload": {
+      "event": "notification",
+      "id": 174
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 175,
+    "type": "email",
+    "createdAt": "2025-11-10T18:21:45Z",
+    "userId": 8182,
+    "read": true,
+    "subject": "Notification #175",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8182@example.com"
+  },
+  {
+    "id": 176,
+    "type": "in_app",
+    "createdAt": "2025-11-09T08:17:57Z",
+    "userId": 7930,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 177,
+    "type": "push",
+    "createdAt": "2025-11-13T02:37:04Z",
+    "userId": 1795,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 178,
+    "type": "sms",
+    "createdAt": "2025-11-08T16:01:46Z",
+    "userId": 9746,
+    "read": true,
+    "phoneNumber": "+18705026955",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 179,
+    "type": "webhook",
+    "createdAt": "2025-11-08T23:28:59Z",
+    "userId": 1081,
+    "read": false,
+    "url": "https://webhook.site/677b4c89-6c32-4315-9263-859749e2a840",
+    "payload": {
+      "event": "notification",
+      "id": 179
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 180,
+    "type": "in_app",
+    "createdAt": "2025-11-09T23:08:55Z",
+    "userId": 8598,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 181,
+    "type": "in_app",
+    "createdAt": "2025-11-12T14:01:44Z",
+    "userId": 9516,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 182,
+    "type": "webhook",
+    "createdAt": "2025-11-10T19:11:08Z",
+    "userId": 5210,
+    "read": false,
+    "url": "https://webhook.site/d73f1fb8-1927-4b1d-b076-e2eb7a9ac1d6",
+    "payload": {
+      "event": "notification",
+      "id": 182
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 183,
+    "type": "sms",
+    "createdAt": "2025-11-15T09:16:21Z",
+    "userId": 8432,
+    "read": true,
+    "phoneNumber": "+19423713927",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 184,
+    "type": "in_app",
+    "createdAt": "2025-11-10T04:06:10Z",
+    "userId": 830,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 185,
+    "type": "webhook",
+    "createdAt": "2025-11-12T02:43:59Z",
+    "userId": 6970,
+    "read": true,
+    "url": "https://webhook.site/46ca0a75-4d75-4022-ae4c-37c89e07c27e",
+    "payload": {
+      "event": "notification",
+      "id": 185
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 186,
+    "type": "email",
+    "createdAt": "2025-11-11T01:22:01Z",
+    "userId": 3892,
+    "read": true,
+    "subject": "Notification #186",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user3892@example.com"
+  },
+  {
+    "id": 187,
+    "type": "in_app",
+    "createdAt": "2025-11-12T10:33:30Z",
+    "userId": 4860,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 188,
+    "type": "webhook",
+    "createdAt": "2025-11-08T14:33:30Z",
+    "userId": 4839,
+    "read": false,
+    "url": "https://webhook.site/7082dc88-52a1-4e45-aa7c-29381994e80f",
+    "payload": {
+      "event": "notification",
+      "id": 188
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 189,
+    "type": "push",
+    "createdAt": "2025-11-11T00:15:35Z",
+    "userId": 3574,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 190,
+    "type": "sms",
+    "createdAt": "2025-11-15T13:46:37Z",
+    "userId": 1302,
+    "read": true,
+    "phoneNumber": "+19906655581",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 191,
+    "type": "push",
+    "createdAt": "2025-11-11T22:47:04Z",
+    "userId": 67,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 192,
+    "type": "email",
+    "createdAt": "2025-11-13T03:56:12Z",
+    "userId": 8081,
+    "read": false,
+    "subject": "Notification #192",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8081@example.com"
+  },
+  {
+    "id": 193,
+    "type": "sms",
+    "createdAt": "2025-11-13T18:24:22Z",
+    "userId": 4406,
+    "read": true,
+    "phoneNumber": "+14691606214",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 194,
+    "type": "email",
+    "createdAt": "2025-11-12T10:22:22Z",
+    "userId": 2269,
+    "read": true,
+    "subject": "Notification #194",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2269@example.com"
+  },
+  {
+    "id": 195,
+    "type": "webhook",
+    "createdAt": "2025-11-12T01:44:55Z",
+    "userId": 8428,
+    "read": true,
+    "url": "https://webhook.site/f3b2c3ca-fe49-483d-a0e6-854a43a0db26",
+    "payload": {
+      "event": "notification",
+      "id": 195
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 196,
+    "type": "push",
+    "createdAt": "2025-11-15T17:39:16Z",
+    "userId": 575,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 197,
+    "type": "in_app",
+    "createdAt": "2025-11-11T12:03:44Z",
+    "userId": 7024,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 198,
+    "type": "in_app",
+    "createdAt": "2025-11-09T18:27:22Z",
+    "userId": 9776,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 199,
+    "type": "in_app",
+    "createdAt": "2025-11-14T19:17:15Z",
+    "userId": 4367,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 200,
+    "type": "in_app",
+    "createdAt": "2025-11-11T15:36:23Z",
+    "userId": 2721,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 201,
+    "type": "in_app",
+    "createdAt": "2025-11-13T19:54:01Z",
+    "userId": 1292,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 202,
+    "type": "in_app",
+    "createdAt": "2025-11-13T02:42:32Z",
+    "userId": 5090,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 203,
+    "type": "email",
+    "createdAt": "2025-11-15T04:11:56Z",
+    "userId": 5213,
+    "read": true,
+    "subject": "Notification #203",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user5213@example.com"
+  },
+  {
+    "id": 204,
+    "type": "webhook",
+    "createdAt": "2025-11-11T00:33:19Z",
+    "userId": 5567,
+    "read": false,
+    "url": "https://webhook.site/1443544a-8f63-48d4-bc42-94f921b50093",
+    "payload": {
+      "event": "notification",
+      "id": 204
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 205,
+    "type": "push",
+    "createdAt": "2025-11-09T12:10:16Z",
+    "userId": 8304,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 206,
+    "type": "email",
+    "createdAt": "2025-11-12T23:14:27Z",
+    "userId": 622,
+    "read": true,
+    "subject": "Notification #206",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user622@example.com"
+  },
+  {
+    "id": 207,
+    "type": "webhook",
+    "createdAt": "2025-11-08T12:09:04Z",
+    "userId": 9980,
+    "read": true,
+    "url": "https://webhook.site/fca68ae4-3f67-4504-8953-827ce2283d19",
+    "payload": {
+      "event": "notification",
+      "id": 207
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 208,
+    "type": "webhook",
+    "createdAt": "2025-11-13T18:29:31Z",
+    "userId": 1102,
+    "read": false,
+    "url": "https://webhook.site/e551d0c1-4b3e-45c8-a2db-154bc5231518",
+    "payload": {
+      "event": "notification",
+      "id": 208
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 209,
+    "type": "email",
+    "createdAt": "2025-11-13T18:59:03Z",
+    "userId": 8677,
+    "read": true,
+    "subject": "Notification #209",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8677@example.com"
+  },
+  {
+    "id": 210,
+    "type": "email",
+    "createdAt": "2025-11-14T22:29:34Z",
+    "userId": 7160,
+    "read": true,
+    "subject": "Notification #210",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user7160@example.com"
+  },
+  {
+    "id": 211,
+    "type": "sms",
+    "createdAt": "2025-11-15T07:35:35Z",
+    "userId": 2881,
+    "read": true,
+    "phoneNumber": "+12271491790",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 212,
+    "type": "webhook",
+    "createdAt": "2025-11-15T03:20:39Z",
+    "userId": 3202,
+    "read": false,
+    "url": "https://webhook.site/e538cfce-8164-46b9-84ac-957095bcd0e1",
+    "payload": {
+      "event": "notification",
+      "id": 212
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 213,
+    "type": "in_app",
+    "createdAt": "2025-11-13T14:58:22Z",
+    "userId": 4067,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 214,
+    "type": "push",
+    "createdAt": "2025-11-14T21:10:06Z",
+    "userId": 757,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 1
+  },
+  {
+    "id": 215,
+    "type": "email",
+    "createdAt": "2025-11-14T05:00:47Z",
+    "userId": 2586,
+    "read": false,
+    "subject": "Notification #215",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2586@example.com"
+  },
+  {
+    "id": 216,
+    "type": "webhook",
+    "createdAt": "2025-11-16T07:34:05Z",
+    "userId": 2658,
+    "read": true,
+    "url": "https://webhook.site/83a72ada-6047-4653-93b8-2e0a64deb4ae",
+    "payload": {
+      "event": "notification",
+      "id": 216
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 217,
+    "type": "webhook",
+    "createdAt": "2025-11-10T16:34:35Z",
+    "userId": 2975,
+    "read": true,
+    "url": "https://webhook.site/fef0c358-0e3a-483d-bf1d-bebd5ed724f7",
+    "payload": {
+      "event": "notification",
+      "id": 217
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 218,
+    "type": "webhook",
+    "createdAt": "2025-11-12T16:20:06Z",
+    "userId": 6336,
+    "read": false,
+    "url": "https://webhook.site/9d1318ce-f8ba-496d-8e79-401b1ea76ea4",
+    "payload": {
+      "event": "notification",
+      "id": 218
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 219,
+    "type": "sms",
+    "createdAt": "2025-11-09T19:08:12Z",
+    "userId": 3527,
+    "read": true,
+    "phoneNumber": "+14634272665",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 220,
+    "type": "webhook",
+    "createdAt": "2025-11-09T05:25:42Z",
+    "userId": 1142,
+    "read": false,
+    "url": "https://webhook.site/e05369d5-230a-41fe-b8ec-65fd8df0b6a0",
+    "payload": {
+      "event": "notification",
+      "id": 220
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 221,
+    "type": "in_app",
+    "createdAt": "2025-11-16T05:42:47Z",
+    "userId": 7259,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 222,
+    "type": "in_app",
+    "createdAt": "2025-11-09T04:04:35Z",
+    "userId": 8944,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 223,
+    "type": "in_app",
+    "createdAt": "2025-11-09T09:30:24Z",
+    "userId": 4680,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 224,
+    "type": "email",
+    "createdAt": "2025-11-09T08:38:55Z",
+    "userId": 4178,
+    "read": false,
+    "subject": "Notification #224",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4178@example.com"
+  },
+  {
+    "id": 225,
+    "type": "sms",
+    "createdAt": "2025-11-13T11:02:47Z",
+    "userId": 8868,
+    "read": true,
+    "phoneNumber": "+18164811111",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 226,
+    "type": "push",
+    "createdAt": "2025-11-10T16:16:46Z",
+    "userId": 7209,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 227,
+    "type": "in_app",
+    "createdAt": "2025-11-14T10:26:29Z",
+    "userId": 2863,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 228,
+    "type": "sms",
+    "createdAt": "2025-11-12T11:52:04Z",
+    "userId": 2940,
+    "read": false,
+    "phoneNumber": "+14998963758",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 229,
+    "type": "push",
+    "createdAt": "2025-11-11T18:14:22Z",
+    "userId": 6393,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 230,
+    "type": "email",
+    "createdAt": "2025-11-13T00:31:35Z",
+    "userId": 5499,
+    "read": true,
+    "subject": "Notification #230",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user5499@example.com"
+  },
+  {
+    "id": 231,
+    "type": "push",
+    "createdAt": "2025-11-15T13:30:26Z",
+    "userId": 6772,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 232,
+    "type": "email",
+    "createdAt": "2025-11-15T05:20:13Z",
+    "userId": 6660,
+    "read": false,
+    "subject": "Notification #232",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6660@example.com"
+  },
+  {
+    "id": 233,
+    "type": "email",
+    "createdAt": "2025-11-16T11:27:39Z",
+    "userId": 6671,
+    "read": true,
+    "subject": "Notification #233",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6671@example.com"
+  },
+  {
+    "id": 234,
+    "type": "email",
+    "createdAt": "2025-11-15T22:33:05Z",
+    "userId": 1965,
+    "read": false,
+    "subject": "Notification #234",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user1965@example.com"
+  },
+  {
+    "id": 235,
+    "type": "in_app",
+    "createdAt": "2025-11-09T00:37:09Z",
+    "userId": 1015,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 236,
+    "type": "in_app",
+    "createdAt": "2025-11-09T14:07:27Z",
+    "userId": 7921,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 237,
+    "type": "push",
+    "createdAt": "2025-11-10T00:04:26Z",
+    "userId": 3117,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 238,
+    "type": "in_app",
+    "createdAt": "2025-11-09T17:40:28Z",
+    "userId": 1990,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 239,
+    "type": "webhook",
+    "createdAt": "2025-11-15T11:45:38Z",
+    "userId": 6290,
+    "read": true,
+    "url": "https://webhook.site/173c9370-b403-4934-93e8-3930f73285fa",
+    "payload": {
+      "event": "notification",
+      "id": 239
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 240,
+    "type": "webhook",
+    "createdAt": "2025-11-09T22:52:01Z",
+    "userId": 7232,
+    "read": true,
+    "url": "https://webhook.site/2df570ee-62e3-4028-954e-3c60dbc76f6e",
+    "payload": {
+      "event": "notification",
+      "id": 240
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 241,
+    "type": "webhook",
+    "createdAt": "2025-11-10T16:29:13Z",
+    "userId": 5299,
+    "read": true,
+    "url": "https://webhook.site/f0e49573-0956-4aaf-8231-6ed6437ea72c",
+    "payload": {
+      "event": "notification",
+      "id": 241
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 242,
+    "type": "push",
+    "createdAt": "2025-11-11T20:17:19Z",
+    "userId": 4286,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 7
+  },
+  {
+    "id": 243,
+    "type": "webhook",
+    "createdAt": "2025-11-13T01:31:55Z",
+    "userId": 9441,
+    "read": false,
+    "url": "https://webhook.site/f425519d-3a12-4b1d-a5b4-5fb1ee481404",
+    "payload": {
+      "event": "notification",
+      "id": 243
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 244,
+    "type": "push",
+    "createdAt": "2025-11-14T14:14:27Z",
+    "userId": 7268,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 4
+  },
+  {
+    "id": 245,
+    "type": "sms",
+    "createdAt": "2025-11-11T09:43:20Z",
+    "userId": 2322,
+    "read": true,
+    "phoneNumber": "+17500129289",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 246,
+    "type": "sms",
+    "createdAt": "2025-11-08T21:36:03Z",
+    "userId": 8110,
+    "read": true,
+    "phoneNumber": "+16019073748",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 247,
+    "type": "push",
+    "createdAt": "2025-11-12T20:26:58Z",
+    "userId": 913,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 248,
+    "type": "sms",
+    "createdAt": "2025-11-16T10:27:30Z",
+    "userId": 2975,
+    "read": true,
+    "phoneNumber": "+19156365030",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 249,
+    "type": "in_app",
+    "createdAt": "2025-11-13T20:18:17Z",
+    "userId": 882,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 250,
+    "type": "webhook",
+    "createdAt": "2025-11-12T04:23:27Z",
+    "userId": 235,
+    "read": true,
+    "url": "https://webhook.site/b9a9d11d-04cd-4d0b-882d-15ab99805445",
+    "payload": {
+      "event": "notification",
+      "id": 250
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 251,
+    "type": "in_app",
+    "createdAt": "2025-11-15T07:00:58Z",
+    "userId": 1995,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 252,
+    "type": "webhook",
+    "createdAt": "2025-11-15T04:25:46Z",
+    "userId": 842,
+    "read": true,
+    "url": "https://webhook.site/82bb55a0-0655-480b-933f-365d94935dbb",
+    "payload": {
+      "event": "notification",
+      "id": 252
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 253,
+    "type": "push",
+    "createdAt": "2025-11-10T09:24:37Z",
+    "userId": 5049,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 254,
+    "type": "webhook",
+    "createdAt": "2025-11-09T12:05:42Z",
+    "userId": 5623,
+    "read": false,
+    "url": "https://webhook.site/56784932-5cee-435b-91eb-681f3fd5d4c7",
+    "payload": {
+      "event": "notification",
+      "id": 254
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 255,
+    "type": "webhook",
+    "createdAt": "2025-11-16T08:31:13Z",
+    "userId": 5156,
+    "read": true,
+    "url": "https://webhook.site/083cf3bc-0200-4ba1-b37b-ef035c512596",
+    "payload": {
+      "event": "notification",
+      "id": 255
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 256,
+    "type": "push",
+    "createdAt": "2025-11-11T03:50:11Z",
+    "userId": 7892,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 257,
+    "type": "sms",
+    "createdAt": "2025-11-09T21:33:14Z",
+    "userId": 5712,
+    "read": true,
+    "phoneNumber": "+14109216317",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 258,
+    "type": "webhook",
+    "createdAt": "2025-11-13T23:50:08Z",
+    "userId": 416,
+    "read": false,
+    "url": "https://webhook.site/fa517648-56f5-4aa7-82be-5fae096d71fa",
+    "payload": {
+      "event": "notification",
+      "id": 258
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 259,
+    "type": "push",
+    "createdAt": "2025-11-11T01:47:38Z",
+    "userId": 4756,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 260,
+    "type": "email",
+    "createdAt": "2025-11-11T04:11:12Z",
+    "userId": 4417,
+    "read": true,
+    "subject": "Notification #260",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4417@example.com"
+  },
+  {
+    "id": 261,
+    "type": "push",
+    "createdAt": "2025-11-11T22:13:17Z",
+    "userId": 3431,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 262,
+    "type": "email",
+    "createdAt": "2025-11-16T01:40:27Z",
+    "userId": 7989,
+    "read": false,
+    "subject": "Notification #262",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user7989@example.com"
+  },
+  {
+    "id": 263,
+    "type": "push",
+    "createdAt": "2025-11-11T11:09:30Z",
+    "userId": 6026,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 2
+  },
+  {
+    "id": 264,
+    "type": "push",
+    "createdAt": "2025-11-16T10:37:53Z",
+    "userId": 209,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 265,
+    "type": "push",
+    "createdAt": "2025-11-12T11:14:22Z",
+    "userId": 37,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 266,
+    "type": "webhook",
+    "createdAt": "2025-11-12T20:42:21Z",
+    "userId": 1000,
+    "read": false,
+    "url": "https://webhook.site/a0e82e0b-3bef-428e-ab95-3bd6e6e0aeb8",
+    "payload": {
+      "event": "notification",
+      "id": 266
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 267,
+    "type": "in_app",
+    "createdAt": "2025-11-10T07:22:32Z",
+    "userId": 4302,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 268,
+    "type": "webhook",
+    "createdAt": "2025-11-14T08:32:22Z",
+    "userId": 5028,
+    "read": false,
+    "url": "https://webhook.site/a80ad043-9ead-49ab-9b9c-3da945502d46",
+    "payload": {
+      "event": "notification",
+      "id": 268
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 269,
+    "type": "in_app",
+    "createdAt": "2025-11-10T10:28:53Z",
+    "userId": 2563,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 270,
+    "type": "in_app",
+    "createdAt": "2025-11-15T05:28:19Z",
+    "userId": 404,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 271,
+    "type": "in_app",
+    "createdAt": "2025-11-16T00:43:05Z",
+    "userId": 4542,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 272,
+    "type": "sms",
+    "createdAt": "2025-11-09T22:11:05Z",
+    "userId": 3752,
+    "read": false,
+    "phoneNumber": "+19167343083",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 273,
+    "type": "sms",
+    "createdAt": "2025-11-10T10:33:04Z",
+    "userId": 5960,
+    "read": false,
+    "phoneNumber": "+18040245467",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 274,
+    "type": "push",
+    "createdAt": "2025-11-14T17:55:14Z",
+    "userId": 3829,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 275,
+    "type": "email",
+    "createdAt": "2025-11-14T10:36:27Z",
+    "userId": 1894,
+    "read": true,
+    "subject": "Notification #275",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user1894@example.com"
+  },
+  {
+    "id": 276,
+    "type": "sms",
+    "createdAt": "2025-11-10T14:08:33Z",
+    "userId": 4854,
+    "read": false,
+    "phoneNumber": "+15034543641",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 277,
+    "type": "in_app",
+    "createdAt": "2025-11-09T10:13:06Z",
+    "userId": 7291,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 278,
+    "type": "sms",
+    "createdAt": "2025-11-15T21:27:34Z",
+    "userId": 2206,
+    "read": true,
+    "phoneNumber": "+14390014645",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 279,
+    "type": "email",
+    "createdAt": "2025-11-15T01:37:40Z",
+    "userId": 2699,
+    "read": true,
+    "subject": "Notification #279",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2699@example.com"
+  },
+  {
+    "id": 280,
+    "type": "email",
+    "createdAt": "2025-11-12T21:29:26Z",
+    "userId": 9447,
+    "read": false,
+    "subject": "Notification #280",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user9447@example.com"
+  },
+  {
+    "id": 281,
+    "type": "in_app",
+    "createdAt": "2025-11-13T14:47:47Z",
+    "userId": 5951,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 282,
+    "type": "sms",
+    "createdAt": "2025-11-09T10:33:59Z",
+    "userId": 459,
+    "read": false,
+    "phoneNumber": "+12205737219",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 283,
+    "type": "push",
+    "createdAt": "2025-11-09T21:27:04Z",
+    "userId": 1462,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 4
+  },
+  {
+    "id": 284,
+    "type": "sms",
+    "createdAt": "2025-11-12T23:03:22Z",
+    "userId": 9657,
+    "read": true,
+    "phoneNumber": "+19414299170",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 285,
+    "type": "email",
+    "createdAt": "2025-11-15T18:45:44Z",
+    "userId": 4203,
+    "read": true,
+    "subject": "Notification #285",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4203@example.com"
+  },
+  {
+    "id": 286,
+    "type": "push",
+    "createdAt": "2025-11-09T20:33:40Z",
+    "userId": 4034,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 287,
+    "type": "webhook",
+    "createdAt": "2025-11-10T12:41:31Z",
+    "userId": 7878,
+    "read": true,
+    "url": "https://webhook.site/b99ec6ef-65fc-446a-b168-657cd27d17e6",
+    "payload": {
+      "event": "notification",
+      "id": 287
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 288,
+    "type": "in_app",
+    "createdAt": "2025-11-10T08:58:18Z",
+    "userId": 9471,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 289,
+    "type": "push",
+    "createdAt": "2025-11-10T12:16:47Z",
+    "userId": 5724,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 4
+  },
+  {
+    "id": 290,
+    "type": "email",
+    "createdAt": "2025-11-11T18:56:47Z",
+    "userId": 1948,
+    "read": false,
+    "subject": "Notification #290",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user1948@example.com"
+  },
+  {
+    "id": 291,
+    "type": "in_app",
+    "createdAt": "2025-11-12T19:39:30Z",
+    "userId": 1710,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 292,
+    "type": "email",
+    "createdAt": "2025-11-12T02:05:12Z",
+    "userId": 3596,
+    "read": true,
+    "subject": "Notification #292",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user3596@example.com"
+  },
+  {
+    "id": 293,
+    "type": "email",
+    "createdAt": "2025-11-15T09:51:44Z",
+    "userId": 8814,
+    "read": false,
+    "subject": "Notification #293",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8814@example.com"
+  },
+  {
+    "id": 294,
+    "type": "in_app",
+    "createdAt": "2025-11-15T09:26:11Z",
+    "userId": 5518,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 295,
+    "type": "in_app",
+    "createdAt": "2025-11-09T19:35:41Z",
+    "userId": 7039,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 296,
+    "type": "webhook",
+    "createdAt": "2025-11-15T07:03:48Z",
+    "userId": 8672,
+    "read": true,
+    "url": "https://webhook.site/f206438c-d73d-4905-b14d-40892e74eca6",
+    "payload": {
+      "event": "notification",
+      "id": 296
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 297,
+    "type": "webhook",
+    "createdAt": "2025-11-15T06:16:50Z",
+    "userId": 7646,
+    "read": true,
+    "url": "https://webhook.site/fdf3f190-6a5e-4551-8ce8-36460861dff1",
+    "payload": {
+      "event": "notification",
+      "id": 297
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 298,
+    "type": "sms",
+    "createdAt": "2025-11-14T03:45:19Z",
+    "userId": 7510,
+    "read": true,
+    "phoneNumber": "+19722488055",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 299,
+    "type": "in_app",
+    "createdAt": "2025-11-15T11:59:17Z",
+    "userId": 4293,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 300,
+    "type": "webhook",
+    "createdAt": "2025-11-15T15:40:44Z",
+    "userId": 1831,
+    "read": false,
+    "url": "https://webhook.site/683cee88-8944-4abe-b239-0d4e7635fa2d",
+    "payload": {
+      "event": "notification",
+      "id": 300
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 301,
+    "type": "sms",
+    "createdAt": "2025-11-13T22:42:09Z",
+    "userId": 3566,
+    "read": true,
+    "phoneNumber": "+18786031238",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 302,
+    "type": "push",
+    "createdAt": "2025-11-14T12:01:13Z",
+    "userId": 1847,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 303,
+    "type": "sms",
+    "createdAt": "2025-11-13T11:17:25Z",
+    "userId": 191,
+    "read": false,
+    "phoneNumber": "+16898488132",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 304,
+    "type": "webhook",
+    "createdAt": "2025-11-10T22:37:24Z",
+    "userId": 6272,
+    "read": true,
+    "url": "https://webhook.site/df65a151-92af-4199-9abb-81a150bc480b",
+    "payload": {
+      "event": "notification",
+      "id": 304
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 305,
+    "type": "in_app",
+    "createdAt": "2025-11-11T15:13:45Z",
+    "userId": 5921,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 306,
+    "type": "push",
+    "createdAt": "2025-11-16T08:30:22Z",
+    "userId": 6930,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 307,
+    "type": "email",
+    "createdAt": "2025-11-11T20:32:31Z",
+    "userId": 5344,
+    "read": true,
+    "subject": "Notification #307",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user5344@example.com"
+  },
+  {
+    "id": 308,
+    "type": "sms",
+    "createdAt": "2025-11-13T09:23:34Z",
+    "userId": 8797,
+    "read": true,
+    "phoneNumber": "+16883550888",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 309,
+    "type": "webhook",
+    "createdAt": "2025-11-14T19:49:27Z",
+    "userId": 7092,
+    "read": false,
+    "url": "https://webhook.site/0f629ae2-c137-4224-8e02-ddc5becd8711",
+    "payload": {
+      "event": "notification",
+      "id": 309
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 310,
+    "type": "push",
+    "createdAt": "2025-11-09T11:47:15Z",
+    "userId": 7495,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 311,
+    "type": "push",
+    "createdAt": "2025-11-08T15:02:08Z",
+    "userId": 1247,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 312,
+    "type": "webhook",
+    "createdAt": "2025-11-16T11:22:51Z",
+    "userId": 128,
+    "read": true,
+    "url": "https://webhook.site/f25fcf5b-ed06-4888-9d91-1330c0a32063",
+    "payload": {
+      "event": "notification",
+      "id": 312
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 313,
+    "type": "push",
+    "createdAt": "2025-11-12T11:27:35Z",
+    "userId": 9157,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 1
+  },
+  {
+    "id": 314,
+    "type": "in_app",
+    "createdAt": "2025-11-09T23:41:04Z",
+    "userId": 7291,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 315,
+    "type": "sms",
+    "createdAt": "2025-11-13T19:44:08Z",
+    "userId": 9566,
+    "read": true,
+    "phoneNumber": "+12612137162",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 316,
+    "type": "email",
+    "createdAt": "2025-11-14T07:04:03Z",
+    "userId": 4414,
+    "read": true,
+    "subject": "Notification #316",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4414@example.com"
+  },
+  {
+    "id": 317,
+    "type": "push",
+    "createdAt": "2025-11-10T18:17:10Z",
+    "userId": 3634,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 318,
+    "type": "in_app",
+    "createdAt": "2025-11-10T21:41:06Z",
+    "userId": 9375,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 319,
+    "type": "email",
+    "createdAt": "2025-11-15T16:01:32Z",
+    "userId": 1662,
+    "read": true,
+    "subject": "Notification #319",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user1662@example.com"
+  },
+  {
+    "id": 320,
+    "type": "webhook",
+    "createdAt": "2025-11-11T23:16:53Z",
+    "userId": 940,
+    "read": true,
+    "url": "https://webhook.site/913ea254-8b25-4142-b4fb-42614f6236e5",
+    "payload": {
+      "event": "notification",
+      "id": 320
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 321,
+    "type": "email",
+    "createdAt": "2025-11-11T19:44:27Z",
+    "userId": 6483,
+    "read": false,
+    "subject": "Notification #321",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6483@example.com"
+  },
+  {
+    "id": 322,
+    "type": "email",
+    "createdAt": "2025-11-14T22:00:18Z",
+    "userId": 3582,
+    "read": false,
+    "subject": "Notification #322",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user3582@example.com"
+  },
+  {
+    "id": 323,
+    "type": "webhook",
+    "createdAt": "2025-11-16T00:07:24Z",
+    "userId": 5842,
+    "read": true,
+    "url": "https://webhook.site/f7874404-0cfa-4ee1-8ef2-8964bc98ad79",
+    "payload": {
+      "event": "notification",
+      "id": 323
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 324,
+    "type": "webhook",
+    "createdAt": "2025-11-14T12:42:01Z",
+    "userId": 137,
+    "read": true,
+    "url": "https://webhook.site/a891a2f3-c501-4e95-9051-b59c4d4a6410",
+    "payload": {
+      "event": "notification",
+      "id": 324
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 325,
+    "type": "webhook",
+    "createdAt": "2025-11-15T19:15:45Z",
+    "userId": 9960,
+    "read": false,
+    "url": "https://webhook.site/d8c11cec-fbfb-4953-8e33-f8bcd257ce38",
+    "payload": {
+      "event": "notification",
+      "id": 325
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 326,
+    "type": "push",
+    "createdAt": "2025-11-15T07:52:30Z",
+    "userId": 88,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 327,
+    "type": "sms",
+    "createdAt": "2025-11-08T19:50:57Z",
+    "userId": 1455,
+    "read": true,
+    "phoneNumber": "+15062313955",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 328,
+    "type": "sms",
+    "createdAt": "2025-11-10T17:04:42Z",
+    "userId": 3623,
+    "read": false,
+    "phoneNumber": "+18081498839",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 329,
+    "type": "sms",
+    "createdAt": "2025-11-11T00:59:30Z",
+    "userId": 9424,
+    "read": true,
+    "phoneNumber": "+14064243552",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 330,
+    "type": "email",
+    "createdAt": "2025-11-13T05:08:35Z",
+    "userId": 5451,
+    "read": false,
+    "subject": "Notification #330",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user5451@example.com"
+  },
+  {
+    "id": 331,
+    "type": "webhook",
+    "createdAt": "2025-11-13T18:25:17Z",
+    "userId": 6084,
+    "read": true,
+    "url": "https://webhook.site/87860cb6-a8a2-4b61-8578-ccc172878cb8",
+    "payload": {
+      "event": "notification",
+      "id": 331
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 332,
+    "type": "sms",
+    "createdAt": "2025-11-10T02:12:05Z",
+    "userId": 1406,
+    "read": false,
+    "phoneNumber": "+16753981463",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 333,
+    "type": "email",
+    "createdAt": "2025-11-13T06:53:31Z",
+    "userId": 6718,
+    "read": true,
+    "subject": "Notification #333",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6718@example.com"
+  },
+  {
+    "id": 334,
+    "type": "sms",
+    "createdAt": "2025-11-14T11:31:11Z",
+    "userId": 8622,
+    "read": false,
+    "phoneNumber": "+14198664396",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 335,
+    "type": "push",
+    "createdAt": "2025-11-09T05:15:26Z",
+    "userId": 9864,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 336,
+    "type": "email",
+    "createdAt": "2025-11-10T06:20:24Z",
+    "userId": 6382,
+    "read": true,
+    "subject": "Notification #336",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6382@example.com"
+  },
+  {
+    "id": 337,
+    "type": "webhook",
+    "createdAt": "2025-11-11T04:07:27Z",
+    "userId": 2660,
+    "read": false,
+    "url": "https://webhook.site/aa858ec8-ba94-4c13-95ea-010483d0b3ac",
+    "payload": {
+      "event": "notification",
+      "id": 337
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 338,
+    "type": "email",
+    "createdAt": "2025-11-11T07:09:13Z",
+    "userId": 339,
+    "read": false,
+    "subject": "Notification #338",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user339@example.com"
+  },
+  {
+    "id": 339,
+    "type": "in_app",
+    "createdAt": "2025-11-09T06:36:05Z",
+    "userId": 8539,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 340,
+    "type": "sms",
+    "createdAt": "2025-11-12T07:24:09Z",
+    "userId": 5890,
+    "read": false,
+    "phoneNumber": "+12239393195",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 341,
+    "type": "in_app",
+    "createdAt": "2025-11-10T03:48:43Z",
+    "userId": 9540,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 342,
+    "type": "sms",
+    "createdAt": "2025-11-12T12:40:54Z",
+    "userId": 3168,
+    "read": true,
+    "phoneNumber": "+17424427562",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 343,
+    "type": "webhook",
+    "createdAt": "2025-11-15T12:23:55Z",
+    "userId": 7216,
+    "read": false,
+    "url": "https://webhook.site/e94283e5-6ce9-41db-b969-5311633020cb",
+    "payload": {
+      "event": "notification",
+      "id": 343
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 344,
+    "type": "webhook",
+    "createdAt": "2025-11-15T20:17:45Z",
+    "userId": 8400,
+    "read": false,
+    "url": "https://webhook.site/60021ef6-0450-45aa-b3a5-1076a99a91df",
+    "payload": {
+      "event": "notification",
+      "id": 344
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 345,
+    "type": "push",
+    "createdAt": "2025-11-14T05:02:02Z",
+    "userId": 7372,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 2
+  },
+  {
+    "id": 346,
+    "type": "in_app",
+    "createdAt": "2025-11-08T13:14:03Z",
+    "userId": 6549,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 347,
+    "type": "push",
+    "createdAt": "2025-11-08T22:08:36Z",
+    "userId": 1909,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 1
+  },
+  {
+    "id": 348,
+    "type": "push",
+    "createdAt": "2025-11-11T23:18:45Z",
+    "userId": 4559,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 2
+  },
+  {
+    "id": 349,
+    "type": "push",
+    "createdAt": "2025-11-10T18:59:48Z",
+    "userId": 8168,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 350,
+    "type": "push",
+    "createdAt": "2025-11-12T16:14:09Z",
+    "userId": 1400,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 1
+  },
+  {
+    "id": 351,
+    "type": "push",
+    "createdAt": "2025-11-10T09:35:13Z",
+    "userId": 8038,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 352,
+    "type": "in_app",
+    "createdAt": "2025-11-10T03:02:03Z",
+    "userId": 7677,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 353,
+    "type": "in_app",
+    "createdAt": "2025-11-15T03:21:22Z",
+    "userId": 3701,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 354,
+    "type": "push",
+    "createdAt": "2025-11-10T19:01:53Z",
+    "userId": 2692,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 355,
+    "type": "webhook",
+    "createdAt": "2025-11-13T12:16:46Z",
+    "userId": 1230,
+    "read": false,
+    "url": "https://webhook.site/9e2f492c-7cac-4246-9042-350fca222378",
+    "payload": {
+      "event": "notification",
+      "id": 355
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 356,
+    "type": "in_app",
+    "createdAt": "2025-11-10T18:48:28Z",
+    "userId": 8328,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 357,
+    "type": "in_app",
+    "createdAt": "2025-11-13T10:41:36Z",
+    "userId": 2891,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 358,
+    "type": "in_app",
+    "createdAt": "2025-11-09T18:01:42Z",
+    "userId": 1467,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 359,
+    "type": "push",
+    "createdAt": "2025-11-13T23:58:04Z",
+    "userId": 2514,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 360,
+    "type": "in_app",
+    "createdAt": "2025-11-10T09:02:53Z",
+    "userId": 800,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 361,
+    "type": "webhook",
+    "createdAt": "2025-11-11T01:13:45Z",
+    "userId": 387,
+    "read": true,
+    "url": "https://webhook.site/70328acf-ca06-4f6f-9513-6cf160d9b3f7",
+    "payload": {
+      "event": "notification",
+      "id": 361
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 362,
+    "type": "email",
+    "createdAt": "2025-11-15T16:59:13Z",
+    "userId": 1188,
+    "read": true,
+    "subject": "Notification #362",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user1188@example.com"
+  },
+  {
+    "id": 363,
+    "type": "email",
+    "createdAt": "2025-11-13T09:18:28Z",
+    "userId": 6317,
+    "read": true,
+    "subject": "Notification #363",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6317@example.com"
+  },
+  {
+    "id": 364,
+    "type": "sms",
+    "createdAt": "2025-11-11T17:38:01Z",
+    "userId": 6466,
+    "read": false,
+    "phoneNumber": "+12195224228",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 365,
+    "type": "webhook",
+    "createdAt": "2025-11-10T14:52:17Z",
+    "userId": 5942,
+    "read": false,
+    "url": "https://webhook.site/d90a68c4-b7aa-4d23-a308-376f57ac3607",
+    "payload": {
+      "event": "notification",
+      "id": 365
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 366,
+    "type": "push",
+    "createdAt": "2025-11-12T07:49:57Z",
+    "userId": 4378,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 367,
+    "type": "in_app",
+    "createdAt": "2025-11-15T22:59:37Z",
+    "userId": 8418,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 368,
+    "type": "sms",
+    "createdAt": "2025-11-09T00:41:56Z",
+    "userId": 3615,
+    "read": true,
+    "phoneNumber": "+15417242430",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 369,
+    "type": "sms",
+    "createdAt": "2025-11-15T21:56:24Z",
+    "userId": 7639,
+    "read": true,
+    "phoneNumber": "+18624814733",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 370,
+    "type": "webhook",
+    "createdAt": "2025-11-15T21:25:28Z",
+    "userId": 9430,
+    "read": true,
+    "url": "https://webhook.site/c0dab7a1-4756-40ee-bb9a-f6d62c863fcc",
+    "payload": {
+      "event": "notification",
+      "id": 370
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 371,
+    "type": "in_app",
+    "createdAt": "2025-11-10T03:53:24Z",
+    "userId": 7983,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 372,
+    "type": "email",
+    "createdAt": "2025-11-14T15:25:14Z",
+    "userId": 3878,
+    "read": true,
+    "subject": "Notification #372",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user3878@example.com"
+  },
+  {
+    "id": 373,
+    "type": "sms",
+    "createdAt": "2025-11-14T18:49:29Z",
+    "userId": 6330,
+    "read": false,
+    "phoneNumber": "+13644454657",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 374,
+    "type": "sms",
+    "createdAt": "2025-11-10T17:52:11Z",
+    "userId": 1294,
+    "read": false,
+    "phoneNumber": "+16031290482",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 375,
+    "type": "push",
+    "createdAt": "2025-11-13T05:15:54Z",
+    "userId": 4775,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 1
+  },
+  {
+    "id": 376,
+    "type": "in_app",
+    "createdAt": "2025-11-09T21:21:39Z",
+    "userId": 4237,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 377,
+    "type": "webhook",
+    "createdAt": "2025-11-15T11:06:52Z",
+    "userId": 4437,
+    "read": false,
+    "url": "https://webhook.site/126f5697-9d26-4aaa-b004-f7dd40f523ad",
+    "payload": {
+      "event": "notification",
+      "id": 377
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 378,
+    "type": "webhook",
+    "createdAt": "2025-11-16T07:10:44Z",
+    "userId": 294,
+    "read": true,
+    "url": "https://webhook.site/81e2de39-9e3a-4c8c-a530-95c93d1f1116",
+    "payload": {
+      "event": "notification",
+      "id": 378
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 379,
+    "type": "push",
+    "createdAt": "2025-11-14T06:14:04Z",
+    "userId": 2987,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 380,
+    "type": "push",
+    "createdAt": "2025-11-12T17:32:17Z",
+    "userId": 8473,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 381,
+    "type": "email",
+    "createdAt": "2025-11-10T17:27:29Z",
+    "userId": 2715,
+    "read": false,
+    "subject": "Notification #381",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2715@example.com"
+  },
+  {
+    "id": 382,
+    "type": "in_app",
+    "createdAt": "2025-11-14T02:50:43Z",
+    "userId": 165,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 383,
+    "type": "webhook",
+    "createdAt": "2025-11-13T00:26:44Z",
+    "userId": 7740,
+    "read": false,
+    "url": "https://webhook.site/2b234be4-9f89-4574-9702-5b219ad4ad89",
+    "payload": {
+      "event": "notification",
+      "id": 383
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 384,
+    "type": "webhook",
+    "createdAt": "2025-11-14T21:31:01Z",
+    "userId": 5951,
+    "read": false,
+    "url": "https://webhook.site/5f94d417-c3f2-4f06-b959-40e895381de1",
+    "payload": {
+      "event": "notification",
+      "id": 384
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 385,
+    "type": "in_app",
+    "createdAt": "2025-11-10T05:42:44Z",
+    "userId": 6067,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 386,
+    "type": "webhook",
+    "createdAt": "2025-11-10T16:40:37Z",
+    "userId": 2517,
+    "read": false,
+    "url": "https://webhook.site/fffe7ab2-aeec-4640-b159-10211a73aa9e",
+    "payload": {
+      "event": "notification",
+      "id": 386
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 387,
+    "type": "sms",
+    "createdAt": "2025-11-15T01:15:15Z",
+    "userId": 8355,
+    "read": false,
+    "phoneNumber": "+18709352121",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 388,
+    "type": "in_app",
+    "createdAt": "2025-11-14T13:39:42Z",
+    "userId": 2909,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 389,
+    "type": "in_app",
+    "createdAt": "2025-11-15T22:32:19Z",
+    "userId": 7978,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 390,
+    "type": "webhook",
+    "createdAt": "2025-11-15T20:49:23Z",
+    "userId": 2627,
+    "read": false,
+    "url": "https://webhook.site/3d94d01d-481c-45d3-8151-bd7df18194d9",
+    "payload": {
+      "event": "notification",
+      "id": 390
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 391,
+    "type": "webhook",
+    "createdAt": "2025-11-14T14:07:16Z",
+    "userId": 8574,
+    "read": false,
+    "url": "https://webhook.site/9a049bf2-1750-4e14-963a-a4864b07fd49",
+    "payload": {
+      "event": "notification",
+      "id": 391
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 392,
+    "type": "push",
+    "createdAt": "2025-11-11T08:32:54Z",
+    "userId": 7023,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 393,
+    "type": "in_app",
+    "createdAt": "2025-11-10T11:47:58Z",
+    "userId": 4835,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 394,
+    "type": "sms",
+    "createdAt": "2025-11-11T11:15:06Z",
+    "userId": 899,
+    "read": true,
+    "phoneNumber": "+12974439919",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 395,
+    "type": "in_app",
+    "createdAt": "2025-11-11T23:30:22Z",
+    "userId": 7396,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 396,
+    "type": "sms",
+    "createdAt": "2025-11-12T10:02:04Z",
+    "userId": 3107,
+    "read": true,
+    "phoneNumber": "+15985234448",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 397,
+    "type": "push",
+    "createdAt": "2025-11-09T18:05:18Z",
+    "userId": 9040,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 398,
+    "type": "webhook",
+    "createdAt": "2025-11-16T00:43:39Z",
+    "userId": 9024,
+    "read": true,
+    "url": "https://webhook.site/024ae42d-1e4c-490a-9ccd-547d7adf2d91",
+    "payload": {
+      "event": "notification",
+      "id": 398
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 399,
+    "type": "sms",
+    "createdAt": "2025-11-13T08:22:42Z",
+    "userId": 6164,
+    "read": false,
+    "phoneNumber": "+17191421673",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 400,
+    "type": "email",
+    "createdAt": "2025-11-10T00:52:42Z",
+    "userId": 5052,
+    "read": true,
+    "subject": "Notification #400",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user5052@example.com"
+  },
+  {
+    "id": 401,
+    "type": "webhook",
+    "createdAt": "2025-11-09T09:24:29Z",
+    "userId": 9806,
+    "read": true,
+    "url": "https://webhook.site/1cbe7e20-83ca-448e-8575-73b10f1c5272",
+    "payload": {
+      "event": "notification",
+      "id": 401
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 402,
+    "type": "webhook",
+    "createdAt": "2025-11-15T19:21:08Z",
+    "userId": 6236,
+    "read": true,
+    "url": "https://webhook.site/d9c0e782-de44-4743-8a3a-14e66634a833",
+    "payload": {
+      "event": "notification",
+      "id": 402
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 403,
+    "type": "in_app",
+    "createdAt": "2025-11-14T12:06:05Z",
+    "userId": 6571,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 404,
+    "type": "push",
+    "createdAt": "2025-11-14T15:04:11Z",
+    "userId": 1602,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 2
+  },
+  {
+    "id": 405,
+    "type": "email",
+    "createdAt": "2025-11-11T09:04:48Z",
+    "userId": 96,
+    "read": true,
+    "subject": "Notification #405",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user96@example.com"
+  },
+  {
+    "id": 406,
+    "type": "email",
+    "createdAt": "2025-11-09T05:03:49Z",
+    "userId": 5823,
+    "read": false,
+    "subject": "Notification #406",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user5823@example.com"
+  },
+  {
+    "id": 407,
+    "type": "sms",
+    "createdAt": "2025-11-14T04:09:03Z",
+    "userId": 9458,
+    "read": false,
+    "phoneNumber": "+18296976587",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 408,
+    "type": "webhook",
+    "createdAt": "2025-11-09T18:54:59Z",
+    "userId": 2009,
+    "read": true,
+    "url": "https://webhook.site/09656af5-b459-4729-ad08-f3bf38ad55b1",
+    "payload": {
+      "event": "notification",
+      "id": 408
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 409,
+    "type": "webhook",
+    "createdAt": "2025-11-09T02:57:05Z",
+    "userId": 7693,
+    "read": false,
+    "url": "https://webhook.site/fb5ffb0f-1f54-49d3-86ab-a2672401b888",
+    "payload": {
+      "event": "notification",
+      "id": 409
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 410,
+    "type": "webhook",
+    "createdAt": "2025-11-10T22:56:56Z",
+    "userId": 7988,
+    "read": false,
+    "url": "https://webhook.site/92306d31-e426-4449-be07-7e4d646e2894",
+    "payload": {
+      "event": "notification",
+      "id": 410
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 411,
+    "type": "push",
+    "createdAt": "2025-11-10T06:36:13Z",
+    "userId": 5435,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 412,
+    "type": "sms",
+    "createdAt": "2025-11-08T23:26:04Z",
+    "userId": 4259,
+    "read": true,
+    "phoneNumber": "+12903013084",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 413,
+    "type": "sms",
+    "createdAt": "2025-11-14T04:27:01Z",
+    "userId": 5803,
+    "read": true,
+    "phoneNumber": "+14754724668",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 414,
+    "type": "in_app",
+    "createdAt": "2025-11-12T23:48:14Z",
+    "userId": 8949,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 415,
+    "type": "in_app",
+    "createdAt": "2025-11-14T15:11:18Z",
+    "userId": 7470,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 416,
+    "type": "push",
+    "createdAt": "2025-11-15T21:50:57Z",
+    "userId": 3676,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 8
+  },
+  {
+    "id": 417,
+    "type": "email",
+    "createdAt": "2025-11-11T15:35:46Z",
+    "userId": 4222,
+    "read": false,
+    "subject": "Notification #417",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4222@example.com"
+  },
+  {
+    "id": 418,
+    "type": "email",
+    "createdAt": "2025-11-12T15:46:30Z",
+    "userId": 4723,
+    "read": false,
+    "subject": "Notification #418",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4723@example.com"
+  },
+  {
+    "id": 419,
+    "type": "push",
+    "createdAt": "2025-11-15T23:43:40Z",
+    "userId": 6301,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 420,
+    "type": "push",
+    "createdAt": "2025-11-11T12:11:42Z",
+    "userId": 1419,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 4
+  },
+  {
+    "id": 421,
+    "type": "email",
+    "createdAt": "2025-11-10T13:33:54Z",
+    "userId": 1568,
+    "read": false,
+    "subject": "Notification #421",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user1568@example.com"
+  },
+  {
+    "id": 422,
+    "type": "push",
+    "createdAt": "2025-11-11T07:08:10Z",
+    "userId": 1087,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 1
+  },
+  {
+    "id": 423,
+    "type": "sms",
+    "createdAt": "2025-11-10T11:19:42Z",
+    "userId": 2248,
+    "read": false,
+    "phoneNumber": "+16269729599",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 424,
+    "type": "sms",
+    "createdAt": "2025-11-11T02:28:13Z",
+    "userId": 7658,
+    "read": true,
+    "phoneNumber": "+16080545574",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 425,
+    "type": "webhook",
+    "createdAt": "2025-11-12T09:49:29Z",
+    "userId": 5045,
+    "read": false,
+    "url": "https://webhook.site/3f2d48bb-67a4-4c92-96ef-cd5e7971504e",
+    "payload": {
+      "event": "notification",
+      "id": 425
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 426,
+    "type": "webhook",
+    "createdAt": "2025-11-14T22:31:24Z",
+    "userId": 8860,
+    "read": false,
+    "url": "https://webhook.site/3c6aa2ab-d31e-4220-9ba4-c84836359cac",
+    "payload": {
+      "event": "notification",
+      "id": 426
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 427,
+    "type": "email",
+    "createdAt": "2025-11-09T17:04:25Z",
+    "userId": 2349,
+    "read": false,
+    "subject": "Notification #427",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2349@example.com"
+  },
+  {
+    "id": 428,
+    "type": "in_app",
+    "createdAt": "2025-11-13T05:31:35Z",
+    "userId": 1434,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 429,
+    "type": "in_app",
+    "createdAt": "2025-11-11T23:19:38Z",
+    "userId": 4722,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 430,
+    "type": "in_app",
+    "createdAt": "2025-11-14T22:41:49Z",
+    "userId": 433,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 431,
+    "type": "sms",
+    "createdAt": "2025-11-14T06:23:20Z",
+    "userId": 7996,
+    "read": true,
+    "phoneNumber": "+16801833167",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 432,
+    "type": "sms",
+    "createdAt": "2025-11-12T06:05:46Z",
+    "userId": 9987,
+    "read": true,
+    "phoneNumber": "+19284322633",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 433,
+    "type": "webhook",
+    "createdAt": "2025-11-10T04:24:05Z",
+    "userId": 4130,
+    "read": true,
+    "url": "https://webhook.site/79864150-57b3-471a-8f05-5952be604c3e",
+    "payload": {
+      "event": "notification",
+      "id": 433
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 434,
+    "type": "sms",
+    "createdAt": "2025-11-10T08:34:42Z",
+    "userId": 1146,
+    "read": true,
+    "phoneNumber": "+14019006393",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 435,
+    "type": "push",
+    "createdAt": "2025-11-15T13:09:48Z",
+    "userId": 98,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 436,
+    "type": "push",
+    "createdAt": "2025-11-15T16:43:45Z",
+    "userId": 452,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 437,
+    "type": "in_app",
+    "createdAt": "2025-11-14T23:23:21Z",
+    "userId": 3351,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 438,
+    "type": "push",
+    "createdAt": "2025-11-15T17:20:48Z",
+    "userId": 2908,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 439,
+    "type": "sms",
+    "createdAt": "2025-11-12T01:05:39Z",
+    "userId": 8738,
+    "read": true,
+    "phoneNumber": "+14802013223",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 440,
+    "type": "sms",
+    "createdAt": "2025-11-14T22:11:43Z",
+    "userId": 1271,
+    "read": false,
+    "phoneNumber": "+13841958517",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 441,
+    "type": "email",
+    "createdAt": "2025-11-09T23:01:46Z",
+    "userId": 2740,
+    "read": true,
+    "subject": "Notification #441",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2740@example.com"
+  },
+  {
+    "id": 442,
+    "type": "email",
+    "createdAt": "2025-11-09T23:03:04Z",
+    "userId": 7602,
+    "read": true,
+    "subject": "Notification #442",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user7602@example.com"
+  },
+  {
+    "id": 443,
+    "type": "webhook",
+    "createdAt": "2025-11-13T19:19:59Z",
+    "userId": 2396,
+    "read": true,
+    "url": "https://webhook.site/bedf53d8-5887-4522-9a8d-a4425102ced2",
+    "payload": {
+      "event": "notification",
+      "id": 443
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 444,
+    "type": "push",
+    "createdAt": "2025-11-12T11:17:36Z",
+    "userId": 1588,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 445,
+    "type": "webhook",
+    "createdAt": "2025-11-14T01:31:54Z",
+    "userId": 3026,
+    "read": true,
+    "url": "https://webhook.site/96001948-6445-4e08-937d-057493709515",
+    "payload": {
+      "event": "notification",
+      "id": 445
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 446,
+    "type": "sms",
+    "createdAt": "2025-11-14T10:42:28Z",
+    "userId": 5612,
+    "read": false,
+    "phoneNumber": "+15374857793",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 447,
+    "type": "in_app",
+    "createdAt": "2025-11-15T13:03:37Z",
+    "userId": 2751,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 448,
+    "type": "in_app",
+    "createdAt": "2025-11-12T22:14:51Z",
+    "userId": 1497,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 449,
+    "type": "webhook",
+    "createdAt": "2025-11-15T11:04:50Z",
+    "userId": 3337,
+    "read": true,
+    "url": "https://webhook.site/7d62168a-278f-4298-a23c-8799f698f540",
+    "payload": {
+      "event": "notification",
+      "id": 449
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 450,
+    "type": "sms",
+    "createdAt": "2025-11-13T02:59:06Z",
+    "userId": 6283,
+    "read": true,
+    "phoneNumber": "+17387504486",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 451,
+    "type": "webhook",
+    "createdAt": "2025-11-09T19:51:07Z",
+    "userId": 3305,
+    "read": false,
+    "url": "https://webhook.site/a04ddc10-6f06-441e-b29e-bd242df50e63",
+    "payload": {
+      "event": "notification",
+      "id": 451
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 452,
+    "type": "webhook",
+    "createdAt": "2025-11-13T18:11:49Z",
+    "userId": 3632,
+    "read": true,
+    "url": "https://webhook.site/1064265c-68b2-4d2d-9a08-49b4c5d3a503",
+    "payload": {
+      "event": "notification",
+      "id": 452
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 453,
+    "type": "sms",
+    "createdAt": "2025-11-09T18:23:57Z",
+    "userId": 3951,
+    "read": false,
+    "phoneNumber": "+18127172457",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 454,
+    "type": "webhook",
+    "createdAt": "2025-11-12T03:21:44Z",
+    "userId": 1478,
+    "read": true,
+    "url": "https://webhook.site/8b9ae2cd-cc45-43a2-9dfe-709cd0382b0e",
+    "payload": {
+      "event": "notification",
+      "id": 454
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 455,
+    "type": "sms",
+    "createdAt": "2025-11-14T16:30:10Z",
+    "userId": 2799,
+    "read": true,
+    "phoneNumber": "+14491323382",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 456,
+    "type": "email",
+    "createdAt": "2025-11-09T07:26:49Z",
+    "userId": 2907,
+    "read": true,
+    "subject": "Notification #456",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user2907@example.com"
+  },
+  {
+    "id": 457,
+    "type": "webhook",
+    "createdAt": "2025-11-15T12:11:03Z",
+    "userId": 7025,
+    "read": false,
+    "url": "https://webhook.site/51a8ac8b-2f9b-493d-b735-f74eabe8396b",
+    "payload": {
+      "event": "notification",
+      "id": 457
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 458,
+    "type": "email",
+    "createdAt": "2025-11-09T10:04:36Z",
+    "userId": 707,
+    "read": false,
+    "subject": "Notification #458",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user707@example.com"
+  },
+  {
+    "id": 459,
+    "type": "in_app",
+    "createdAt": "2025-11-11T07:16:10Z",
+    "userId": 9162,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 460,
+    "type": "sms",
+    "createdAt": "2025-11-13T16:19:42Z",
+    "userId": 1011,
+    "read": true,
+    "phoneNumber": "+14796098924",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 461,
+    "type": "sms",
+    "createdAt": "2025-11-08T18:59:40Z",
+    "userId": 1430,
+    "read": false,
+    "phoneNumber": "+16316953123",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 462,
+    "type": "sms",
+    "createdAt": "2025-11-10T10:26:06Z",
+    "userId": 1180,
+    "read": false,
+    "phoneNumber": "+14411034306",
+    "message": "Your code is 123456",
+    "carrier": "AT&T"
+  },
+  {
+    "id": 463,
+    "type": "sms",
+    "createdAt": "2025-11-14T03:20:08Z",
+    "userId": 6704,
+    "read": true,
+    "phoneNumber": "+13976003970",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 464,
+    "type": "push",
+    "createdAt": "2025-11-16T08:14:30Z",
+    "userId": 7989,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 4
+  },
+  {
+    "id": 465,
+    "type": "webhook",
+    "createdAt": "2025-11-13T12:05:18Z",
+    "userId": 3725,
+    "read": false,
+    "url": "https://webhook.site/57c4b84d-3ab3-41dc-b7f8-802c28604236",
+    "payload": {
+      "event": "notification",
+      "id": 465
+    },
+    "retryCount": 1
+  },
+  {
+    "id": 466,
+    "type": "sms",
+    "createdAt": "2025-11-15T06:33:23Z",
+    "userId": 8160,
+    "read": true,
+    "phoneNumber": "+14888129610",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 467,
+    "type": "in_app",
+    "createdAt": "2025-11-11T10:55:31Z",
+    "userId": 8243,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 468,
+    "type": "email",
+    "createdAt": "2025-11-16T06:15:35Z",
+    "userId": 7150,
+    "read": false,
+    "subject": "Notification #468",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user7150@example.com"
+  },
+  {
+    "id": 469,
+    "type": "sms",
+    "createdAt": "2025-11-15T04:22:14Z",
+    "userId": 7971,
+    "read": true,
+    "phoneNumber": "+17124719583",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 470,
+    "type": "push",
+    "createdAt": "2025-11-11T22:56:26Z",
+    "userId": 1681,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 5
+  },
+  {
+    "id": 471,
+    "type": "webhook",
+    "createdAt": "2025-11-09T18:54:23Z",
+    "userId": 9503,
+    "read": true,
+    "url": "https://webhook.site/6524200b-edc5-4b21-8d2b-b4f32e7fad19",
+    "payload": {
+      "event": "notification",
+      "id": 471
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 472,
+    "type": "email",
+    "createdAt": "2025-11-14T09:14:51Z",
+    "userId": 4026,
+    "read": false,
+    "subject": "Notification #472",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4026@example.com"
+  },
+  {
+    "id": 473,
+    "type": "in_app",
+    "createdAt": "2025-11-14T10:21:28Z",
+    "userId": 7123,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 474,
+    "type": "in_app",
+    "createdAt": "2025-11-16T10:24:18Z",
+    "userId": 7572,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 475,
+    "type": "email",
+    "createdAt": "2025-11-11T14:05:36Z",
+    "userId": 3956,
+    "read": false,
+    "subject": "Notification #475",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user3956@example.com"
+  },
+  {
+    "id": 476,
+    "type": "in_app",
+    "createdAt": "2025-11-13T20:49:06Z",
+    "userId": 7430,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 477,
+    "type": "push",
+    "createdAt": "2025-11-12T08:54:48Z",
+    "userId": 3705,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 478,
+    "type": "push",
+    "createdAt": "2025-11-08T20:05:45Z",
+    "userId": 2146,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 479,
+    "type": "email",
+    "createdAt": "2025-11-11T01:25:30Z",
+    "userId": 1179,
+    "read": true,
+    "subject": "Notification #479",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user1179@example.com"
+  },
+  {
+    "id": 480,
+    "type": "push",
+    "createdAt": "2025-11-11T12:44:48Z",
+    "userId": 8607,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 10
+  },
+  {
+    "id": 481,
+    "type": "email",
+    "createdAt": "2025-11-10T10:38:49Z",
+    "userId": 9116,
+    "read": true,
+    "subject": "Notification #481",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user9116@example.com"
+  },
+  {
+    "id": 482,
+    "type": "webhook",
+    "createdAt": "2025-11-08T14:03:00Z",
+    "userId": 464,
+    "read": false,
+    "url": "https://webhook.site/11bbade0-bd74-4c62-8c05-db53275a64e1",
+    "payload": {
+      "event": "notification",
+      "id": 482
+    },
+    "retryCount": 3
+  },
+  {
+    "id": 483,
+    "type": "push",
+    "createdAt": "2025-11-15T17:51:12Z",
+    "userId": 6110,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 484,
+    "type": "sms",
+    "createdAt": "2025-11-09T08:40:02Z",
+    "userId": 2885,
+    "read": true,
+    "phoneNumber": "+17162599817",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 485,
+    "type": "sms",
+    "createdAt": "2025-11-08T22:09:24Z",
+    "userId": 9552,
+    "read": true,
+    "phoneNumber": "+18810585738",
+    "message": "Your code is 123456",
+    "carrier": "T-Mobile"
+  },
+  {
+    "id": 486,
+    "type": "email",
+    "createdAt": "2025-11-09T18:59:12Z",
+    "userId": 7116,
+    "read": true,
+    "subject": "Notification #486",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user7116@example.com"
+  },
+  {
+    "id": 487,
+    "type": "email",
+    "createdAt": "2025-11-13T19:30:46Z",
+    "userId": 8192,
+    "read": true,
+    "subject": "Notification #487",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8192@example.com"
+  },
+  {
+    "id": 488,
+    "type": "push",
+    "createdAt": "2025-11-12T08:34:05Z",
+    "userId": 4109,
+    "read": false,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 3
+  },
+  {
+    "id": 489,
+    "type": "email",
+    "createdAt": "2025-11-13T21:37:45Z",
+    "userId": 8342,
+    "read": false,
+    "subject": "Notification #489",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user8342@example.com"
+  },
+  {
+    "id": 490,
+    "type": "in_app",
+    "createdAt": "2025-11-13T17:14:25Z",
+    "userId": 1930,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 491,
+    "type": "email",
+    "createdAt": "2025-11-10T23:46:12Z",
+    "userId": 4611,
+    "read": true,
+    "subject": "Notification #491",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user4611@example.com"
+  },
+  {
+    "id": 492,
+    "type": "sms",
+    "createdAt": "2025-11-11T22:35:57Z",
+    "userId": 4132,
+    "read": true,
+    "phoneNumber": "+16756536189",
+    "message": "Your code is 123456",
+    "carrier": "Verizon"
+  },
+  {
+    "id": 493,
+    "type": "in_app",
+    "createdAt": "2025-11-13T16:19:12Z",
+    "userId": 1382,
+    "read": false,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  },
+  {
+    "id": 494,
+    "type": "email",
+    "createdAt": "2025-11-09T10:31:14Z",
+    "userId": 9343,
+    "read": true,
+    "subject": "Notification #494",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user9343@example.com"
+  },
+  {
+    "id": 495,
+    "type": "push",
+    "createdAt": "2025-11-15T22:01:12Z",
+    "userId": 1746,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 6
+  },
+  {
+    "id": 496,
+    "type": "email",
+    "createdAt": "2025-11-11T14:29:06Z",
+    "userId": 6325,
+    "read": false,
+    "subject": "Notification #496",
+    "body": "Your action is required.",
+    "from": "noreply@example.com",
+    "to": "user6325@example.com"
+  },
+  {
+    "id": 497,
+    "type": "webhook",
+    "createdAt": "2025-11-10T04:55:27Z",
+    "userId": 6165,
+    "read": false,
+    "url": "https://webhook.site/4593a266-675e-412b-81e2-108005e6f1b8",
+    "payload": {
+      "event": "notification",
+      "id": 497
+    },
+    "retryCount": 0
+  },
+  {
+    "id": 498,
+    "type": "webhook",
+    "createdAt": "2025-11-12T01:37:39Z",
+    "userId": 3254,
+    "read": false,
+    "url": "https://webhook.site/8e975f34-1b97-4479-843d-354d3d560cd8",
+    "payload": {
+      "event": "notification",
+      "id": 498
+    },
+    "retryCount": 2
+  },
+  {
+    "id": 499,
+    "type": "push",
+    "createdAt": "2025-11-09T22:39:57Z",
+    "userId": 2779,
+    "read": true,
+    "title": "New Update",
+    "body": "Check out what's new!",
+    "icon": "notification_icon",
+    "badge": 9
+  },
+  {
+    "id": 500,
+    "type": "in_app",
+    "createdAt": "2025-11-12T01:28:59Z",
+    "userId": 3302,
+    "read": true,
+    "title": "New Feature",
+    "message": "Try our new feature!",
+    "actionUrl": "/features/new",
+    "dismissable": true
+  }
+]

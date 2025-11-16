@@ -1,0 +1,3216 @@
+[
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "code": 2,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 4,
+    "name": "Name 4"
+  },
+  {
+    "timestamp": "2025-07-05T18:03:37Z",
+    "value": 0.3985643315984634
+  },
+  {
+    "code": 6,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 7,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "timestamp": "2023-12-17T03:13:29Z",
+    "value": 0.5862122624488438
+  },
+  {
+    "user": {
+      "id": 10,
+      "active": true
+    }
+  },
+  {
+    "timestamp": "2024-10-31T18:03:31Z",
+    "value": 0.6663622556280608
+  },
+  {
+    "user": {
+      "id": 12,
+      "active": true
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "timestamp": "2025-07-19T00:20:41Z",
+    "value": 0.9137427218481671
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "user": {
+      "id": 16,
+      "active": true
+    }
+  },
+  {
+    "timestamp": "2025-11-13T15:40:05Z",
+    "value": 0.1386624704293482
+  },
+  {
+    "id": 18,
+    "name": "Name 18"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_19"
+  },
+  {
+    "timestamp": "2024-11-18T15:28:43Z",
+    "value": 0.24546817430897327
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_21"
+  },
+  {
+    "timestamp": "2024-08-14T07:25:48Z",
+    "value": 0.25202072744481985
+  },
+  {
+    "user": {
+      "id": 23,
+      "active": true
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_24"
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_26"
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_28"
+  },
+  {
+    "timestamp": "2024-06-17T17:26:47Z",
+    "value": 0.5033863222530995
+  },
+  {
+    "timestamp": "2023-12-02T05:46:40Z",
+    "value": 0.3474471997569336
+  },
+  {
+    "id": 31,
+    "name": "Name 31"
+  },
+  {
+    "timestamp": "2024-10-10T02:53:58Z",
+    "value": 0.35424452969760656
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "code": 35,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 36,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "user": {
+      "id": 38,
+      "active": true
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "code": 40,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 41,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "timestamp": "2024-07-15T09:31:28Z",
+    "value": 0.3642333627315445
+  },
+  {
+    "user": {
+      "id": 44,
+      "active": true
+    }
+  },
+  {
+    "code": 45,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_46"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_47"
+  },
+  {
+    "id": 48,
+    "name": "Name 48"
+  },
+  {
+    "timestamp": "2025-03-21T15:58:23Z",
+    "value": 0.8139417841037366
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "id": 51,
+    "name": "Name 51"
+  },
+  {
+    "user": {
+      "id": 52,
+      "active": true
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "timestamp": "2024-12-08T22:02:12Z",
+    "value": 0.6800427040040802
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 59,
+    "name": "Name 59"
+  },
+  {
+    "id": 60,
+    "name": "Name 60"
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "code": 63,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "timestamp": "2025-10-15T23:32:20Z",
+    "value": 0.08786529894604678
+  },
+  {
+    "code": 70,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "timestamp": "2025-01-05T01:59:36Z",
+    "value": 0.10897047985631236
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "timestamp": "2024-01-27T23:03:55Z",
+    "value": 0.6795030607437108
+  },
+  {
+    "id": 82,
+    "name": "Name 82"
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "user": {
+      "id": 85,
+      "active": true
+    }
+  },
+  {
+    "timestamp": "2025-01-22T16:34:07Z",
+    "value": 0.19529102159081657
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_90"
+  },
+  {
+    "timestamp": "2025-01-11T08:21:23Z",
+    "value": 0.9795144523289366
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "user": {
+      "id": 94,
+      "active": true
+    }
+  },
+  {
+    "id": 95,
+    "name": "Name 95"
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "timestamp": "2024-05-17T04:23:46Z",
+    "value": 0.3598940468736125
+  },
+  {
+    "code": 99,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "code": 102,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "timestamp": "2024-07-19T06:49:42Z",
+    "value": 0.42119582818897994
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "timestamp": "2024-12-25T18:23:23Z",
+    "value": 0.5504637514571034
+  },
+  {
+    "timestamp": "2025-02-24T13:03:27Z",
+    "value": 0.7952997717790636
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "code": 113,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_114"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "timestamp": "2023-12-09T03:57:22Z",
+    "value": 0.6055435333376256
+  },
+  {
+    "timestamp": "2024-11-05T03:30:35Z",
+    "value": 0.38497979416556705
+  },
+  {
+    "id": 120,
+    "name": "Name 120"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_121"
+  },
+  {
+    "user": {
+      "id": 122,
+      "active": true
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_124"
+  },
+  {
+    "id": 125,
+    "name": "Name 125"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 129,
+    "name": "Name 129"
+  },
+  {
+    "user": {
+      "id": 130,
+      "active": true
+    }
+  },
+  {
+    "user": {
+      "id": 131,
+      "active": true
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "user": {
+      "id": 135,
+      "active": true
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 137,
+    "name": "Name 137"
+  },
+  {
+    "user": {
+      "id": 138,
+      "active": true
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "code": 140,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "timestamp": "2024-07-05T06:39:23Z",
+    "value": 0.3114995882135232
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "timestamp": "2024-08-31T11:40:21Z",
+    "value": 0.5991935960159674
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "id": 147,
+    "name": "Name 147"
+  },
+  {
+    "code": 148,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "timestamp": "2025-07-23T15:13:05Z",
+    "value": 0.45187715270371187
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_150"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_151"
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "code": 153,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 154,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "id": 155,
+    "name": "Name 155"
+  },
+  {
+    "user": {
+      "id": 156,
+      "active": true
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "name": "Name 158"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_159"
+  },
+  {
+    "user": {
+      "id": 160,
+      "active": true
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "code": 162,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "user": {
+      "id": 165,
+      "active": true
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 167,
+    "name": "Name 167"
+  },
+  {
+    "user": {
+      "id": 168,
+      "active": true
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "name": "Name 175"
+  },
+  {
+    "code": 176,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_178"
+  },
+  {
+    "timestamp": "2024-11-18T12:23:50Z",
+    "value": 0.25906346139027747
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-09-06T18:44:33Z",
+    "value": 0.17010590921297863
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_188"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "id": 190,
+    "name": "Name 190"
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "id": 193,
+    "name": "Name 193"
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "name": "Name 198"
+  },
+  {
+    "id": 199,
+    "name": "Name 199"
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_201"
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "user": {
+      "id": 204,
+      "active": true
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_206"
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "user": {
+      "id": 209,
+      "active": true
+    }
+  },
+  {
+    "id": 210,
+    "name": "Name 210"
+  },
+  {
+    "timestamp": "2024-03-23T19:09:48Z",
+    "value": 0.03128327236459294
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_213"
+  },
+  {
+    "user": {
+      "id": 214,
+      "active": true
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "timestamp": "2025-08-18T00:09:03Z",
+    "value": 0.14853280898440058
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_224"
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_226"
+  },
+  {
+    "user": {
+      "id": 227,
+      "active": true
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 229,
+    "name": "Name 229"
+  },
+  {
+    "code": 230,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_231"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_235"
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_240"
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "id": 244,
+    "name": "Name 244"
+  },
+  {
+    "timestamp": "2025-10-15T21:22:14Z",
+    "value": 0.580096162180985
+  },
+  {
+    "timestamp": "2025-08-10T09:05:26Z",
+    "value": 0.12555794689589606
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 252,
+    "name": "Name 252"
+  },
+  {
+    "code": 253,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 254,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_259"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_260"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_261"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 265,
+    "name": "Name 265"
+  },
+  {
+    "user": {
+      "id": 266,
+      "active": true
+    }
+  },
+  {
+    "user": {
+      "id": 267,
+      "active": true
+    }
+  },
+  {
+    "user": {
+      "id": 268,
+      "active": true
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "code": 270,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "code": 272,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "user": {
+      "id": 275,
+      "active": true
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_278"
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "code": 283,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 285,
+    "name": "Name 285"
+  },
+  {
+    "user": {
+      "id": 286,
+      "active": true
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "timestamp": "2024-11-02T10:24:13Z",
+    "value": 0.6576806225004892
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "timestamp": "2025-10-16T17:08:18Z",
+    "value": 0.8792967825444945
+  },
+  {
+    "id": 295,
+    "name": "Name 295"
+  },
+  {
+    "timestamp": "2023-12-17T10:22:41Z",
+    "value": 0.25692838232045245
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_299"
+  },
+  {
+    "code": 300,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "timestamp": "2024-08-11T19:44:56Z",
+    "value": 0.5820129223106612
+  },
+  {
+    "user": {
+      "id": 303,
+      "active": true
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_307"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_308"
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 311,
+    "name": "Name 311"
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 315,
+    "name": "Name 315"
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_320"
+  },
+  {
+    "timestamp": "2024-02-16T11:44:09Z",
+    "value": 0.6372566040248501
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "timestamp": "2024-12-14T04:50:12Z",
+    "value": 0.5532064687521192
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_330"
+  },
+  {
+    "code": 331,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 332,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "id": 335,
+    "name": "Name 335"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "user": {
+      "id": 338,
+      "active": true
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "id": 340,
+    "name": "Name 340"
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_342"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 345,
+    "name": "Name 345"
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "user": {
+      "id": 347,
+      "active": true
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "code": 349,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "timestamp": "2023-12-24T22:52:08Z",
+    "value": 0.5612718443444858
+  },
+  {
+    "id": 351,
+    "name": "Name 351"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_352"
+  },
+  {
+    "user": {
+      "id": 353,
+      "active": true
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "timestamp": "2024-01-03T04:37:02Z",
+    "value": 0.7557543731913421
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "user": {
+      "id": 361,
+      "active": true
+    }
+  },
+  {
+    "id": 362,
+    "name": "Name 362"
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "id": 365,
+    "name": "Name 365"
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "user": {
+      "id": 367,
+      "active": true
+    }
+  },
+  {
+    "user": {
+      "id": 368,
+      "active": true
+    }
+  },
+  {
+    "user": {
+      "id": 369,
+      "active": true
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_371"
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "timestamp": "2025-06-12T01:26:28Z",
+    "value": 0.4269029162500747
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "id": 376,
+    "name": "Name 376"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "id": 379,
+    "name": "Name 379"
+  },
+  {
+    "user": {
+      "id": 380,
+      "active": true
+    }
+  },
+  {
+    "timestamp": "2023-12-18T02:41:57Z",
+    "value": 0.8015057258249697
+  },
+  {
+    "id": 382,
+    "name": "Name 382"
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "code": 387,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 388,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 389,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "id": 393,
+    "name": "Name 393"
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_395"
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "code": 399,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "timestamp": "2025-04-12T06:54:18Z",
+    "value": 0.4550561766954516
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_403"
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "user": {
+      "id": 405,
+      "active": true
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "user": {
+      "id": 407,
+      "active": true
+    }
+  },
+  {
+    "code": 408,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "timestamp": "2024-07-13T06:29:53Z",
+    "value": 0.9149265334655534
+  },
+  {
+    "code": 411,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "timestamp": "2025-05-14T05:47:34Z",
+    "value": 0.4820307769837663
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_413"
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 415,
+    "name": "Name 415"
+  },
+  {
+    "user": {
+      "id": 416,
+      "active": true
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "timestamp": "2023-12-10T07:24:12Z",
+    "value": 0.23853410664931485
+  },
+  {
+    "user": {
+      "id": 420,
+      "active": true
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "id": 426,
+    "name": "Name 426"
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_427"
+  },
+  {
+    "id": 428,
+    "name": "Name 428"
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "code": 433,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 434,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "timestamp": "2023-12-19T00:30:11Z",
+    "value": 0.7895179370120874
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 437,
+    "name": "Name 437"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "id": 439,
+    "name": "Name 439"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "code": 441,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "id": 442,
+    "name": "Name 442"
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "user": {
+      "id": 445,
+      "active": true
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "timestamp": "2025-02-28T13:12:06Z",
+    "value": 0.27073071787445047
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "id": 452,
+    "name": "Name 452"
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_454"
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "user": {
+      "id": 456,
+      "active": true
+    }
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "id": 458,
+    "name": "Name 458"
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_460"
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_464"
+  },
+  {
+    "timestamp": "2024-11-07T08:25:29Z",
+    "value": 0.32621060269644797
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "code": 467,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "meta": {
+      "version": "1.0"
+    },
+    "payload": "data_468"
+  },
+  {
+    "timestamp": "2024-08-20T21:30:01Z",
+    "value": 0.16502184677263587
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "code": 471,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "timestamp": "2025-01-24T04:17:48Z",
+    "value": 0.07027479490218036
+  },
+  {
+    "code": 474,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 475,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 476,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "id": 479,
+    "name": "Name 479"
+  },
+  {
+    "user": {
+      "id": 480,
+      "active": true
+    }
+  },
+  {
+    "code": 481,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "code": 482,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "user": {
+      "id": 484,
+      "active": true
+    }
+  },
+  {
+    "status": "ok",
+    "data": null
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "user": {
+      "id": 487,
+      "active": true
+    }
+  },
+  {
+    "list": [
+      {
+        "x": 1
+      },
+      {
+        "y": 2
+      },
+      {
+        "z": 3
+      }
+    ]
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  },
+  {
+    "timestamp": "2025-10-01T09:02:53Z",
+    "value": 0.79852454634358
+  },
+  {
+    "timestamp": "2025-04-11T01:03:20Z",
+    "value": 0.9244219663013068
+  },
+  {
+    "a": 1,
+    "b": {
+      "c": 2,
+      "d": {
+        "e": 3
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-16T22:07:26Z",
+    "value": 0.7181006559869485
+  },
+  {
+    "items": [
+      1,
+      2,
+      3
+    ],
+    "count": 3
+  },
+  {
+    "user": {
+      "id": 495,
+      "active": true
+    }
+  },
+  {
+    "timestamp": "2025-04-29T09:15:32Z",
+    "value": 0.18458285861159018
+  },
+  {
+    "timestamp": "2024-04-23T01:48:28Z",
+    "value": 0.41558702400296654
+  },
+  {
+    "id": 498,
+    "name": "Name 498"
+  },
+  {
+    "code": 499,
+    "message": "Error",
+    "details": {
+      "line": 1
+    }
+  },
+  {
+    "results": [],
+    "query": "test",
+    "filters": {}
+  }
+]
