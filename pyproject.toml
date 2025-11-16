@@ -3,11 +3,11 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pytoon"
-version = "1.0.0"
+name = "toon-codec"
+version = "1.0.1"
 description = "PyToon: Effortless, Token-Efficient Data for LLMs — Python’s First Production-Ready TOON Implementation"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.8"
 authors = [
     {name = "PyToon Team", email = "pytoon@example.com"}
@@ -16,7 +16,6 @@ keywords = ["toon", "json", "llm", "token", "serialization", "encoding"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
