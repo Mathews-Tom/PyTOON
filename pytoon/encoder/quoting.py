@@ -125,6 +125,11 @@ class QuotingEngine:
         if QuotingEngine._NUMERIC_PATTERN.match(value):
             return True
 
+        # Check if it starts with a digit but isn't a valid number (e.g., UUIDs like "23672333-...")
+        # These must be quoted to avoid lexer confusion
+        if value and value[0].isdigit() and not QuotingEngine._NUMERIC_PATTERN.match(value):
+            return True
+
         # Check for leading or trailing whitespace
         if value != value.strip():
             return True
@@ -143,6 +148,15 @@ class QuotingEngine:
 
         # Check if starts with list item marker
         if value.startswith("- "):
+            return True
+
+        # Check for hyphens (except at start for negative numbers, which are already checked)
+        # UUIDs, dates, and other hyphenated strings need quoting
+        if "-" in value and not value.startswith("-"):
+            return True
+
+        # Check for slashes (URLs, paths)
+        if "/" in value:
             return True
 
         # Check for backslash or double quote

@@ -223,7 +223,8 @@ class Lexer:
             self._scan_quoted_string()
         elif char.isdigit() or (char == "-" and self._is_number_start()):
             self._scan_number()
-        elif char.isalpha() or char == "_":
+        elif char.isalpha() or char in ("_", "/"):
+            # Allow / to start identifiers for URL paths like /page/25
             self._scan_identifier_or_keyword()
         else:
             raise TOONDecodeError(
@@ -396,7 +397,9 @@ class Lexer:
 
         while not self._at_end():
             char = self._peek()
-            if char.isalnum() or char in ("_", "."):
+            # Allow alphanumeric, underscore, dot, hyphen, and slash in identifiers
+            # Hyphens allow for UUIDs, slashes allow for URL paths
+            if char.isalnum() or char in ("_", ".", "-", "/"):
                 self._advance()
             else:
                 break

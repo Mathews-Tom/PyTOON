@@ -9,6 +9,7 @@ from __future__ import annotations
 from typing import Any, Literal
 
 from pytoon.core.spec import TOONSpec
+from pytoon.decoder.depth_decoder import decode_toon as depth_decode
 from pytoon.utils.errors import TOONDecodeError, TOONValidationError
 
 
@@ -118,9 +119,30 @@ class Decoder:
             True
 
         Note:
-            This is a stub implementation that handles basic formats.
-            Full parsing with indentation tracking, state machine,
-            and validation will be implemented in decoder module components.
+            Uses depth-based parsing per TOON v2.0 specification for proper
+            handling of nested objects within list-format arrays.
+        """
+        if not isinstance(toon_string, str):
+            raise TOONDecodeError(f"Expected string, got: {type(toon_string).__name__}")
+
+        # Use new depth-based decoder
+        return depth_decode(
+            toon_string,
+            indent_size=TOONSpec.DEFAULT_INDENT,
+            strict=self._strict,
+        )
+
+    def decode_legacy(self, toon_string: str) -> Any:
+        """Legacy decoder implementation (deprecated).
+
+        This is the old implementation that doesn't properly handle
+        nested objects in list-format arrays. Kept for comparison.
+
+        Args:
+            toon_string: TOON-formatted string to decode
+
+        Returns:
+            Python object (dict, list, or primitive)
         """
         if not isinstance(toon_string, str):
             raise TOONDecodeError(f"Expected string, got: {type(toon_string).__name__}")
@@ -351,20 +373,55 @@ class Decoder:
         Raises:
             TOONValidationError: If length mismatch in strict mode
         """
-        result = []
+        result: list[Any] = []
+
+        # Group lines by list item (each item starts with "- ")
+        items: list[list[str]] = []
+        current_item_lines: list[str] = []
 
         for line in data_lines:
-            line = line.strip()
-            if not line:
+            stripped = line.strip()
+            if not stripped:
                 continue
 
-            if line.startswith("- "):
-                item_str = line[2:].strip()
+            if stripped.startswith("- "):
+                # Start of a new list item
+                if current_item_lines:
+                    items.append(current_item_lines)
+                # Start new item with the content after "- "
+                first_line_content = stripped[2:].strip()
+                current_item_lines = [first_line_content] if first_line_content else []
+            else:
+                # Continuation of current item (part of multi-line object)
+                if current_item_lines is not None:
+                    current_item_lines.append(stripped)
+
+        # Don't forget the last item
+        if current_item_lines:
+            items.append(current_item_lines)
+
+        # Parse each item
+        for item_lines in items:
+            if not item_lines:
+                result.append(None)
+                continue
+
+            if len(item_lines) == 1:
+                # Single line item - try to parse as primitive
+                item_str = item_lines[0]
                 parsed = self._try_parse_primitive(item_str)
                 if parsed is not None:
                     result.append(parsed[0])
                 else:
-                    result.append(item_str)
+                    # Check if it's a key-value pair (object with one field)
+                    if ":" in item_str:
+                        result.append(self._parse_object(item_str))
+                    else:
+                        result.append(item_str)
+            else:
+                # Multi-line item - parse as object
+                item_str = "\n".join(item_lines)
+                result.append(self._parse_object(item_str))
 
         if self._strict and len(result) != declared_length:
             raise TOONValidationError(

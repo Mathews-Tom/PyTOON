@@ -235,17 +235,28 @@ class ObjectEncoder:
 
         # Check if array is inline (single line) or multi-line
         if "\n" in encoded_array:
-            # Multi-line array needs proper indentation
+            # Multi-line array - header goes on its own line with proper nesting
+            # The array header becomes a value with nested content below it
             array_lines = encoded_array.split("\n")
-            first_line = array_lines[0]
+            first_line = array_lines[0]  # e.g., "array[N]:" or "array[N]{fields}:"
             rest_lines = array_lines[1:]
 
-            result = f"{base_indent}{encoded_key}: {first_line}"
+            # Strip "array" prefix from header - just use [N]: format
+            # e.g., "array[1]:" -> "[1]:"
+            if first_line.startswith("array"):
+                first_line = first_line[5:]  # Remove "array" prefix
+
+            # Build result: key on first line, array header indented on next line
+            nested_indent = " " * (indent * (current_depth + 1))
+            result = f"{base_indent}{encoded_key}:\n{nested_indent}{first_line}"
+
+            # Add rest of array lines - they already have correct indentation
+            # from ArrayEncoder (relative to current_depth), just add them as-is
             for line in rest_lines:
                 result += f"\n{line}"
             return result
         else:
-            # Inline array
+            # Inline array (e.g., "array[3]: 1,2,3")
             return f"{base_indent}{encoded_key}: {encoded_array}"
 
     def _encode_primitive_value(

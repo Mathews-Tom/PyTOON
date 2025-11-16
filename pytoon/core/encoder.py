@@ -270,20 +270,31 @@ class Encoder:
                     keys = list(value[0].keys())
                     if self._sort_keys:
                         keys.sort()
-                    header = f"[{len(value)}]{{{self._delimiter.join(keys)}}}:"
-                    indent = " " * self._indent
+                    # Header indentation must account for nesting depth
+                    base_indent = " " * (self._indent * depth)
+                    header = f"{base_indent}[{len(value)}]{{{self._delimiter.join(keys)}}}:"
+                    # Row indentation must account for nesting depth
+                    row_indent = " " * (self._indent * (depth + 1))
                     rows = []
                     for item in value:
                         row_values = [self._encode_value(item[key], depth + 1) for key in keys]
-                        rows.append(f"{indent}{self._delimiter.join(row_values)}")
+                        rows.append(f"{row_indent}{self._delimiter.join(row_values)}")
                     return header + "\n" + "\n".join(rows)
 
         # Fall back to list format (one item per line)
-        indent = " " * self._indent
-        lines = [f"[{len(value)}]:"]
+        # Array header gets base indentation for this depth
+        base_indent = " " * (self._indent * depth)
+        lines = [f"{base_indent}[{len(value)}]:"]
         for item in value:
-            encoded = self._encode_value(item, depth + 1)
-            lines.append(f"{indent}- {encoded}")
+            if isinstance(item, dict) and item:
+                # Encode object as list item per TOON v2.0 §10
+                # First field goes on the hyphen line, rest are indented below
+                item_lines = self._encode_list_item_object(item, depth + 1)
+                lines.extend(item_lines)
+            else:
+                item_indent = " " * (self._indent * (depth + 1))
+                encoded = self._encode_value(item, depth + 1)
+                lines.append(f"{item_indent}- {encoded}")
         return "\n".join(lines)
 
     def _encode_dict(self, value: dict[str, Any], depth: int) -> str:
@@ -316,10 +327,104 @@ class Encoder:
             # Check if value is multiline (nested structure)
             if "\n" in encoded_val:
                 lines.append(f"{indent}{key}:")
-                # Indent each line of the nested value
+                # Nested value already has correct indentation from depth+1
+                # Just add it without additional indentation
                 for line in encoded_val.split("\n"):
-                    lines.append(f"{indent}{' ' * self._indent}{line}")
+                    lines.append(line)
             else:
-                lines.append(f"{indent}{key}: {encoded_val}")
+                # Single-line value - check if it's a nested structure with embedded indentation
+                # If so, it should be displayed on separate lines, not inline
+                stripped_val = encoded_val.lstrip()
+                if stripped_val != encoded_val and ":" in stripped_val:
+                    # This is a nested object/structure with indentation - display on new line
+                    lines.append(f"{indent}{key}:")
+                    lines.append(encoded_val)
+                else:
+                    lines.append(f"{indent}{key}: {encoded_val}")
 
         return "\n".join(lines)
+
+    def _encode_list_item_object(self, obj: dict[str, Any], depth: int) -> list[str]:
+        """Encode an object as a list item per TOON v2.0 §10.
+
+        The first field goes on the hyphen line, subsequent fields are indented
+        at depth level (one deeper than the hyphen line's base).
+
+        Args:
+            obj: Dictionary to encode
+            depth: Depth of the list item (hyphen line depth)
+
+        Returns:
+            List of formatted lines
+
+        Examples:
+            >>> encoder = Encoder()
+            >>> encoder._encode_list_item_object({'id': 1, 'name': 'Alice'}, 1)
+            ['  - id: 1', '    name: Alice']
+        """
+        if not obj:
+            # Empty object
+            base_indent = " " * (self._indent * depth)
+            return [f"{base_indent}-"]
+
+        lines: list[str] = []
+        keys = list(obj.keys())
+        if self._sort_keys:
+            keys.sort()
+
+        base_indent = " " * (self._indent * depth)
+        field_indent = " " * (self._indent * (depth + 1))
+
+        # First field goes on the hyphen line
+        first_key = keys[0]
+        first_value = obj[first_key]
+
+        if isinstance(first_value, dict) and first_value:
+            # Nested object as first field: encode at depth + 2
+            encoded_first = self._encode_value(first_value, depth + 2)
+            lines.append(f"{base_indent}- {first_key}:")
+            # The encoded value already has correct indentation for depth + 2
+            for nested_line in encoded_first.split("\n"):
+                lines.append(nested_line)
+        elif isinstance(first_value, list):
+            # Array as first field
+            encoded_first = self._encode_value(first_value, depth + 1)
+            if "\n" in encoded_first:
+                lines.append(f"{base_indent}- {first_key}{encoded_first}")
+            else:
+                lines.append(f"{base_indent}- {first_key}: {encoded_first}")
+        else:
+            # Primitive value on hyphen line
+            encoded_first = self._encode_value(first_value, depth + 1)
+            lines.append(f"{base_indent}- {first_key}: {encoded_first}")
+
+        # Subsequent fields at depth + 1
+        for key in keys[1:]:
+            value = obj[key]
+
+            if isinstance(value, dict) and value:
+                # Nested object: encode at depth + 2 (one deeper than sibling fields)
+                encoded_val = self._encode_value(value, depth + 2)
+                lines.append(f"{field_indent}{key}:")
+                # The encoded value already has correct indentation for depth + 2
+                for nested_line in encoded_val.split("\n"):
+                    lines.append(nested_line)
+            elif isinstance(value, list):
+                # Array value - encode at depth + 2 for proper nesting
+                encoded_val = self._encode_value(value, depth + 2)
+                if "\n" in encoded_val:
+                    # Multi-line array - header on same line, rest indented
+                    array_lines = encoded_val.split("\n")
+                    first_line = array_lines[0]  # e.g., "[2]{x,y}:"
+                    rest_lines = array_lines[1:]
+                    lines.append(f"{field_indent}{key}{first_line}")
+                    for array_line in rest_lines:
+                        lines.append(array_line)
+                else:
+                    lines.append(f"{field_indent}{key}: {encoded_val}")
+            else:
+                # Primitive value
+                encoded_val = self._encode_value(value, depth + 1)
+                lines.append(f"{field_indent}{key}: {encoded_val}")
+
+        return lines
